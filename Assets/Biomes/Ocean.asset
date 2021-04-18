@@ -20,4 +20,4 @@ MonoBehaviour:
   maxLandHeight: 1000
   minWaterHeight: 0
   maxWaterHeight: 1000
-  tile: {fileID: 11400000, guid: 97d8d17bfe2ce234cbeea8c23864a4f9, type: 2}
+  tile: {fileID: 11400000, guid: a0cfdbaed5503894b9c5e2ed470866b5, type: 2}

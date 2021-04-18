@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25ede5ce8f85af740bc952de3f7aa579, type: 3}
-  m_Name: Beach
+  m_Name: Ocean
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 0}
+  m_DefaultSprite: {fileID: 21300000, guid: f5c47d9988d26e9418779c807c3cfd58, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules: []
   customField: 0
-  tileOption: []
+  tileOption:
+  - {fileID: 11400000, guid: 4a6f61c11c7d913469353ec3844c0241, type: 2}
