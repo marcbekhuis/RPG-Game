@@ -17,7 +17,7 @@ MonoBehaviour:
   minWetness: 0
   maxWetness: 100
   minLandHeight: 0
-  maxLandHeight: 1000
+  maxLandHeight: 600
   minWaterHeight: 0
   maxWaterHeight: 1000
   tile: {fileID: 11400000, guid: a0cfdbaed5503894b9c5e2ed470866b5, type: 2}
