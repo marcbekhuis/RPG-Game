@@ -4,31 +4,45 @@ using UnityEngine;
 
 public class RangeDetection : MonoBehaviour
 {
-    [SerializeField] private float radius = 1;
+    [SerializeField] [Min(0)] private float radius = 1;
     [SerializeField] private LayerMask layerMasks;
     [SerializeField] private Transform DetectionBase;
+    [Header("Debugging")]
+    [SerializeField] private Color circleColor = Color.red;
 
-    public bool DetectRange(Vector2 direction)
+    public bool DetectRange()
     {
-        RaycastHit2D[] raycastHit2Ds = Physics2D.CircleCastAll(DetectionBase.position, radius, direction, radius, layerMasks);
-        foreach (var raycastHit2D in raycastHit2Ds)
+        Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(DetectionBase.position, radius, layerMasks);
+        foreach (var collider2D in collider2Ds)
         {
-            if (raycastHit2D.transform == transform) continue;
-            else if (raycastHit2D.transform.parent == transform) continue;
+            if (collider2D.transform == transform) continue;
+            else if (collider2D.transform.parent == transform) continue;
             else return true;
         }
         return false;
     }
 
-    public Vector2 DetectRangePosition(Vector2 direction)
+    public float GetRadius()
     {
-        RaycastHit2D[] raycastHit2Ds = Physics2D.CircleCastAll(DetectionBase.position, radius, direction, radius, layerMasks);
-        foreach (var raycastHit2D in raycastHit2Ds)
+        return radius;
+    }
+
+    public Vector2 DetectRangePosition()
+    {
+        Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(DetectionBase.position, radius, layerMasks);
+        foreach (var collider2D in collider2Ds)
         {
-            if (raycastHit2D.transform == transform) continue;
-            else if (raycastHit2D.transform.parent == transform) continue;
-            else return raycastHit2D.point;
+            if (collider2D.transform == transform) continue;
+            else if (collider2D.transform.parent == transform) continue;
+            else return collider2D.transform.position;
         }
         return default;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        // Draw a yellow sphere at the transform's position
+        Gizmos.color = circleColor;
+        Gizmos.DrawWireSphere(DetectionBase.transform.position, radius);
     }
 }

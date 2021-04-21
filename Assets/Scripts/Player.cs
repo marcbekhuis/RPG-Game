@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private HealthDisplay healthDisplay;
+    [SerializeField] private StatBarDisplay healthDisplay;
     [SerializeField] private HealthSystem healthSystem;
+    [SerializeField] private PlayerDeath playerDeath;
+    [SerializeField] private MeleeAttack meleeAttack;
+    [SerializeField] private PlayerController playerController;
+    [SerializeField] private StatBarDisplay staminaDisplay;
+    [SerializeField] private StaminaSystem staminaSystem;
 
     private void Start()
     {
-        healthSystem.healthChanged += healthDisplay.SetHealthBar;
+        healthSystem.healthChanged += healthDisplay.SetStatBar;
         healthSystem.ResetHealth();
+        healthSystem.died += playerDeath.PlayerDied;
+        playerController.attack += meleeAttack.AttackCall;
+        staminaSystem.staminaChanged += staminaDisplay.SetStatBarFinish;
+        staminaSystem.ResetStamina();
     }
 }

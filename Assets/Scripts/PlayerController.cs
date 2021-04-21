@@ -4,16 +4,34 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Movement movement;
+    public delegate void Attack(Vector2 direction);
+    public event Attack attack = delegate { };
+
+    [SerializeField] [Min(0)] private float attackCooldown = 1;
+    [SerializeField] [Min(0)] private float movementCooldown = 1;
+
+    private IMovement movement;
+    new private Camera camera;
+
+    private float attackCooldownTime = 0;
+    private float movementCooldownTime = 0;
 
     private void Start()
     {
-        movement = GetComponent<Movement>();
+        movement = GetComponent<IMovement>();
+        camera = Camera.main;
     }
 
     private void Update()
     {
-        movement.Move(MovementInput());
+        if (GameManager.instance.GameLoading || GameManager.instance.playerDied) return;
+        if (InputManager.instance.GetKeyDown(InputManager.Actions.UseTool) && Time.timeSinceLevelLoad > attackCooldownTime)
+        {
+            attack(camera.ViewportToWorldPoint(Input.mousePosition));
+            attackCooldownTime = Time.timeSinceLevelLoad + attackCooldown;
+            movementCooldownTime = Time.timeSinceLevelLoad + movementCooldown;
+        }
+        else if(Time.timeSinceLevelLoad > movementCooldownTime) movement.Move(MovementInput(), InputManager.instance.GetKey(InputManager.Actions.Sprint));
     }
 
     private Vector2 MovementInput()

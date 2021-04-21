@@ -11,6 +11,7 @@ public class InputManager : MonoBehaviour
         { Actions.MoveBackward, KeyCode.S},
         { Actions.MoveLeft, KeyCode.A},
         { Actions.MoveRight, KeyCode.D},
+        { Actions.Sprint, KeyCode.LeftShift},
         { Actions.UseTool, KeyCode.Mouse0},
         { Actions.DropItem, KeyCode.Q},
     };
@@ -21,6 +22,7 @@ public class InputManager : MonoBehaviour
         MoveBackward,
         MoveLeft,
         MoveRight,
+        Sprint,
         UseTool,
         DropItem,
     }

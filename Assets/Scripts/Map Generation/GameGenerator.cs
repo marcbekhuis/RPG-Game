@@ -25,10 +25,12 @@ public class GameGenerator : MonoBehaviour
 
     private IEnumerator GenerateGame()
     {
+        GameManager.instance.GameLoading = true;
         if (loadscreen) loadscreen.SetActive(true);
         if (landscapeGenerator) yield return StartCoroutine(landscapeGenerator.MakeLandscape(mapSize));
         if (resourceGenerator) yield return StartCoroutine(resourceGenerator.MakeResources(mapSize));
         if (loadscreen) loadscreen.SetActive(false);
+        GameManager.instance.GameLoading = false;
     }
 
     private void UpdateLoadText(string text)

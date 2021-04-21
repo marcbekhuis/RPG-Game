@@ -1,10 +1,10 @@
 Using pre-set license
 Built from '2020.3/release' branch; Version is '2020.3.2f1 (8fd9074bf66c) revision 9427207'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19041.867; Version 2004; 64bit' Language: 'nl' Physical Memory: 16269 MB
+OS: 'Windows 10 Home; OS build 19042.928; Version 2009; 64bit' Language: 'nl' Physical Memory: 16320 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-D:\Unity\Hub\Editor\2020.3.2f1\Editor\Unity.exe
+D:\Unity\Engines\2020.3.2f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,40 +15,1015 @@ D:/Unity/Projects/RPG-Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56249
+53394
 Successfully changed project path to: D:/Unity/Projects/RPG-Game
 D:/Unity/Projects/RPG-Game
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 406.93 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 117.83 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
-[Subsystems] Discovering subsystems at path D:/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity/Engines/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path D:/Unity/Projects/RPG-Game/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1050 (ID=0x1c8d)
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
     Vendor:   
-    VRAM:     1977 MB
-    Driver:   27.21.14.6089
+    VRAM:     6052 MB
+    Driver:   27.21.14.6192
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
-Mono path[0] = 'D:/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'D:/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56136
+Mono path[0] = 'D:/Unity/Engines/2020.3.2f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Engines/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/Engines/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56512
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Unity/Hub/Editor/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.247799 seconds.
+Register platform support module: D:/Unity/Engines/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003638 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 177.13 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 119.74 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  9.718 seconds
+- Completed reload, in  1.331 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.195120 seconds.
+Registered in 0.002980 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 114.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.178 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.16 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3027 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 160.1 MB.
+System memory in use after: 160.2 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 3493.
+Total: 2.854900 ms (FindLiveObjects: 0.438700 ms CreateObjectMapping: 0.183100 ms MarkObjects: 2.057300 ms  DeleteObjects: 0.174800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/GameScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GameScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61dcb25e33ecdf5f64257ba7677ff426') in 0.018731 seconds
+  Import took 0.050621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000435 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(b870ec07469562046bbc36e211ddf07e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(b870ec07469562046bbc36e211ddf07e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15e3279621f15f09347d14c4e38b8801') in 0.011731 seconds
+  Import took 0.035600 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002735 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.172 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2917 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 153.1 MB.
+System memory in use after: 153.2 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3497.
+Total: 3.101200 ms (FindLiveObjects: 0.426200 ms CreateObjectMapping: 0.154100 ms MarkObjects: 2.339000 ms  DeleteObjects: 0.181100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002841 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.27 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.122 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2917 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 153.2 MB.
+System memory in use after: 153.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3501.
+Total: 2.776900 ms (FindLiveObjects: 0.385500 ms CreateObjectMapping: 0.138600 ms MarkObjects: 2.061800 ms  DeleteObjects: 0.190200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002935 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.104 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2917 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 153.2 MB.
+System memory in use after: 153.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3505.
+Total: 2.923700 ms (FindLiveObjects: 0.387700 ms CreateObjectMapping: 0.177900 ms MarkObjects: 2.167300 ms  DeleteObjects: 0.189400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1284.465899 seconds.
+  path: Assets/Scripts/Player.cs
+  artifactKey: Guid(45978e490ee792d4d85f47e65424a61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player.cs using Guid(45978e490ee792d4d85f47e65424a61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc5adb6fc68c5be2ba3d034fa3271ab3') in 0.049164 seconds
+  Import took 0.078404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.785529 seconds.
+  path: Assets/Scripts/AIController.cs
+  artifactKey: Guid(14fc8c834c4e7994eacfc3c07d7359f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AIController.cs using Guid(14fc8c834c4e7994eacfc3c07d7359f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6b12df95de321a85761cdc99e9c104e') in 0.008683 seconds
+  Import took 0.033193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.207739 seconds.
+  path: Assets/Scripts/BasicMovement.cs
+  artifactKey: Guid(914ca652d0f23e341bb2ff86b43a3818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/BasicMovement.cs using Guid(914ca652d0f23e341bb2ff86b43a3818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a517499415f604a2f90f2ae5c431caef') in 0.002945 seconds
+  Import took 0.010460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000995 seconds.
+  path: Assets/Scripts/BasicMovement.cs
+  artifactKey: Guid(914ca652d0f23e341bb2ff86b43a3818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/BasicMovement.cs using Guid(914ca652d0f23e341bb2ff86b43a3818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a517499415f604a2f90f2ae5c431caef') in 0.002821 seconds
+  Import took 0.009498 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002959 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.128 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.15 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2917 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 153.2 MB.
+System memory in use after: 153.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3509.
+Total: 3.148800 ms (FindLiveObjects: 0.464500 ms CreateObjectMapping: 0.193000 ms MarkObjects: 2.295200 ms  DeleteObjects: 0.194900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.282036 seconds.
+  path: Assets/Scripts/BasicMovement.cs
+  artifactKey: Guid(914ca652d0f23e341bb2ff86b43a3818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/BasicMovement.cs using Guid(914ca652d0f23e341bb2ff86b43a3818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01544f09f3bdaae5b86dee4d373e82d2') in 0.023506 seconds
+  Import took 0.053172 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.378641 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_02
+  artifactKey: Guid(e7ac9b539e04b1e49a47341fd2aa7812) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_02 using Guid(e7ac9b539e04b1e49a47341fd2aa7812) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44c85fbe485d42909cbbf89f7ac9da79') in 0.133772 seconds
+  Import took 0.160337 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.325684 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Idle Blink
+  artifactKey: Guid(7bdcf50b74b890c4c988a66005a65395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Idle Blink using Guid(7bdcf50b74b890c4c988a66005a65395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b945d31a442135a343993b263ed46501') in 0.029159 seconds
+  Import took 0.037440 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.174663 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying
+  artifactKey: Guid(d93d2ac1a24eabf4780f04600b04f098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying using Guid(d93d2ac1a24eabf4780f04600b04f098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bd5515c17c5feeb1fe77d344fe1d253') in 0.034330 seconds
+  Import took 0.057732 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.035077 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_000.png
+  artifactKey: Guid(bad75d63854a6e140ae827e40389b7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_000.png using Guid(bad75d63854a6e140ae827e40389b7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a05675aec6e421d842bf7db5a426118') in 0.314417 seconds
+  Import took 0.365764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_011.png
+  artifactKey: Guid(96067da0871c9034e87de201c5e940a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_011.png using Guid(96067da0871c9034e87de201c5e940a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6518564e60f8e2a3f7c8bcc032a1cc89') in 0.153025 seconds
+  Import took 0.182090 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_008.png
+  artifactKey: Guid(e91e91889d7fba8448a782c2e69d79c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_008.png using Guid(e91e91889d7fba8448a782c2e69d79c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe060097518051b1aec925c8946e2c77') in 0.144173 seconds
+  Import took 0.168561 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_009.png
+  artifactKey: Guid(7aa12e0c3970bb444b05a2d6e0c72b00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_009.png using Guid(7aa12e0c3970bb444b05a2d6e0c72b00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8a62f9e72d2cae1230a83b0444797f5') in 0.074500 seconds
+  Import took 0.097860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_006.png
+  artifactKey: Guid(8b4cf9e12953a0f40bc7cfbec8c2a299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_006.png using Guid(8b4cf9e12953a0f40bc7cfbec8c2a299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4916c7e802e4d7ccecd71ccc07646cc6') in 0.066865 seconds
+  Import took 0.087411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_012.png
+  artifactKey: Guid(09f216b7357764b43abe0e9a719d2723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_012.png using Guid(09f216b7357764b43abe0e9a719d2723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b453936f0394e475a27b693e42ce2282') in 0.190805 seconds
+  Import took 0.198613 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_005.png
+  artifactKey: Guid(d76d71beb92ac9d4da8a4040d8fa4e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_005.png using Guid(d76d71beb92ac9d4da8a4040d8fa4e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fd410c5818f04a123ea2a5ec88227a8') in 0.098951 seconds
+  Import took 0.106760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_001.png
+  artifactKey: Guid(3015f00bdbb21404c8155780ad4c7a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_001.png using Guid(3015f00bdbb21404c8155780ad4c7a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23d1958d0f415b8d4901523cacf3036c') in 0.098076 seconds
+  Import took 0.118758 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_002.png
+  artifactKey: Guid(c531e961d5c1e6749bf9eb06f52c1988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_002.png using Guid(c531e961d5c1e6749bf9eb06f52c1988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3a1bdf8f0f00eb28691e25a5c0ef550') in 0.085831 seconds
+  Import took 0.092366 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_013.png
+  artifactKey: Guid(175a8abd82e19e84fb775a2de1b62e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_013.png using Guid(175a8abd82e19e84fb775a2de1b62e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e587dc680bc825d5be54b5574d8c635e') in 0.128295 seconds
+  Import took 0.136186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_003.png
+  artifactKey: Guid(a93598d1c65d9d044b53e90ab03a397b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_003.png using Guid(a93598d1c65d9d044b53e90ab03a397b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a7d056bb1af52e200b2eba5969d1ca8') in 0.084778 seconds
+  Import took 0.135769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_007.png
+  artifactKey: Guid(a11fd24f7b432354fbe3f142f058cb1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_007.png using Guid(a11fd24f7b432354fbe3f142f058cb1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c44cbca0119fd2d4aaa8d6816625827a') in 0.077676 seconds
+  Import took 0.089685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_004.png
+  artifactKey: Guid(3b331125a300b6146957e91ea1fefdce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_004.png using Guid(3b331125a300b6146957e91ea1fefdce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37a8f219ee57f5e3cd408ab0238f4fd1') in 0.107055 seconds
+  Import took 0.114299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_010.png
+  artifactKey: Guid(21a7dc7b366b11f40a7dd20f06a991f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_010.png using Guid(21a7dc7b366b11f40a7dd20f06a991f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f568c041c72f0cc75c942ce9a4a87a98') in 0.113179 seconds
+  Import took 0.127806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_014.png
+  artifactKey: Guid(7b14669297104e741b4427ae2e1c1e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_014.png using Guid(7b14669297104e741b4427ae2e1c1e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e21143d250cd3dff22cfa0b7953bada1') in 0.089905 seconds
+  Import took 0.116354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.950734 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking
+  artifactKey: Guid(d962462e96843c846a83eb05ab21ccb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking using Guid(d962462e96843c846a83eb05ab21ccb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f5b210faaec409e738642cb73fca7ee') in 0.034846 seconds
+  Import took 0.072834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.046489 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_000.png
+  artifactKey: Guid(b989b384b94bdfe42a743ce2326b0002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_000.png using Guid(b989b384b94bdfe42a743ce2326b0002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '706e9f57033b7309c9e56dd5837dd3c9') in 0.079142 seconds
+  Import took 0.099139 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_006.png
+  artifactKey: Guid(2181ac47610d8844eb028d58b17dad23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_006.png using Guid(2181ac47610d8844eb028d58b17dad23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '154b936050eca5253bdfb0e4d069eb0e') in 0.083073 seconds
+  Import took 0.100126 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_009.png
+  artifactKey: Guid(7eba846117a7db04bafadb53ee0998cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_009.png using Guid(7eba846117a7db04bafadb53ee0998cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '285af13e95cd2bd95ce86057f3a64229') in 0.088903 seconds
+  Import took 0.112364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_001.png
+  artifactKey: Guid(ad52109751be1fd49860774bd2eae72f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_001.png using Guid(ad52109751be1fd49860774bd2eae72f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45430640cb25ab4b0517505f2c5744d8') in 0.082827 seconds
+  Import took 0.104212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_007.png
+  artifactKey: Guid(d789b92a3d241e7429d1f56321739cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_007.png using Guid(d789b92a3d241e7429d1f56321739cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd05131e0bf7a3c73deb0936070a63c7f') in 0.103639 seconds
+  Import took 0.111802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000317 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_002.png
+  artifactKey: Guid(1be98185451c36346914c65b5451d4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_002.png using Guid(1be98185451c36346914c65b5451d4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50db84847907256cd54f3ac1200bb65e') in 0.101355 seconds
+  Import took 0.109103 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_008.png
+  artifactKey: Guid(47ef7229ece7c7f4a9eca52bd79863b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_008.png using Guid(47ef7229ece7c7f4a9eca52bd79863b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a3c6926348fb7965b30e09a2d22ffb8') in 0.072897 seconds
+  Import took 0.100114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_005.png
+  artifactKey: Guid(4565dfa7657267c4ba7a94f8d1b28699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_005.png using Guid(4565dfa7657267c4ba7a94f8d1b28699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd98e239c1eb34ee790a255679cc4d596') in 0.088199 seconds
+  Import took 0.094404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_010.png
+  artifactKey: Guid(318482236a596dc41b6f52a071d24bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_010.png using Guid(318482236a596dc41b6f52a071d24bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '934f9d220aea1272723d60cb585d44bf') in 0.087190 seconds
+  Import took 0.111034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_004.png
+  artifactKey: Guid(ad720498fe29cca40b2ab5f8c696ed27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_004.png using Guid(ad720498fe29cca40b2ab5f8c696ed27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12bc7578beb136211568fc500df33e4f') in 0.099925 seconds
+  Import took 0.123472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_003.png
+  artifactKey: Guid(27e9d2a8c53f21a408c1ec46c53e3850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_003.png using Guid(27e9d2a8c53f21a408c1ec46c53e3850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79b97e261736cc92526b4e9c46bb4f7d') in 0.070182 seconds
+  Import took 0.110072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_011.png
+  artifactKey: Guid(38978fc3a5ee8c648a9bed621f4ad170) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Attacking/Minotaur_01_Attacking_011.png using Guid(38978fc3a5ee8c648a9bed621f4ad170) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4085199e004ac95be4d490fff49b21d') in 0.090812 seconds
+  Import took 0.097597 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004813 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.321 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2917 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.2 MB.
+System memory in use after: 156.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3519.
+Total: 3.944500 ms (FindLiveObjects: 0.461700 ms CreateObjectMapping: 0.233600 ms MarkObjects: 3.036700 ms  DeleteObjects: 0.210900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.547078 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_014.png
+  artifactKey: Guid(7b14669297104e741b4427ae2e1c1e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_014.png using Guid(7b14669297104e741b4427ae2e1c1e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb532c03f8acbfec6b701283631fa009') in 0.073155 seconds
+  Import took 0.081034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 298.243623 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_000.png
+  artifactKey: Guid(bad75d63854a6e140ae827e40389b7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_000.png using Guid(bad75d63854a6e140ae827e40389b7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a2c29320b02f3cb9fb9db05667976a6') in 0.014275 seconds
+  Import took 0.080719 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_011.png
+  artifactKey: Guid(96067da0871c9034e87de201c5e940a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_011.png using Guid(96067da0871c9034e87de201c5e940a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c4fc03e00df98b3c7f3c988d5a227e1') in 0.015371 seconds
+  Import took 0.053785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_008.png
+  artifactKey: Guid(e91e91889d7fba8448a782c2e69d79c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_008.png using Guid(e91e91889d7fba8448a782c2e69d79c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbf8e362684e3166ba4ae016030103dd') in 0.014376 seconds
+  Import took 0.071897 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_009.png
+  artifactKey: Guid(7aa12e0c3970bb444b05a2d6e0c72b00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_009.png using Guid(7aa12e0c3970bb444b05a2d6e0c72b00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '789d4ae2eb0ef6476bc34cd58d29abf7') in 0.013684 seconds
+  Import took 0.107706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_006.png
+  artifactKey: Guid(8b4cf9e12953a0f40bc7cfbec8c2a299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_006.png using Guid(8b4cf9e12953a0f40bc7cfbec8c2a299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8152a7cbc72a9aa088ed152587689732') in 0.018174 seconds
+  Import took 0.025351 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_012.png
+  artifactKey: Guid(09f216b7357764b43abe0e9a719d2723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_012.png using Guid(09f216b7357764b43abe0e9a719d2723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dc1155552162583b23e3f80923b1d36') in 0.013456 seconds
+  Import took 0.065084 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_005.png
+  artifactKey: Guid(d76d71beb92ac9d4da8a4040d8fa4e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_005.png using Guid(d76d71beb92ac9d4da8a4040d8fa4e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '964c4192744c60212c87e15b9fd2da93') in 0.017478 seconds
+  Import took 0.091460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_001.png
+  artifactKey: Guid(3015f00bdbb21404c8155780ad4c7a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_001.png using Guid(3015f00bdbb21404c8155780ad4c7a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '699e25adf4ab49e90d005c9c1491c700') in 0.016878 seconds
+  Import took 0.022548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_002.png
+  artifactKey: Guid(c531e961d5c1e6749bf9eb06f52c1988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_002.png using Guid(c531e961d5c1e6749bf9eb06f52c1988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '582f2385e9b700239b33932d2611efff') in 0.016188 seconds
+  Import took 0.022938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_013.png
+  artifactKey: Guid(175a8abd82e19e84fb775a2de1b62e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_013.png using Guid(175a8abd82e19e84fb775a2de1b62e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ba03095ae34d0413f5c360bd9f952bf') in 0.014372 seconds
+  Import took 0.022838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_003.png
+  artifactKey: Guid(a93598d1c65d9d044b53e90ab03a397b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_003.png using Guid(a93598d1c65d9d044b53e90ab03a397b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5b93e0c51b79ccff538c74d192debd2') in 0.015304 seconds
+  Import took 0.022071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000381 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_007.png
+  artifactKey: Guid(a11fd24f7b432354fbe3f142f058cb1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_007.png using Guid(a11fd24f7b432354fbe3f142f058cb1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95df8812a93358107bb1cdb3add503ea') in 0.015173 seconds
+  Import took 0.063668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_004.png
+  artifactKey: Guid(3b331125a300b6146957e91ea1fefdce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_004.png using Guid(3b331125a300b6146957e91ea1fefdce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c71d6df38e7fbd027c529d85bf6b442') in 0.016313 seconds
+  Import took 0.041905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_010.png
+  artifactKey: Guid(21a7dc7b366b11f40a7dd20f06a991f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_010.png using Guid(21a7dc7b366b11f40a7dd20f06a991f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe50b0c99a1f7e53b34833a8bd27ae86') in 0.015800 seconds
+  Import took 0.027515 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_014.png
+  artifactKey: Guid(7b14669297104e741b4427ae2e1c1e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_014.png using Guid(7b14669297104e741b4427ae2e1c1e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08e927311b170b01d15c727266fbcc60') in 0.014315 seconds
+  Import took 0.019590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_000.png
+  artifactKey: Guid(bad75d63854a6e140ae827e40389b7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/craftpix-net-484869-free-minotaur-tiny-style-2d-sprites/PNG/Minotaur_01/PNG Sequences/Dying/Minotaur_01_Dying_000.png using Guid(bad75d63854a6e140ae827e40389b7fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a2c29320b02f3cb9fb9db05667976a6') in 0.013730 seconds
+  Import took 0.020126 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.255886 seconds.
+  path: Assets/Scripts/HealthSystem.cs
+  artifactKey: Guid(0683d64204d0e014cabe29f1fabf87ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HealthSystem.cs using Guid(0683d64204d0e014cabe29f1fabf87ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d93023848ff2bda9bfdbe1c02de16d1') in 0.008920 seconds
+  Import took 0.035391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.603043 seconds.
+  path: Assets/Scripts/HealthDisplay.cs
+  artifactKey: Guid(83897fb12e21c2f4bb03250497317173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HealthDisplay.cs using Guid(83897fb12e21c2f4bb03250497317173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88afdf1c15c789aeb6454ed64b9365ba') in 0.007236 seconds
+  Import took 0.013810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000605 seconds.
+  path: Assets/Scripts/HealthDisplay.cs
+  artifactKey: Guid(83897fb12e21c2f4bb03250497317173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HealthDisplay.cs using Guid(83897fb12e21c2f4bb03250497317173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88afdf1c15c789aeb6454ed64b9365ba') in 0.003076 seconds
+  Import took 0.009037 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003192 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.187 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.12 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2917 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3524.
+Total: 2.934400 ms (FindLiveObjects: 0.339200 ms CreateObjectMapping: 0.208600 ms MarkObjects: 2.191400 ms  DeleteObjects: 0.193500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 452.688950 seconds.
+  path: Assets/Scripts/StaminaSystem.cs
+  artifactKey: Guid(5fc7e3520c148e24aa5549d1b35cc2d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/StaminaSystem.cs using Guid(5fc7e3520c148e24aa5549d1b35cc2d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f27f8b386cbe88d666a9008e274b4b9b') in 0.012459 seconds
+  Import took 0.021965 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002812 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.094 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2918 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3529.
+Total: 3.225700 ms (FindLiveObjects: 0.331400 ms CreateObjectMapping: 0.182700 ms MarkObjects: 2.503000 ms  DeleteObjects: 0.207500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 460.710007 seconds.
+  path: Assets/Scripts/StaminaSystem.cs
+  artifactKey: Guid(5fc7e3520c148e24aa5549d1b35cc2d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/StaminaSystem.cs using Guid(5fc7e3520c148e24aa5549d1b35cc2d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00c0938117821a423f32279a89f24bcf') in 0.009853 seconds
+  Import took 0.317464 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002894 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.044 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.15 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2918 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3533.
+Total: 3.009800 ms (FindLiveObjects: 0.357700 ms CreateObjectMapping: 0.163700 ms MarkObjects: 2.310800 ms  DeleteObjects: 0.176700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1122.965575 seconds.
+  path: Assets/Scripts/Minotaur.cs
+  artifactKey: Guid(b5ab03ecb25616e40a9d3b0a3a102177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Minotaur.cs using Guid(b5ab03ecb25616e40a9d3b0a3a102177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a4c6297cd50ad7b672f0afe73880923') in 0.011829 seconds
+  Import took 0.020969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001442 seconds.
+  path: Assets/Scripts/Minotaur.cs
+  artifactKey: Guid(b5ab03ecb25616e40a9d3b0a3a102177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Minotaur.cs using Guid(b5ab03ecb25616e40a9d3b0a3a102177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a4c6297cd50ad7b672f0afe73880923') in 0.003535 seconds
+  Import took 0.009939 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002962 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.26 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.015 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2918 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3537.
+Total: 3.670300 ms (FindLiveObjects: 0.526600 ms CreateObjectMapping: 0.265700 ms MarkObjects: 2.701000 ms  DeleteObjects: 0.175900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 176.359192 seconds.
+  path: Assets/Scripts/Minotaur.cs
+  artifactKey: Guid(b5ab03ecb25616e40a9d3b0a3a102177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Minotaur.cs using Guid(b5ab03ecb25616e40a9d3b0a3a102177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '301589cc21ad6ad44253b3bc9f3429d2') in 0.006599 seconds
+  Import took 0.012193 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003009 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.054 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2918 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3541.
+Total: 4.059500 ms (FindLiveObjects: 0.702500 ms CreateObjectMapping: 0.422300 ms MarkObjects: 2.742500 ms  DeleteObjects: 0.190300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.077360 seconds.
+  path: Assets/Scripts/Player.cs
+  artifactKey: Guid(45978e490ee792d4d85f47e65424a61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player.cs using Guid(45978e490ee792d4d85f47e65424a61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5653d056f8b490e16d2456acd160adf') in 0.009045 seconds
+  Import took 0.014234 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003663 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.043 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2918 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3545.
+Total: 3.725700 ms (FindLiveObjects: 0.835800 ms CreateObjectMapping: 0.341800 ms MarkObjects: 2.363700 ms  DeleteObjects: 0.183100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 92.919424 seconds.
+  path: Assets/Scripts/Player.cs
+  artifactKey: Guid(45978e490ee792d4d85f47e65424a61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player.cs using Guid(45978e490ee792d4d85f47e65424a61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca52f5c838471b0f82a010a305fa90aa') in 0.005787 seconds
+  Import took 0.011349 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003179 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.057 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2918 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3549.
+Total: 3.521800 ms (FindLiveObjects: 0.540500 ms CreateObjectMapping: 0.248900 ms MarkObjects: 2.469900 ms  DeleteObjects: 0.261300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002834 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.117 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2918 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3553.
+Total: 3.281400 ms (FindLiveObjects: 0.640600 ms CreateObjectMapping: 0.291200 ms MarkObjects: 2.178600 ms  DeleteObjects: 0.169900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002938 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.008 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.31 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2918 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3557.
+Total: 3.294000 ms (FindLiveObjects: 0.445800 ms CreateObjectMapping: 0.175900 ms MarkObjects: 2.469200 ms  DeleteObjects: 0.201900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002749 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.001 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2918 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3561.
+Total: 2.798900 ms (FindLiveObjects: 0.359500 ms CreateObjectMapping: 0.154700 ms MarkObjects: 2.090200 ms  DeleteObjects: 0.193700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002882 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.046 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2918 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3565.
+Total: 3.866300 ms (FindLiveObjects: 0.656300 ms CreateObjectMapping: 0.211800 ms MarkObjects: 2.816200 ms  DeleteObjects: 0.179800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003359 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.452 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2918 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.6 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3569.
+Total: 3.293400 ms (FindLiveObjects: 0.362200 ms CreateObjectMapping: 0.178900 ms MarkObjects: 2.556300 ms  DeleteObjects: 0.194500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002935 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.62 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.187 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2918 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.6 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3573.
+Total: 3.222200 ms (FindLiveObjects: 0.523300 ms CreateObjectMapping: 0.209900 ms MarkObjects: 2.308600 ms  DeleteObjects: 0.178900 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

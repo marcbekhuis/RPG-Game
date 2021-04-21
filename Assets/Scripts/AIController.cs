@@ -4,35 +4,50 @@ using UnityEngine;
 
 public class AIController : MonoBehaviour
 {
-    public delegate void Attack(Vector2 direction, float attackdamage);
+    public delegate void Attack(Vector2 direction);
     public event Attack attack;
+    public bool disabled = false;
 
-    [SerializeField] private float targetAcceptDistance = 0.1f;
+    [SerializeField] [Min(0)] private float targetAcceptDistance = 0.1f;
     [SerializeField] private RangeDetection attackRange;
     [SerializeField] private RangeDetection targetRange;
-    [SerializeField] private float attackCooldown = 1;
+    [SerializeField] [Min(0)] private float attackCooldown = 1;
+    [SerializeField] [Min(0)] private float movementCooldown = 1;
 
-    private float cooldownTime = 0;
-    private Movement movement;
+    private float attackCooldownTime = 0;
+    private float movementCooldownTime = 0;
+    private IMovement movement;
 
     private void Start()
     {
-        movement = GetComponent<Movement>();
+        movement = GetComponent<IMovement>();
     }
 
     private void Update()
     {
-        Vector3 targetPosition = targetRange.DetectRangePosition(Vector2.up);
-        if (targetPosition == null) return;
-        if (attackRange.DetectRange(Vector2.up) && Time.timeSinceLevelLoad > cooldownTime)
+        if (disabled)
         {
-            attack(targetPosition - transform.position, 2);
-            Debug.LogError("Attack");
-            cooldownTime = Time.timeSinceLevelLoad + attackCooldown;
+            movement.Move(Vector2.zero);
+            movement.Frozen(true);
+            return;
         }
-        else if(Vector2.Distance(transform.position, targetPosition) > targetAcceptDistance)
+        if (GameManager.instance.GameLoading || GameManager.instance.playerDied)
         {
-            movement.Move((targetPosition - transform.position).normalized);
+            movement.Move(Vector2.zero);
+            return;
+        }
+        Vector3 targetPosition = targetRange.DetectRangePosition();
+        if (targetPosition == null) return;
+        if (attackRange.DetectRange() && Time.timeSinceLevelLoad > attackCooldownTime)
+        {
+            attack(targetPosition);
+            attackCooldownTime = Time.timeSinceLevelLoad + attackCooldown;
+            movementCooldownTime = Time.timeSinceLevelLoad + movementCooldown;
+        }
+        else if(Vector2.Distance(transform.position, targetPosition) > targetAcceptDistance && Time.timeSinceLevelLoad > movementCooldownTime)
+        {
+            if(Vector2.Distance(transform.position, targetPosition) > targetRange.GetRadius() * 0.5f) movement.Move((targetPosition - transform.position).normalized, true);
+            else movement.Move((targetPosition - transform.position).normalized);
         }
         else
         {
