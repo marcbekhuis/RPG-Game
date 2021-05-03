@@ -7,4 +7,5 @@ public class ItemInformation : ScriptableObject
 {
     public Sprite sprite;
     public int maxStackSize = 10;
+    public string description = "A basic item.";
 }

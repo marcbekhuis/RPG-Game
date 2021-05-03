@@ -13,6 +13,7 @@ public class AIController : MonoBehaviour
     [SerializeField] private RangeDetection targetRange;
     [SerializeField] [Min(0)] private float attackCooldown = 1;
     [SerializeField] [Min(0)] private float movementCooldown = 1;
+    [SerializeField] [Range(0, 1)] private float runProcentDistance = 0.5f;
 
     private float attackCooldownTime = 0;
     private float movementCooldownTime = 0;
@@ -46,7 +47,7 @@ public class AIController : MonoBehaviour
         }
         else if(Vector2.Distance(transform.position, targetPosition) > targetAcceptDistance && Time.timeSinceLevelLoad > movementCooldownTime)
         {
-            if(Vector2.Distance(transform.position, targetPosition) > targetRange.GetRadius() * 0.5f) movement.Move((targetPosition - transform.position).normalized, true);
+            if(Vector2.Distance(transform.position, targetPosition) > targetRange.GetRadius() * runProcentDistance) movement.Move((targetPosition - transform.position).normalized, true);
             else movement.Move((targetPosition - transform.position).normalized);
         }
         else

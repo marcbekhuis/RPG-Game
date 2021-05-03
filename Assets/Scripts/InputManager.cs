@@ -14,6 +14,7 @@ public class InputManager : MonoBehaviour
         { Actions.Sprint, KeyCode.LeftShift},
         { Actions.UseTool, KeyCode.Mouse0},
         { Actions.DropItem, KeyCode.Q},
+        { Actions.OpenConsole, KeyCode.C},
     };
 
     public enum Actions
@@ -25,6 +26,7 @@ public class InputManager : MonoBehaviour
         Sprint,
         UseTool,
         DropItem,
+        OpenConsole
     }
 
     private void Awake()
