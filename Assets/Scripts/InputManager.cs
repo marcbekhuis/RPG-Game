@@ -14,7 +14,17 @@ public class InputManager : MonoBehaviour
         { Actions.Sprint, KeyCode.LeftShift},
         { Actions.UseTool, KeyCode.Mouse0},
         { Actions.DropItem, KeyCode.Q},
-        { Actions.OpenConsole, KeyCode.C},
+        { Actions.OpenConsole, KeyCode.F1},
+        { Actions.OpenInventory, KeyCode.E},
+        { Actions.HotbarSlot1, KeyCode.Alpha1},
+        { Actions.HotbarSlot2, KeyCode.Alpha2},
+        { Actions.HotbarSlot3, KeyCode.Alpha3},
+        { Actions.HotbarSlot4, KeyCode.Alpha4},
+        { Actions.HotbarSlot5, KeyCode.Alpha5},
+        { Actions.HotbarSlot6, KeyCode.Alpha6},
+        { Actions.HotbarSlot7, KeyCode.Alpha7},
+        { Actions.HotbarSlot8, KeyCode.Alpha8},
+        { Actions.HotbarSlot9, KeyCode.Alpha9},
     };
 
     public enum Actions
@@ -26,7 +36,17 @@ public class InputManager : MonoBehaviour
         Sprint,
         UseTool,
         DropItem,
-        OpenConsole
+        OpenConsole,
+        OpenInventory,
+        HotbarSlot1,
+        HotbarSlot2,
+        HotbarSlot3,
+        HotbarSlot4,
+        HotbarSlot5,
+        HotbarSlot6,
+        HotbarSlot7,
+        HotbarSlot8,
+        HotbarSlot9,
     }
 
     private void Awake()

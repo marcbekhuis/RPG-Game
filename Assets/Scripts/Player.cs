@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerController playerController;
     [SerializeField] private StatBarDisplay staminaDisplay;
     [SerializeField] private StaminaSystem staminaSystem;
+    [SerializeField] private PlayerInventory playerInventory;
 
     private void Start()
     {
@@ -20,5 +21,6 @@ public class Player : MonoBehaviour
         playerController.attack += meleeAttack.AttackCall;
         staminaSystem.staminaChanged += staminaDisplay.SetStatBarFinish;
         staminaSystem.ResetStamina();
+        playerController.toggleInventory += playerInventory.ToggleInventory;
     }
 }

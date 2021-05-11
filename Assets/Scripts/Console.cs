@@ -30,12 +30,14 @@ public class Console : MonoBehaviour
                 console.SetActive(true);
                 consoleInput.ActivateInputField();
             }
+            GameManager.instance.consoleOpen = console.activeSelf;
         }
     }
 
     private void CommitCommand(string command)
     {
-        string[] args = command.ToLower().Split(' ');
+        if (command.ToLower().Trim().Length <= 0) return;
+        string[] args = command.ToLower().Trim().Split(' ');
 
         switch (args[0])
         {

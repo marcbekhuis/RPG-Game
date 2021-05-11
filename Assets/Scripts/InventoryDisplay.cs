@@ -5,28 +5,31 @@ using UnityEngine.UI;
 
 public class InventoryDisplay : MonoBehaviour
 {
-    [SerializeField] private Inventory playerInventory;
-    [SerializeField] private Transform inventory;
+    [SerializeField] public Inventory inventory;
+    [SerializeField] public Transform inventoryHolder;
     [SerializeField] private GameObject itemPrefab;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        playerInventory.inventoryChanged += UpdateInventory;
+        inventory.inventoryChanged += UpdateInventory;
     }
 
     public void UpdateInventory()
     {
-        foreach (Transform child in inventory)
+        foreach (Transform child in inventoryHolder)
         {
             Destroy(child.gameObject);
         }
 
-        foreach (var item in playerInventory.items)
+        if (!GameManager.instance.inventoryOpen) return;
+
+        foreach (var item in inventory.items)
         {
-            GameObject newItem = Instantiate(itemPrefab, inventory);
+            GameObject newItem = Instantiate(itemPrefab, inventoryHolder);
             newItem.transform.GetChild(0).GetComponent<Image>().sprite = item.itemInformation.sprite;
-            newItem.transform.GetChild(1).GetComponent<Text>().text = item.amount.ToString();
+            if (item.itemInformation.maxStackSize <= 1) newItem.transform.GetChild(1).gameObject.SetActive(false);
+            else newItem.transform.GetChild(1).GetComponent<Text>().text = item.amount.ToString();
         }
     }
 }

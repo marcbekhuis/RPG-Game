@@ -6,6 +6,6 @@ using UnityEngine;
 public class ItemInformation : ScriptableObject
 {
     public Sprite sprite;
-    public int maxStackSize = 10;
+    [Min(1)] public int maxStackSize = 10;
     public string description = "A basic item.";
 }
