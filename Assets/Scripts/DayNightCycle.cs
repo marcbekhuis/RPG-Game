@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class DayNightCycle : MonoBehaviour
 {
-    [SerializeField][Range(0,24)] private float timeOfDay = 12;
+    [Range(0,24)] public float timeOfDay = 12;
     [SerializeField][Tooltip("Time in minutes")][Range(0.05f,60)] private float dayNightCylceDuration = 1;
     [SerializeField] private bool stopTime = false;
     [Space]

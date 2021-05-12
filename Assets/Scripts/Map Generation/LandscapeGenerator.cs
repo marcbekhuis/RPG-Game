@@ -10,9 +10,11 @@ public class LandscapeGenerator : MonoBehaviour
     [SerializeField] private float seaLevel = 40;
     [SerializeField] private float minTempature = -50;
     [SerializeField] private float maxTempature = 50;
+    [SerializeField][Min(1)] private int wallWidth = 1;
     [Space]
     [SerializeField] private Tilemap landscapeTilemap;
     [SerializeField] private Biome[] biomes;
+    [SerializeField] private Biome wallBiome;
     [SerializeField] private Biome errorBiome;
     [Space]
     [SerializeField] private HeightNoise heightNoise = new HeightNoise();
@@ -32,12 +34,14 @@ public class LandscapeGenerator : MonoBehaviour
             yield break;
         }
         yield return StartCoroutine(GenerateLandscape(mapSize));
+        yield return StartCoroutine(GenerateBorderWall(mapSize));
         yield return StartCoroutine(PlaceLandscape(mapSize));
     }
 
     public IEnumerator GenerateLandscape(Vector2Int mapSize)
     {
         mapData.landscapeTiles = new LandscapeTile[mapSize.x, mapSize.y];
+        mapData.size = mapSize;
         heightNoise.Setup();
         wetnessNoise.Setup();
         tempatureNoise.Setup();
@@ -89,7 +93,71 @@ public class LandscapeGenerator : MonoBehaviour
             AllowedBiomes.Add(errorBiome);
             Debug.LogError("Tile at position: x:" + x + ", y:" + y + " Had to be given a error biome. Height: " + height + " Wetness: " + wetness + " Tempature: " + tempature + " WaterLevel: " + waterLevel);
         }
-        mapData.landscapeTiles[x, y] = new LandscapeTile(AllowedBiomes[Random.Range(0,AllowedBiomes.Count)], height, tempature, wetness, waterLevel);
+        mapData.landscapeTiles[x, y] = new LandscapeTile(AllowedBiomes[Random.Range(0,AllowedBiomes.Count)], height, new Vector2Int(x,y), tempature, wetness, waterLevel);
+    }
+
+    public IEnumerator GenerateBorderWall(Vector2Int mapSize)
+    {
+        System.DateTime loopStartTime = System.DateTime.Now;
+        for (int x = 0; x < mapSize.x; x++)
+        {
+            for (int y = 0, i = 0; y < wallWidth; y++, i++)
+            {
+                int random = Random.Range(0, i + 1);
+                if (random == i || i < wallWidth / 3f) mapData.landscapeTiles[x, y].biome = wallBiome;
+                if ((System.DateTime.Now - loopStartTime).TotalSeconds >= 1)
+                {
+                    GameGenerator.updateLoadText.Invoke("Progress generating wall at tile: X=" + x + " Y=" + y);
+                    yield return null;
+                    loopStartTime = System.DateTime.Now;
+                }
+            }
+        }
+
+        for (int y = 0; y < mapSize.y; y++)
+        {
+            for (int x = 0, i = 0; x < wallWidth; x++, i++)
+            {
+                int random = Random.Range(0, i + 1);
+                if (random == i || i < wallWidth / 3f) mapData.landscapeTiles[x, y].biome = wallBiome;
+                if ((System.DateTime.Now - loopStartTime).TotalSeconds >= 1)
+                {
+                    GameGenerator.updateLoadText.Invoke("Progress generating wall at tile: X=" + x + " Y=" + y);
+                    yield return null;
+                    loopStartTime = System.DateTime.Now;
+                }
+            }
+        }
+
+        for (int x = 0; x < mapSize.x; x++)
+        {
+            for (int y = mapSize.y - 1, i = 0; y > mapSize.y - wallWidth - 1; y--, i++)
+            {
+                int random = Random.Range(0, i + 1);
+                if (random == i || i < wallWidth / 3f) mapData.landscapeTiles[x, y].biome = wallBiome;
+                if ((System.DateTime.Now - loopStartTime).TotalSeconds >= 1)
+                {
+                    GameGenerator.updateLoadText.Invoke("Progress generating wall at tile: X=" + x + " Y=" + y);
+                    yield return null;
+                    loopStartTime = System.DateTime.Now;
+                }
+            }
+        }
+
+        for (int y = 0; y < mapSize.y; y++)
+        {
+            for (int x = mapSize.x - 1, i = 0; x > mapSize.x - wallWidth - 1; x--, i++)
+            {
+                int random = Random.Range(0, i + 1);
+                if (random == i || i < wallWidth / 3f) mapData.landscapeTiles[x, y].biome = wallBiome;
+                if ((System.DateTime.Now - loopStartTime).TotalSeconds >= 1)
+                {
+                    GameGenerator.updateLoadText.Invoke("Progress generating wall at tile: X=" + x + " Y=" + y);
+                    yield return null;
+                    loopStartTime = System.DateTime.Now;
+                }
+            }
+        }
     }
 
     public IEnumerator PlaceLandscape(Vector2Int mapSize)

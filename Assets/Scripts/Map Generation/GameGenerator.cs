@@ -11,6 +11,8 @@ public class GameGenerator : MonoBehaviour
     [Tooltip("Map size in tiles")] [SerializeField] private Vector2Int mapSize;
     [SerializeField] private GameObject loadscreen;
     [SerializeField] private Text loadscreenText;
+    [SerializeField] private SpawnPosition spawnPosition;
+    [SerializeField] private SpawnPlayer spawnPlayer;
 
     private LandscapeGenerator landscapeGenerator;
     private ResourceGenerator resourceGenerator;
@@ -29,6 +31,8 @@ public class GameGenerator : MonoBehaviour
         if (loadscreen) loadscreen.SetActive(true);
         if (landscapeGenerator) yield return StartCoroutine(landscapeGenerator.MakeLandscape(mapSize));
         if (resourceGenerator) yield return StartCoroutine(resourceGenerator.MakeResources(mapSize));
+        if(spawnPosition) spawnPosition.Setup();
+        if(spawnPlayer && spawnPosition) spawnPlayer.Spawn();
         if (loadscreen) loadscreen.SetActive(false);
         GameManager.instance.GameLoading = false;
     }

@@ -36,7 +36,7 @@ public class RangeDetection : MonoBehaviour
             else if (collider2D.transform.parent == transform) continue;
             else return collider2D.transform.position;
         }
-        return default;
+        return transform.position;
     }
 
     void OnDrawGizmosSelected()

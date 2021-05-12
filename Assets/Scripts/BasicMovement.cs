@@ -22,7 +22,7 @@ public class BasicMovement : MonoBehaviour, IMovement
         if (sprint && staminaSystem.HasStamina())
         {
             rigidbody.velocity = direction * sprintSpeed;
-            staminaSystem.RemoveStamina();
+            if(direction != Vector2.zero) staminaSystem.RemoveStamina();
         }
         else
         {

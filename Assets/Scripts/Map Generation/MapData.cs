@@ -7,4 +7,5 @@ public class MapData : MonoBehaviour
     public LandscapeTile[,] landscapeTiles;
     public Structure[,] structures;
     public Resource[,] resources;
+    public Vector2Int size;
 }

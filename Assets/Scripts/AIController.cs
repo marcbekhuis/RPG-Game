@@ -38,7 +38,11 @@ public class AIController : MonoBehaviour
             return;
         }
         Vector3 targetPosition = targetRange.DetectRangePosition();
-        if (targetPosition == null) return;
+        if (targetPosition == transform.position)
+        {
+            movement.Move(Vector2.zero);
+            return;
+        }
         if (attackRange.DetectRange() && Time.timeSinceLevelLoad > attackCooldownTime)
         {
             attack(targetPosition);
