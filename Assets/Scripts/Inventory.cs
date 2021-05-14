@@ -57,4 +57,26 @@ public class Inventory : MonoBehaviour
         }
         inventoryChanged();
     }
+
+    public void AddItem(Item newItem, int index)
+    {
+        items.Insert(index, newItem);
+        inventoryChanged();
+    }
+
+    public void RemoveItemAtIndex(int index)
+    {
+        items.RemoveAt(index);
+        inventoryChanged();
+    }
+
+    public void MoveItemInInventory(int currentIndex, int NewIndex)
+    {
+        Item movingItem = items[currentIndex];
+        items.Remove(movingItem);
+        if (NewIndex > items.Count - 1) items.Add(movingItem);
+        else items.Insert(NewIndex, movingItem);
+        Debug.LogError("Moved item");
+        inventoryChanged();
+    }
 }

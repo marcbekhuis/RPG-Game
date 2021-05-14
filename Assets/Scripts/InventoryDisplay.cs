@@ -39,6 +39,7 @@ public class InventoryDisplay : MonoBehaviour
         {
             GameObject newItem = Instantiate(itemPrefab, inventoryHolder);
             newItem.transform.GetChild(0).GetComponent<Image>().sprite = item.itemInformation.sprite;
+            newItem.name = "Inventory Item " + item.itemInformation.name;
             if (item.itemInformation.maxStackSize <= 1) newItem.transform.GetChild(1).gameObject.SetActive(false);
             else newItem.transform.GetChild(1).GetComponent<Text>().text = item.amount.ToString();
         }

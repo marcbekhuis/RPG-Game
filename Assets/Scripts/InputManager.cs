@@ -25,6 +25,7 @@ public class InputManager : MonoBehaviour
         { Actions.HotbarSlot7, KeyCode.Alpha7},
         { Actions.HotbarSlot8, KeyCode.Alpha8},
         { Actions.HotbarSlot9, KeyCode.Alpha9},
+        { Actions.MoveItem, KeyCode.Mouse0},
     };
 
     public enum Actions
@@ -47,6 +48,7 @@ public class InputManager : MonoBehaviour
         HotbarSlot7,
         HotbarSlot8,
         HotbarSlot9,
+        MoveItem,
     }
 
     private void Awake()
