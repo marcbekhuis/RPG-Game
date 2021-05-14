@@ -18,7 +18,7 @@ public class PlayerInventory : MonoBehaviour
             fullInventory.SetActive(false);
             GameManager.instance.inventoryOpen = secondInventory.activeSelf;
 
-            OtherInventoryDisplay.inventory = otherInventory;
+            OtherInventoryDisplay.Inventory = otherInventory;
             OtherInventoryDisplay.UpdateInventory();
             playerInventoryDisplay2.UpdateInventory();
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class RangeDetection : MonoBehaviour
 {
@@ -37,6 +38,19 @@ public class RangeDetection : MonoBehaviour
             else return collider2D.transform.position;
         }
         return transform.position;
+    }
+
+    public Collider2D[] DetectRangeColliders()
+    {
+        Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(DetectionBase.position, radius, layerMasks);
+        List<Collider2D> filterCollider2ds = new List<Collider2D>();
+        foreach (var collider2D in collider2Ds)
+        {
+            if (collider2D.transform == transform) continue;
+            else if (collider2D.transform.parent == transform) continue;
+            else filterCollider2ds.Add(collider2D);
+        }
+        return filterCollider2ds.ToArray();
     }
 
     void OnDrawGizmosSelected()

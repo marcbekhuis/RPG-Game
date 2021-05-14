@@ -25,6 +25,11 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void ClearInventoryChanged()
+    {
+        inventoryChanged = delegate { };
+    }
+
     public void AddItem(Item newItem)
     {
         int amountToAdd = newItem.amount;

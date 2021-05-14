@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] [Min(0)] private float attackCooldown = 1;
     [SerializeField] [Min(0)] private float movementCooldown = 1;
+    [SerializeField] private OpenStorage openStorage;
 
     private IMovement movement;
     new private Camera camera;
@@ -46,7 +47,10 @@ public class PlayerController : MonoBehaviour
         {
             movement.Move(Vector2.zero);
         }
-        if (InputManager.instance.GetKeyDown(InputManager.Actions.OpenInventory)) toggleInventory(null);
+        if (InputManager.instance.GetKeyDown(InputManager.Actions.OpenInventory))
+        {
+            toggleInventory(openStorage.StorageInRange());
+        }
     }
 
     private Vector2 MovementInput()

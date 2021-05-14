@@ -51,6 +51,8 @@ GameObject:
   - component: {fileID: 3056311029010151995}
   - component: {fileID: 3056311029010151996}
   - component: {fileID: 3056311029010151987}
+  - component: {fileID: 3013319674613743295}
+  - component: {fileID: 7282350721138662728}
   m_Layer: 8
   m_Name: Minotaur
   m_TagString: Untagged
@@ -72,6 +74,7 @@ Transform:
   - {fileID: 3056311030765375079}
   - {fileID: 3056311028802205519}
   - {fileID: 3056311029300129991}
+  - {fileID: 2595527307201047748}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -261,6 +264,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiController: {fileID: 0}
+  layerMaskOnDead:
+    serializedVersion: 2
+    m_Bits: 512
+  OnDead:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7282350721138662728}
+        m_TargetAssemblyTypeName: InventoryRandomItems, Assembly-CSharp
+        m_MethodName: AddItems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3056311029010151987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +299,41 @@ MonoBehaviour:
   staminaRegenWalk: 0.5
   staminaConsume: 1
   stamina: 0
+--- !u!114 &3013319674613743295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056311029010151968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f58390546642b438053d5f21d8a394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots: 10
+  startingItems: []
+  items: []
+--- !u!114 &7282350721138662728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056311029010151968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e10bf43a901de7d4db85e219a5685a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomItems:
+  - item: {fileID: 11400000, guid: 7a85ae1f88a22d74882a0cba53dd3de8, type: 2}
+    minAmount: 2
+    maxAmount: 4
+  - item: {fileID: 11400000, guid: 25ffdec9f27ddc14580e3534c03fc2ed, type: 2}
+    minAmount: 0
+    maxAmount: 2
+  inventory: {fileID: 3013319674613743295}
 --- !u!1 &3056311029063193725
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +599,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5845790036535221050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2595527307201047748}
+  - component: {fileID: 7770327176256476880}
+  m_Layer: 8
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2595527307201047748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5845790036535221050}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3056311029010151992}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &7770327176256476880
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5845790036535221050}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.12}
+  serializedVersion: 2
+  m_Radius: 0.13
 --- !u!1001 &5762834140766009881
 PrefabInstance:
   m_ObjectHideFlags: 0

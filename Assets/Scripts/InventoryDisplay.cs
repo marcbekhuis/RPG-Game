@@ -9,10 +9,21 @@ public class InventoryDisplay : MonoBehaviour
     [SerializeField] public Transform inventoryHolder;
     [SerializeField] private GameObject itemPrefab;
 
+    public Inventory Inventory 
+    {
+        get { return inventory; }
+        set {
+            if(inventory) inventory.ClearInventoryChanged();
+            inventory = value;
+            inventory.inventoryChanged += UpdateInventory;
+        }
+    }
+
+
     // Start is called before the first frame update
     void Awake()
     {
-        inventory.inventoryChanged += UpdateInventory;
+        if(inventory)inventory.inventoryChanged += UpdateInventory;
     }
 
     public void UpdateInventory()

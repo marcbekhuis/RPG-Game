@@ -99,12 +99,13 @@ public class LandscapeGenerator : MonoBehaviour
     public IEnumerator GenerateBorderWall(Vector2Int mapSize)
     {
         System.DateTime loopStartTime = System.DateTime.Now;
+        float solidWall = wallWidth / 3f;
         for (int x = 0; x < mapSize.x; x++)
         {
             for (int y = 0, i = 0; y < wallWidth; y++, i++)
             {
-                int random = Random.Range(0, i + 1);
-                if (random == i || i < wallWidth / 3f) mapData.landscapeTiles[x, y].biome = wallBiome;
+                int random = Random.Range((int)solidWall, i + 1);
+                if (random == i || i < solidWall) mapData.landscapeTiles[x, y].biome = wallBiome;
                 if ((System.DateTime.Now - loopStartTime).TotalSeconds >= 1)
                 {
                     GameGenerator.updateLoadText.Invoke("Progress generating wall at tile: X=" + x + " Y=" + y);
@@ -118,8 +119,8 @@ public class LandscapeGenerator : MonoBehaviour
         {
             for (int x = 0, i = 0; x < wallWidth; x++, i++)
             {
-                int random = Random.Range(0, i + 1);
-                if (random == i || i < wallWidth / 3f) mapData.landscapeTiles[x, y].biome = wallBiome;
+                int random = Random.Range((int)solidWall, i + 1);
+                if (random == i || i < solidWall) mapData.landscapeTiles[x, y].biome = wallBiome;
                 if ((System.DateTime.Now - loopStartTime).TotalSeconds >= 1)
                 {
                     GameGenerator.updateLoadText.Invoke("Progress generating wall at tile: X=" + x + " Y=" + y);
@@ -133,8 +134,8 @@ public class LandscapeGenerator : MonoBehaviour
         {
             for (int y = mapSize.y - 1, i = 0; y > mapSize.y - wallWidth - 1; y--, i++)
             {
-                int random = Random.Range(0, i + 1);
-                if (random == i || i < wallWidth / 3f) mapData.landscapeTiles[x, y].biome = wallBiome;
+                int random = Random.Range((int)solidWall, i + 1);
+                if (random == i || i < solidWall) mapData.landscapeTiles[x, y].biome = wallBiome;
                 if ((System.DateTime.Now - loopStartTime).TotalSeconds >= 1)
                 {
                     GameGenerator.updateLoadText.Invoke("Progress generating wall at tile: X=" + x + " Y=" + y);
@@ -148,8 +149,8 @@ public class LandscapeGenerator : MonoBehaviour
         {
             for (int x = mapSize.x - 1, i = 0; x > mapSize.x - wallWidth - 1; x--, i++)
             {
-                int random = Random.Range(0, i + 1);
-                if (random == i || i < wallWidth / 3f) mapData.landscapeTiles[x, y].biome = wallBiome;
+                int random = Random.Range((int)solidWall, i + 1);
+                if (random == i || i < solidWall) mapData.landscapeTiles[x, y].biome = wallBiome;
                 if ((System.DateTime.Now - loopStartTime).TotalSeconds >= 1)
                 {
                     GameGenerator.updateLoadText.Invoke("Progress generating wall at tile: X=" + x + " Y=" + y);
