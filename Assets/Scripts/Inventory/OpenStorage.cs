@@ -7,9 +7,9 @@ public class OpenStorage : MonoBehaviour
 {
     [SerializeField] private RangeDetection rangeDetection;
     [SerializeField] private GameObject hotkeyCanvas;
-    [SerializeField] private string textBeforeHotkey;
-    [SerializeField] private string textAfterHotkey;
-    [SerializeField] private InputManager.Actions hotkey;
+    [SerializeField] private string textBeforeAction;
+    [SerializeField] private string textAfterAction;
+    [SerializeField] private InputActions action;
 
     private Dictionary<Inventory,GameObject> hotkeyCanvasses = new Dictionary<Inventory, GameObject>();
 
@@ -25,7 +25,7 @@ public class OpenStorage : MonoBehaviour
             }
             GameObject canvas = Instantiate(hotkeyCanvas, inventory.gameObject.transform.position, new Quaternion(0, 0, 0, 0));
             hotkeyCanvasses.Add(inventory, canvas);
-            canvas.GetComponentInChildren<HotkeyHint>().SetText(textBeforeHotkey, textAfterHotkey, hotkey);
+            canvas.GetComponentInChildren<HotkeyHint>().SetText(textBeforeAction, textAfterAction, action);
         }
         while (hotkeyCanvassesInRange.Count > 0)
         {

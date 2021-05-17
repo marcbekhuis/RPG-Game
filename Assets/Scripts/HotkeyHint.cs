@@ -8,9 +8,9 @@ public class HotkeyHint : MonoBehaviour
 {
     private Text text;
 
-    public void SetText(string textBeforeHotkey, string textAfterHotkey, InputManager.Actions hotkey)
+    public void SetText(string textBeforeAction, string textAfterAction, InputActions action)
     {
         if (!text) text = GetComponent<Text>();
-        text.text = textBeforeHotkey + InputManager.instance.keybinds[hotkey].ToString() + textAfterHotkey;
+        text.text = textBeforeAction + InputManager.instance.inputSystemKeyboard.Keybinds[action].ToString() + textAfterAction;
     }
 }

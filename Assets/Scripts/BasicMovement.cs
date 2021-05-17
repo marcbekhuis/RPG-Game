@@ -22,15 +22,14 @@ public class BasicMovement : MonoBehaviour, IMovement
         if (sprint && staminaSystem.HasStamina())
         {
             rigidbody.velocity = direction * sprintSpeed;
-            if(direction != Vector2.zero) staminaSystem.RemoveStamina();
+            if (direction != Vector2.zero) staminaSystem.RemoveStamina();
         }
         else
         {
             rigidbody.velocity = direction * walkSpeed;
-            if(direction == Vector2.zero) staminaSystem.AddStaminaIdle();
+            if (direction == Vector2.zero) staminaSystem.AddStaminaIdle();
             else staminaSystem.AddStaminaWalk();
         }
-
     }
 
     public void Frozen(bool active)

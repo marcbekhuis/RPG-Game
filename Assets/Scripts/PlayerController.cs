@@ -35,19 +35,19 @@ public class PlayerController : MonoBehaviour
         }
         if (!GameManager.instance.inventoryOpen)
         {
-            if (InputManager.instance.GetKeyDown(InputManager.Actions.UseTool) && Time.timeSinceLevelLoad > attackCooldownTime)
+            if (InputManager.instance.GetKeyDown(InputActions.UseTool) && Time.timeSinceLevelLoad > attackCooldownTime)
             {
                 attack(camera.ViewportToWorldPoint(Input.mousePosition));
                 attackCooldownTime = Time.timeSinceLevelLoad + attackCooldown;
                 movementCooldownTime = Time.timeSinceLevelLoad + movementCooldown;
             }
-            if (Time.timeSinceLevelLoad > movementCooldownTime) movement.Move(MovementInput(), InputManager.instance.GetKey(InputManager.Actions.Sprint));
+            if (Time.timeSinceLevelLoad > movementCooldownTime) movement.Move(MovementInput(), InputManager.instance.GetKey(InputActions.Sprint));
         }
         else
         {
             movement.Move(Vector2.zero);
         }
-        if (InputManager.instance.GetKeyDown(InputManager.Actions.OpenInventory))
+        if (InputManager.instance.GetKeyDown(InputActions.OpenInventory))
         {
             toggleInventory(openStorage.StorageInRange());
         }
@@ -55,12 +55,8 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 MovementInput()
     {
-        float vertical = 0;
-        float horizontal = 0;
-        if (InputManager.instance.GetKey(InputManager.Actions.MoveForward)) vertical += 1;
-        if (InputManager.instance.GetKey(InputManager.Actions.MoveBackward)) vertical -= 1;
-        if (InputManager.instance.GetKey(InputManager.Actions.MoveRight)) horizontal += 1;
-        if (InputManager.instance.GetKey(InputManager.Actions.MoveLeft)) horizontal -= 1;
+        float vertical = InputManager.instance.GetAxis(InputAxis.Vertical);
+        float horizontal = InputManager.instance.GetAxis(InputAxis.Horizontal);
 
         return new Vector2(horizontal, vertical).normalized;
     }

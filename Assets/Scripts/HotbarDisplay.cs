@@ -20,15 +20,15 @@ public class HotbarDisplay : MonoBehaviour
 
     private void Update()
     {
-        if (InputManager.instance.GetKeyDown(InputManager.Actions.HotbarSlot1)) SelectSlot(1);
-        if (InputManager.instance.GetKeyDown(InputManager.Actions.HotbarSlot2)) SelectSlot(2);
-        if (InputManager.instance.GetKeyDown(InputManager.Actions.HotbarSlot3)) SelectSlot(3);
-        if (InputManager.instance.GetKeyDown(InputManager.Actions.HotbarSlot4)) SelectSlot(4);
-        if (InputManager.instance.GetKeyDown(InputManager.Actions.HotbarSlot5)) SelectSlot(5);
-        if (InputManager.instance.GetKeyDown(InputManager.Actions.HotbarSlot6)) SelectSlot(6);
-        if (InputManager.instance.GetKeyDown(InputManager.Actions.HotbarSlot7)) SelectSlot(7);
-        if (InputManager.instance.GetKeyDown(InputManager.Actions.HotbarSlot8)) SelectSlot(8);
-        if (InputManager.instance.GetKeyDown(InputManager.Actions.HotbarSlot9)) SelectSlot(9);
+        if (InputManager.instance.GetKeyDown(InputActions.HotbarSlot1)) SelectSlot(1);
+        if (InputManager.instance.GetKeyDown(InputActions.HotbarSlot2)) SelectSlot(2);
+        if (InputManager.instance.GetKeyDown(InputActions.HotbarSlot3)) SelectSlot(3);
+        if (InputManager.instance.GetKeyDown(InputActions.HotbarSlot4)) SelectSlot(4);
+        if (InputManager.instance.GetKeyDown(InputActions.HotbarSlot5)) SelectSlot(5);
+        if (InputManager.instance.GetKeyDown(InputActions.HotbarSlot6)) SelectSlot(6);
+        if (InputManager.instance.GetKeyDown(InputActions.HotbarSlot7)) SelectSlot(7);
+        if (InputManager.instance.GetKeyDown(InputActions.HotbarSlot8)) SelectSlot(8);
+        if (InputManager.instance.GetKeyDown(InputActions.HotbarSlot9)) SelectSlot(9);
     }
 
     public void UpdateInventory()

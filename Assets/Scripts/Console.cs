@@ -22,7 +22,7 @@ public class Console : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (InputManager.instance.GetKeyDown(InputManager.Actions.OpenConsole))
+        if (InputManager.instance.GetKeyDown(InputActions.OpenConsole))
         {
             if (console.activeSelf) console.SetActive(false);
             else

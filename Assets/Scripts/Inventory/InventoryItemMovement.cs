@@ -15,7 +15,7 @@ public class InventoryItemMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (InputManager.instance.GetKeyUp(InputManager.Actions.MoveItem))
+        if (InputManager.instance.GetKeyUp(InputActions.MoveItem))
         {
             if (!hoveredItem) return;
             Destroy(itemCanvas);
@@ -38,7 +38,7 @@ public class InventoryItemMovement : MonoBehaviour
                 itemInventoryDisplay.inventory.RemoveItemAtIndex(itemIndex);
             }
         }
-        else if (InputManager.instance.GetKey(InputManager.Actions.MoveItem))
+        else if (InputManager.instance.GetKey(InputActions.MoveItem))
         {
             if (!hoveredItem) return;
             if (!itemCanvas) {
