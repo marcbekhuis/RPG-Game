@@ -278,7 +278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &106470045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,14 +293,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnEntries:
   - prefab: {fileID: 3056311029010151968, guid: f2d4e27dff02d5e4d9f2211d34bccf0f, type: 3}
-    minRange: 5
-    maxRange: 20
-    earlyTime: 0
-    lateTime: 24
+    minRange: 10
+    maxRange: 40
+    earlyTime: 6
+    lateTime: 22
     maxSpawns: 10
-    timeBetweenSpawns: 10
+    timeBetweenSpawns: 40
     spawnBiomes:
     - {fileID: 11400000, guid: 855b5227f8b994743a9bcb91e47d49a6, type: 2}
+    spawns: 0
+    nextSpawnTime: 0
+  - prefab: {fileID: 3056311029010151968, guid: a96a48f0b03d86c42b1f33336b8d8e9b, type: 3}
+    minRange: 10
+    maxRange: 40
+    earlyTime: 20
+    lateTime: 4
+    maxSpawns: 10
+    timeBetweenSpawns: 40
+    spawnBiomes:
+    - {fileID: 11400000, guid: e4a61ad67ea96a74c8daf7e1f61e25f9, type: 2}
     spawns: 0
     nextSpawnTime: 0
   spawnPosition: {fileID: 2047033476}
@@ -318,7 +329,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &116059636
 GameObject:
@@ -1040,7 +1051,7 @@ RectTransform:
   - {fileID: 1961180742}
   - {fileID: 135151736}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1667,211 +1678,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryDisplays:
   - {fileID: 1633247443}
---- !u!1 &292535058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 292535060}
-  - component: {fileID: 292535059}
-  - component: {fileID: 292535061}
-  m_Layer: 0
-  m_Name: Point Light 2D
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &292535059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292535058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.766
-  m_Color: {r: 0.764151, g: 0.6086097, b: 0.24991095, a: 1}
-  m_Intensity: 1
-  m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0
-  m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.2
-  m_PointLightOuterRadius: 4.24
-  m_PointLightDistance: 3
-  m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
---- !u!4 &292535060
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292535058}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.469, y: 2.131, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &292535061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292535058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac6923a18c26ee245bc54f02147a52d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outerRadius:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 4.4
-      inSlope: -2.0000029
-      outSlope: -2.0000029
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.1
-      value: 4.2
-      inSlope: 0.27651146
-      outSlope: 0.27651146
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.22497967
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.2
-      value: 4.3
-      inSlope: 0.35045448
-      outSlope: 0.35045448
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.4
-      value: 4
-      inSlope: 0.37728673
-      outSlope: 0.37728673
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.7
-      value: 4.3
-      inSlope: 0.16666657
-      outSlope: 0.16666657
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 4.1
-      inSlope: 0.4166665
-      outSlope: 0.4166665
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1.2
-      value: 4.4
-      inSlope: 1.5000006
-      outSlope: 1.5000006
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  brightness:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: -0.13837348
-      outSlope: -0.13837348
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.111762896
-      value: 0.984535
-      inSlope: -0.007869426
-      outSlope: -0.007869426
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.3242688
-      value: 1.0105956
-      inSlope: 0.026971295
-      outSlope: 0.026971295
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.6407237
-      value: 0.9888576
-      inSlope: -0.018839326
-      outSlope: -0.018839326
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0.031013383
-      outSlope: 0.031013383
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!224 &358414758 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7319336403810098287, guid: 1f12f6ffe6968784b880054bd1c770ff, type: 3}
@@ -2603,7 +2409,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &706372424
 MonoBehaviour:
@@ -5745,6 +5551,7 @@ GameObject:
   - component: {fileID: 1601598754}
   - component: {fileID: 1601598757}
   - component: {fileID: 1601598756}
+  - component: {fileID: 1601598758}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -5783,7 +5590,7 @@ Transform:
   - {fileID: 875824279}
   - {fileID: 1587779950}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1601598743
 MonoBehaviour:
@@ -5812,8 +5619,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 914ca652d0f23e341bb2ff86b43a3818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 2
-  sprintSpeed: 6
+  walkSpeed: 1.5
+  sprintSpeed: 3
+  biomeSpeeds:
+  - biome: {fileID: 11400000, guid: 82dc3f58b8e101840b83b5d0cfb1bd4d, type: 2}
+    speedMultiplier: 0.5
 --- !u!50 &1601598745
 Rigidbody2D:
   serializedVersion: 4
@@ -5900,6 +5710,7 @@ MonoBehaviour:
   healthSystem: {fileID: 1601598747}
   playerDeath: {fileID: 1601598750}
   meleeAttack: {fileID: 1601598746}
+  testAttack: {fileID: 1601598758}
   playerController: {fileID: 1601598743}
   staminaDisplay: {fileID: 1601598751}
   staminaSystem: {fileID: 1601598752}
@@ -6035,9 +5846,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rangeDetection: {fileID: 1601598756}
   hotkeyCanvas: {fileID: 3734957941747988397, guid: 648ce8ad00949454e8ed0ee0f7b8afce, type: 3}
-  textBeforeAction: 
-  textAfterAction: 
+  textBeforeAction: Press "
+  textAfterAction: '" to open inventory'
   action: 8
+--- !u!114 &1601598758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601598740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38943531c2cdd7142894e2662c432adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arc: 90
+  numberProjectiles: 1
+  projectilePrefab: {fileID: 6275068580151102690, guid: 9b89754125213c9438175f2938e27f39, type: 3}
+  projectileBase: {fileID: 1587779950}
 --- !u!1 &1633247438
 GameObject:
   m_ObjectHideFlags: 0
@@ -6944,7 +6771,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1889408660
 MonoBehaviour:
@@ -7027,38 +6854,38 @@ MonoBehaviour:
     biomes:
     - {fileID: 11400000, guid: 802359305580bec44bd63291bd6860fa, type: 2}
     - {fileID: 11400000, guid: 855b5227f8b994743a9bcb91e47d49a6, type: 2}
-    spawnChange: 10
+    spawnChange: 20
   - resource: {fileID: 11400000, guid: 54af3b1976c1b91419ee58d127e8d659, type: 2}
     biomes:
     - {fileID: 11400000, guid: 802359305580bec44bd63291bd6860fa, type: 2}
     - {fileID: 11400000, guid: 855b5227f8b994743a9bcb91e47d49a6, type: 2}
-    spawnChange: 10
+    spawnChange: 20
   - resource: {fileID: 11400000, guid: 6c969f79c18ff174a91dd9ce152ca95c, type: 2}
     biomes:
     - {fileID: 11400000, guid: 802359305580bec44bd63291bd6860fa, type: 2}
     - {fileID: 11400000, guid: 855b5227f8b994743a9bcb91e47d49a6, type: 2}
-    spawnChange: 10
+    spawnChange: 20
   - resource: {fileID: 11400000, guid: 0ff76ca694ca03849b898f2aa8ec8122, type: 2}
     biomes:
     - {fileID: 11400000, guid: 802359305580bec44bd63291bd6860fa, type: 2}
     - {fileID: 11400000, guid: 855b5227f8b994743a9bcb91e47d49a6, type: 2}
-    spawnChange: 10
+    spawnChange: 20
   - resource: {fileID: 11400000, guid: 19f9f2c5c63743e418dd21d95f343842, type: 2}
     biomes:
     - {fileID: 11400000, guid: 855b5227f8b994743a9bcb91e47d49a6, type: 2}
-    spawnChange: 20
+    spawnChange: 40
   - resource: {fileID: 11400000, guid: 3e378d3ed4fe1214aa03dbc590b217cd, type: 2}
     biomes:
     - {fileID: 11400000, guid: 855b5227f8b994743a9bcb91e47d49a6, type: 2}
-    spawnChange: 20
+    spawnChange: 40
   - resource: {fileID: 11400000, guid: 02e04e80737a3394c8f654d4167fdd82, type: 2}
     biomes:
     - {fileID: 11400000, guid: 855b5227f8b994743a9bcb91e47d49a6, type: 2}
-    spawnChange: 20
+    spawnChange: 40
   - resource: {fileID: 11400000, guid: 2bf36980e56e790408b27383d44148b4, type: 2}
     biomes:
     - {fileID: 11400000, guid: 855b5227f8b994743a9bcb91e47d49a6, type: 2}
-    spawnChange: 20
+    spawnChange: 40
   resourceLargeTilemap: {fileID: 805165484}
   resourceLargeShadowTilemap: {fileID: 574925627}
   resourceSmallShadowTilemap: {fileID: 908435210}

@@ -67,14 +67,16 @@ public class ResourceGenerator : MonoBehaviour
         int numberOfResources = resourcesFilteredByBiome[biome].Count;
         if (numberOfResources <= 0) return;
         int resourceIndex = Random.Range(0, numberOfResources);
+        int random = Random.Range(0, 100 * numberOfResources);
+        int startValue = 0;
         for (int i = 0; i < numberOfResources; i++)
         {
-            int change = Random.Range(0, 100);
-            if(change < resourcesFilteredByBiome[biome][resourceIndex].spawnChange)
+            if(random < startValue + resourcesFilteredByBiome[biome][resourceIndex].spawnChange)
             {
                 mapData.resources[x, y] = new Resource(resourcesFilteredByBiome[biome][resourceIndex].resource);
                 return;
             }
+            startValue = startValue + resourcesFilteredByBiome[biome][resourceIndex].spawnChange;
             if (resourceIndex < numberOfResources - 1) resourceIndex++;
             else resourceIndex = 0;
         }
@@ -126,8 +128,8 @@ public class ResourceGenerator : MonoBehaviour
             resourceShadowTilemap = resourceSmallShadowTilemap;
         }
 
-        Vector3 positionOffset = new Vector3(Random.Range(-0.4f, 0.4f), Random.Range(-0.4f, 0.4f), 0);
-        Vector3 SpriteSize = Vector3.one * Random.Range(0.5f, 1);
+        Vector3 positionOffset = new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0);
+        Vector3 SpriteSize = Vector3.one * Random.Range(0.7f, 1);
         resourceTilemap.SetTile(new Vector3Int(x, y, 0), resource.information.tile);
         resourceTilemap.SetTransformMatrix(new Vector3Int(x, y, 0), Matrix4x4.TRS(positionOffset, Quaternion.Euler(0, 0, 0), SpriteSize));
         resourceShadowTilemap.SetTile(new Vector3Int(x, y, 0), resource.information.tile);
