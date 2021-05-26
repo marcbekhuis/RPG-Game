@@ -1,47 +1,106 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class InventoryDisplay : MonoBehaviour
 {
-    [SerializeField] public Inventory inventory;
-    [SerializeField] public Transform inventoryHolder;
-    [SerializeField] private GameObject itemPrefab;
+    [Header("References")]
+    [SerializeField] protected GameObject itemContainerPrefab;
+    public Inventory inventory;
+    [SerializeField] protected RectTransform itemContainerHolder;
 
-    public Inventory Inventory 
+    [HideInInspector] public List<ItemContainer> itemContainers = new List<ItemContainer>();
+
+    public Inventory Inventory
     {
-        get { return inventory; }
-        set {
-            if(inventory) inventory.ClearInventoryChanged();
+        get => inventory;
+        set
+        {
+            if(inventory) inventory.OnInventoryChanged -= UpdateDisplay;
             inventory = value;
-            inventory.inventoryChanged += UpdateInventory;
+            if (inventory) inventory.OnInventoryChanged += UpdateDisplay;
         }
     }
-
 
     // Start is called before the first frame update
     void Awake()
     {
-        if(inventory)inventory.inventoryChanged += UpdateInventory;
+        if(inventory) inventory.OnInventoryChanged += UpdateDisplay;
     }
 
-    public void UpdateInventory()
+    public virtual void UpdateDisplay()
     {
-        foreach (Transform child in inventoryHolder)
-        {
-            Destroy(child.gameObject);
-        }
+        CreateContainers();
+        RemoveContainers();
+        UpdateContainers();
+    }
 
-        if (!GameManager.instance.inventoryOpen) return;
-
-        foreach (var item in inventory.items)
+    public void UpdateContainers()
+    {
+        for (int i = 0; i < itemContainers.Count; i++)
         {
-            GameObject newItem = Instantiate(itemPrefab, inventoryHolder);
-            newItem.transform.GetChild(0).GetComponent<Image>().sprite = item.itemInformation.sprite;
-            newItem.name = "Inventory Item " + item.itemInformation.name;
-            if (item.itemInformation.maxStackSize <= 1) newItem.transform.GetChild(1).gameObject.SetActive(false);
-            else newItem.transform.GetChild(1).GetComponent<Text>().text = item.amount.ToString();
+            if (i < inventory.items.Count)
+            {
+                itemContainers[i].inventory = inventory;
+                itemContainers[i].AddItem(inventory.items[i], i);
+            }
+            else itemContainers[i].RemoveItem();
         }
+    }
+
+    public void CreateContainers()
+    {
+        for (int i = itemContainers.Count; i < inventory.Slots; i++)
+        {
+            ItemContainer itemContainer = Instantiate(itemContainerPrefab, itemContainerHolder).GetComponent<ItemContainer>();
+            itemContainer.Setup(null, i, inventory, this);
+            itemContainers.Add(itemContainer);
+        }
+    }
+
+    public void RemoveContainers()
+    {
+        while(itemContainers.Count > inventory.Slots)
+        {
+            Destroy(itemContainers[itemContainers.Count - 1].gameObject);
+            itemContainers.RemoveAt(itemContainers.Count - 1);
+        }
+    }
+
+    public bool OnContainer(Vector2 position)
+    {
+        Vector2 halfSize = itemContainerHolder.rect.size * 0.5f * CanvasScaleHelper.instance.GetCanvasScale();
+        Vector2 centerPosition = itemContainerHolder.position;
+        float highPosition = centerPosition.y + halfSize.y;
+        float lowPosition = centerPosition.y - halfSize.y;
+        float leftPosition = centerPosition.x - halfSize.x;
+        float rightPosition = centerPosition.x + halfSize.x;
+        if (position.x < rightPosition && position.x > leftPosition && position.y < highPosition && position.y > lowPosition) return true;
+        else return false;
+    }
+
+    public bool OnItemContainer(Vector2 position, out ItemContainer itemContainer)
+    {
+        foreach (var itemContainerLoop in itemContainers)
+        {
+            if (!itemContainerLoop.OnContainer(position)) continue;
+            itemContainer = itemContainerLoop;
+            return true;
+        }
+        itemContainer = default;
+        return false;
+    }
+
+    public bool OnItemContainerWithItem(Vector2 position, out ItemContainer itemContainer)
+    {
+        foreach (var itemContainerLoop in itemContainers)
+        {
+            if (!itemContainerLoop.HasItem()) continue;
+            if (!itemContainerLoop.OnContainer(position)) continue;
+            itemContainer = itemContainerLoop;
+            return true;
+        }
+        itemContainer = default;
+        return false;
     }
 }

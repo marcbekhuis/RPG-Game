@@ -6,7 +6,7 @@ using System;
 [Serializable]
 public class RandomItem
 {
-    public ItemInformation item;
+    public Item item;
     public int minAmount = 0;
     public int maxAmount = 3;
 }

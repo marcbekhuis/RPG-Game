@@ -16,12 +16,20 @@ public class ProjectileAttack : MonoBehaviour, IAttack
         owner = this.gameObject;
     }
 
+    public void SetSettings(float arc, int numberProjectiles, GameObject projectilePrefab)
+    {
+        this.arc = arc;
+        this.numberProjectiles = numberProjectiles;
+        this.projectilePrefab = projectilePrefab;
+    }
+
     public void AttackCall(Vector2 mousePosition)
     {
         float distanceBetweenProjectiles = arc / (numberProjectiles + 1);
         float halfArc = arc / 2f;
         Vector2 direction = mousePosition - (Vector2)projectileBase.position;
         float centerAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Debug.LogError(centerAngle);
         float startAngle = centerAngle - halfArc;
 
         Debug.DrawLine(projectileBase.position, mousePosition, Color.blue, 1);

@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 876a22d21b6ace245ba3f390c6a94144, type: 3}
+  m_Script: {fileID: 11500000, guid: aa5f4f2dee33d42479c10457786b3556, type: 3}
   m_Name: Coin
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 3676a0b185daeb54fb257f700ba7ead4, type: 3}
-  maxStackSize: 30
-  description: Coins are the common currency in this world.
+  icon: {fileID: 21300000, guid: 3676a0b185daeb54fb257f700ba7ead4, type: 3}
+  description: The most commonly use payment item.
+  maxStackSize: 10
+  amount: 0

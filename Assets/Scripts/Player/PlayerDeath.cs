@@ -17,6 +17,6 @@ public class PlayerDeath : MonoBehaviour
         {
             deactivateGameObject.SetActive(false);
         }
-        GameManager.instance.playerDied = true;
+        GameManager.instance.gameEnd = true;
     }
 }

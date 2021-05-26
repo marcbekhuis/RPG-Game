@@ -10,7 +10,7 @@ public class InventoryRandomItems : MonoBehaviour
     [System.Serializable]
     public class Entry 
     {
-        public ItemInformation item;
+        public Item item;
         [Min(0)] public int minAmount = 0;
         [Min(0)] public int maxAmount = 1;
     }
@@ -19,7 +19,7 @@ public class InventoryRandomItems : MonoBehaviour
     {
         foreach (var randomItem in randomItems)
         {
-            inventory.AddItem(new Item(randomItem.item, Random.Range(randomItem.minAmount, randomItem.maxAmount + 1)));
+            inventory.AddItem(randomItem.item.Create(randomItem.item, inventory, Random.Range(randomItem.minAmount, randomItem.maxAmount + 1)));
         }
     }
 }

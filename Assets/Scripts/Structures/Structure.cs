@@ -3,12 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Structure
+[CreateAssetMenu(fileName = "New structure", menuName = "Structures/Structure")]
+public class Structure : ScriptableObject
 {
-    public StructureInformation information;
+    public TileBase tile;
 
-    public Structure(StructureInformation information)
+    public Structure(Structure structure)
     {
-        this.information = information;
+        this.tile = structure.tile;
+    }
+
+    public Structure()
+    {
+
+    }
+
+    public virtual Structure Create(Structure structure)
+    {
+        return new Structure(structure);
     }
 }

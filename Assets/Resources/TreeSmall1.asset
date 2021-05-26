@@ -14,4 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 58bd0ecdb354a214fb597fca7bdbc684, type: 2}
   size: 2
-  drops: []
+  drops:
+  - item: {fileID: 11400000, guid: d62c6c9d64a34584587ccefb888b37e9, type: 2}
+    minAmount: 2
+    maxAmount: 5
+  - item: {fileID: 11400000, guid: 909bc240bdc9ee040b05e028b090e75f, type: 2}
+    minAmount: 0
+    maxAmount: 3

@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public bool playerDied = false;
+    public bool gameEnd = false;
     public bool GameLoading = true;
     public bool inventoryOpen = false;
     public bool consoleOpen = false;
@@ -15,5 +15,10 @@ public class GameManager : MonoBehaviour
     {
         if (instance) Destroy(this);
         else instance = this;
+    }
+
+    public bool GamePaused()
+    {
+        return gameEnd || GameLoading || consoleOpen;
     }
 }

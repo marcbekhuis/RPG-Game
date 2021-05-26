@@ -4,14 +4,30 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public int slots = 1;
-    public Item[] startingItems;
-    public List<Item> items;
+    [SerializeField] private int slots = 10;
+    [Tooltip("The items the player starts with")][SerializeField] private List<StartingItem> startingItems = new List<StartingItem>();
+
+    [HideInInspector] public List<Item> items = new List<Item>();
 
     public delegate void InventoryChanged();
-    public event InventoryChanged inventoryChanged = delegate { };
+    public event InventoryChanged OnInventoryChanged = delegate { };
 
-    // Start is called before the first frame update
+    public int Slots {
+        get => slots;
+        set 
+        {
+            slots = value;
+            OnInventoryChanged();
+        }
+    }
+
+    [System.Serializable]
+    public class StartingItem 
+    {
+        public Item item;
+        [Min(1)]public int amount = 1;
+    }
+
     void Start()
     {
         AddStartingItems();
@@ -21,62 +37,152 @@ public class Inventory : MonoBehaviour
     {
         foreach (var startingItem in startingItems)
         {
-            AddItem(startingItem);
+            AddItem(startingItem.item.Create(startingItem.item, this, startingItem.amount));
         }
     }
 
-    public void ClearInventoryChanged()
+    public void AddItem(Item item)
     {
-        inventoryChanged = delegate { };
-    }
-
-    public void AddItem(Item newItem)
-    {
-        int amountToAdd = newItem.amount;
-        foreach (var item in items)
+        int amountToAdd = item.amount;
+        foreach (var loopItem in items)
         {
-            if (item.itemInformation != newItem.itemInformation) continue;
-            if (item.amount < item.itemInformation.maxStackSize)
+            if (loopItem.name != item.name) continue;
+            if (loopItem.amount < loopItem.maxStackSize)
             {
-                int stackAmountAvailable = item.itemInformation.maxStackSize - item.amount;
+                int stackAmountAvailable = loopItem.maxStackSize - loopItem.amount;
                 int amountCantBeAdded = amountToAdd - stackAmountAvailable;
                 int amountCanBeAdded = amountToAdd;
                 if (amountCantBeAdded > 0) amountCanBeAdded = amountToAdd - amountCantBeAdded;
                 amountToAdd = amountCantBeAdded;
-                item.amount += amountCanBeAdded;
+                loopItem.amount += amountCanBeAdded;
             }
         }
-        if (amountToAdd <= 0) return;
-        for (int i = amountToAdd; i > 0; i -= newItem.itemInformation.maxStackSize)
+        if (amountToAdd > 0)
         {
-            if (items.Count < slots)
+            for (int i = amountToAdd; i > 0; i -= item.maxStackSize)
             {
-                if(i >= newItem.itemInformation.maxStackSize) items.Add(new Item(newItem.itemInformation, newItem.itemInformation.maxStackSize));
-                else items.Add(new Item(newItem.itemInformation, i));
+                if (items.Count < slots)
+                {
+                    if (i >= item.maxStackSize) items.Add(item.Create(item, this, item.maxStackSize));
+                    else items.Add(item.Create(item, this, i));
+                }
             }
         }
-        inventoryChanged();
+        OnInventoryChanged();
     }
 
-    public void AddItem(Item newItem, int index)
+    public void AddItemExact(Item item)
     {
-        items.Insert(index, newItem);
-        inventoryChanged();
+        item.inventory = this;
+        items.Add(item);
+        OnInventoryChanged();
     }
 
-    public void RemoveItemAtIndex(int index)
+    public void AddItemAtIndex(Item item, int index)
+    {
+        item.inventory = this;
+        items.Insert(index, item);
+        OnInventoryChanged();
+    }
+
+    public bool HasItemExact(Item item)
+    {
+        return items.Contains(item);
+    }
+
+    public bool HasItem(Item item)
+    {
+        foreach (var loopItem in items)
+        {
+            if (loopItem.name == item.name) return true;
+        }
+        return false;
+    }
+
+    public bool HasSpace()
+    {
+        return items.Count < slots;
+    }
+
+    public int GetItemAmount(Item item)
+    {
+        int amount = 0;
+        foreach (var loopItem in items)
+        {
+            if (loopItem.name == item.name) amount += loopItem.amount;
+        }
+        return amount;
+    }
+
+    public void RemoveItemAt(int index)
     {
         items.RemoveAt(index);
-        inventoryChanged();
+        OnInventoryChanged();
     }
 
-    public void MoveItemInInventory(int currentIndex, int NewIndex)
+    public void RemoveItem(Item item)
     {
-        Item movingItem = items[currentIndex];
-        items.Remove(movingItem);
-        if (NewIndex > items.Count - 1) items.Add(movingItem);
-        else items.Insert(NewIndex, movingItem);
-        Debug.LogError("Moved item");
-        inventoryChanged();
+        items.Remove(item);
+        OnInventoryChanged();
+    }
+
+    public void RemoveItem(Item item, int amount)
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if(items[i].name == item.name)
+            {
+                int amountLeftToRemove = amount - items[i].amount;
+                items[i].amount -= amount;
+                if (items[i].amount <= 0)
+                {
+                    items.RemoveAt(i);
+                    i--;
+                }
+                amount = amountLeftToRemove;
+                if (amountLeftToRemove <= 0) break;
+            }
+        }
+        OnInventoryChanged();
+    }
+
+    public void RemoveAllItemsByName(Item item)
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i].name == item.name)
+            {
+                items.RemoveAt(i);
+                i--;
+            }
+        }
+        OnInventoryChanged();
+    }
+
+    public void RemoveAllItemsByName(string name)
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i].name == name)
+            {
+                items.RemoveAt(i);
+                i--;
+            }
+        }
+        OnInventoryChanged();
+    }
+
+    public void MoveItemToIndex(Item item, int index)
+    {
+        items.Remove(item);
+        items.Insert(index, item);
+        OnInventoryChanged();
+    }
+
+    public void MoveItemToLast(Item  item)
+    {
+        items.Remove(item);
+        items.Add(item);
+        OnInventoryChanged();
     }
 }

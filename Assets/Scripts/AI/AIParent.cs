@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Minotaur : MonoBehaviour
+public class AIParent : MonoBehaviour
 {
     [SerializeField] private StatBarDisplay healthDisplay;
     [SerializeField] private HealthSystem healthSystem;

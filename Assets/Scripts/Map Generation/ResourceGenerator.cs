@@ -117,7 +117,7 @@ public class ResourceGenerator : MonoBehaviour
         if (resource == null) return;
         Tilemap resourceTilemap;
         Tilemap resourceShadowTilemap;
-        if (resource.information.size == ESize.Large)
+        if (resource.size == ESize.Large)
         {
             resourceTilemap = resourceLargeTilemap;
             resourceShadowTilemap = resourceLargeShadowTilemap;
@@ -130,9 +130,9 @@ public class ResourceGenerator : MonoBehaviour
 
         Vector3 positionOffset = new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0);
         Vector3 SpriteSize = Vector3.one * Random.Range(0.7f, 1);
-        resourceTilemap.SetTile(new Vector3Int(x, y, 0), resource.information.tile);
+        resourceTilemap.SetTile(new Vector3Int(x, y, 0), resource.tile);
         resourceTilemap.SetTransformMatrix(new Vector3Int(x, y, 0), Matrix4x4.TRS(positionOffset, Quaternion.Euler(0, 0, 0), SpriteSize));
-        resourceShadowTilemap.SetTile(new Vector3Int(x, y, 0), resource.information.tile);
+        resourceShadowTilemap.SetTile(new Vector3Int(x, y, 0), resource.tile);
         resourceShadowTilemap.SetTransformMatrix(new Vector3Int(x, y, 0), Matrix4x4.TRS(positionOffset, Quaternion.Euler(0, 0, 0), SpriteSize));
     }
 }

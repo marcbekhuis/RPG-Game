@@ -1,13 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
+[CreateAssetMenu(fileName = "New Resource", menuName = "Structures/Resource")]
 public class Resource : Structure
 {
-    new public ResourceInformation information;
-    public Resource(ResourceInformation information) : base(information)
+    public ESize size;
+    public RandomItem[] drops;
+
+    public Resource(Resource resource)
     {
-        this.information = information;
+        this.tile = resource.tile;
+        this.size = resource.size;
+        this.drops = resource.drops;
+    }
+
+    public Resource()
+    {
+        this.size = ESize.Large;
     }
 }

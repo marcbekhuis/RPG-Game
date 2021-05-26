@@ -32,7 +32,7 @@ public class AIController : MonoBehaviour
             movement.Frozen(true);
             return;
         }
-        if (GameManager.instance.GameLoading || GameManager.instance.playerDied || GameManager.instance.consoleOpen)
+        if (GameManager.instance.GameLoading || GameManager.instance.gameEnd || GameManager.instance.consoleOpen)
         {
             movement.Move(Vector2.zero);
             return;

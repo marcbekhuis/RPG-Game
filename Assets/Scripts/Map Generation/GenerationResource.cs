@@ -6,7 +6,7 @@ using System;
 [Serializable]
 public class GenerationResource
 {
-    public ResourceInformation resource;
+    public Resource resource;
     public Biome[] biomes;
     public int spawnChange;
 }

@@ -9,9 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 876a22d21b6ace245ba3f390c6a94144, type: 3}
+  m_Script: {fileID: 11500000, guid: 147da9dc78182bb43942af3222b1a907, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 5fd50594014b70e48bd6993443d46b32, type: 3}
+  icon: {fileID: 21300000, guid: 5fd50594014b70e48bd6993443d46b32, type: 3}
+  description: A strong weapon to fight monsters.
   maxStackSize: 1
-  description: Sword Used to fight
+  amount: 0
+  attackCooldown: 1
+  movementCooldown: 0.1
+  damage: 2
+  range: 0.5
+  arc: 90

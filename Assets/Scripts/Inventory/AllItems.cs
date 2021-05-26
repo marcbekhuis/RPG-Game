@@ -5,7 +5,7 @@ using UnityEngine;
 public class AllItems : MonoBehaviour
 {
     public static AllItems instance;
-    public ItemInformation[] items;
+    public Item[] items;
 
     void Awake()
     {

@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     public delegate void Attack(Vector2 direction);
     public event Attack attack = delegate { };
 
+    public delegate void Consume();
+    public event Consume consume = delegate { };
+
     public delegate void ToggleInventory(Inventory sideInventory);
     public event ToggleInventory toggleInventory = delegate { };
 
@@ -28,20 +31,28 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.instance.GameLoading || GameManager.instance.playerDied || GameManager.instance.consoleOpen)
+        if (GameManager.instance.GamePaused())
         {
             movement.Move(Vector2.zero);
             return;
         }
         if (!GameManager.instance.inventoryOpen)
         {
-            if (InputManager.instance.GetKeyDown(InputActions.UseTool) && Time.timeSinceLevelLoad > attackCooldownTime)
+            if (InputManager.instance.GetKeyDown(InputActions.UseTool))
             {
-                attack(camera.ScreenToWorldPoint(Input.mousePosition));
-                attackCooldownTime = Time.timeSinceLevelLoad + attackCooldown;
-                movementCooldownTime = Time.timeSinceLevelLoad + movementCooldown;
+                if (attack.GetInvocationList().Length > 1 && Time.timeSinceLevelLoad > attackCooldownTime)
+                {
+                    attack(camera.ScreenToWorldPoint(Input.mousePosition));
+                    attackCooldownTime = Time.timeSinceLevelLoad + attackCooldown;
+                    movementCooldownTime = Time.timeSinceLevelLoad + movementCooldown;
+                }
+                else if (consume.GetInvocationList().Length > 1)
+                {
+                    consume();
+                }
             }
             if (Time.timeSinceLevelLoad > movementCooldownTime) movement.Move(MovementInput(), InputManager.instance.GetKey(InputActions.Sprint));
+            else movement.Move(Vector2.zero);
         }
         else
         {
@@ -59,5 +70,11 @@ public class PlayerController : MonoBehaviour
         float horizontal = InputManager.instance.GetAxis(InputAxis.Horizontal);
 
         return new Vector2(horizontal, vertical).normalized;
+    }
+
+    public void SetCooldowns(float attackCooldown, float movementCooldown)
+    {
+        this.attackCooldown = attackCooldown;
+        this.movementCooldown = movementCooldown;
     }
 }

@@ -41,7 +41,7 @@ public class DayNightCycle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!stopTime && !GameManager.instance.GameLoading && !GameManager.instance.playerDied && !GameManager.instance.consoleOpen) SetTime();
+        if (!stopTime && !GameManager.instance.GameLoading && !GameManager.instance.gameEnd && !GameManager.instance.consoleOpen) SetTime();
         TimeAppearance();
     }
 

@@ -61,27 +61,19 @@ public class Console : MonoBehaviour
 
     private void GiveItem(string[] args)
     {
+        string itemName = "";
+        for (int i = 1; i < args.Length - 1; i++)
+        {
+            itemName += args[i] + " ";
+        }
+        itemName = itemName.Trim().ToLower();
         foreach (var item in AllItems.instance.items)
         {
-            if (item.name.ToLower() == args[1])
+            if (item.name.ToLower() == itemName)
             {
-                if (int.TryParse(args[2], out int amount))
+                if (int.TryParse(args[args.Length - 1], out int amount))
                 {
-                    playerInventory.AddItem(new Item(item, amount));
-                    ConsoleMessage(amount + " of item " + item.name + " Added to the players inventory");
-                    return;
-                }
-                else
-                {
-                    ConsoleMessage("The item was found, but no valid amount was given.");
-                    return;
-                }
-            }
-            else if (item.name.ToLower() == args[1] + " " + args[2] && args.Length > 3)
-            {
-                if (int.TryParse(args[3], out int amount))
-                {
-                    playerInventory.AddItem(new Item(item, amount));
+                    playerInventory.AddItem(item.Create(item, playerInventory, amount));
                     ConsoleMessage(amount + " of item " + item.name + " Added to the players inventory");
                     return;
                 }

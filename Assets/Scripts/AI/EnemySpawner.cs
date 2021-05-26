@@ -28,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.instance.consoleOpen || GameManager.instance.GameLoading || GameManager.instance.playerDied) return;
+        if (GameManager.instance.consoleOpen || GameManager.instance.GameLoading || GameManager.instance.gameEnd) return;
         foreach (var spawnEntry in spawnEntries)
         {
             SpawnEnemy(spawnEntry);

@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 1
   sprintSpeed: 4
+  biomeSpeeds: []
 --- !u!58 &3056311029010151972
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -308,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomItems:
-  - item: {fileID: 11400000, guid: a92ae92ff2d7da54facd39f0c3eefe83, type: 2}
+  - item: {fileID: 11400000, guid: 7a85ae1f88a22d74882a0cba53dd3de8, type: 2}
     minAmount: 0
     maxAmount: 4
   - item: {fileID: 11400000, guid: 25ffdec9f27ddc14580e3534c03fc2ed, type: 2}

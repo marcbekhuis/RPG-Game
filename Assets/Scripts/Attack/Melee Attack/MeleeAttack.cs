@@ -19,21 +19,17 @@ public class MeleeAttack : MonoBehaviour, IAttack
         {
             if (collider2D.transform == transform) continue;
             else if (collider2D.transform.parent == transform) continue;
-            else if (!CheckIfInArg(mousePosition, collider2D.transform.position)) continue;
+            else if (!MathM.CheckIfInArc(MathM.GetAngle(mousePosition - (Vector2)attackBase.position), MathM.GetAngle((Vector2)collider2D.transform.position - (Vector2)attackBase.position), arc)) continue;
             else if (collider2D.transform.TryGetComponent<HealthSystem>(out HealthSystem healthSystem)) healthSystem.RemoveHealth(attackDamage);
             else continue;
         }
     }
 
-    private bool CheckIfInArg(Vector2 mousePosition, Vector2 enityPosition)
+    public void SetSettings(float attackDamage, float arc, float radius)
     {
-        float centerAngle = Vector2.Angle(attackBase.position, mousePosition);
-        Debug.DrawLine(attackBase.position, mousePosition, circleColor, 1);
-        float enityAngle = Vector2.Angle(attackBase.position, enityPosition);
-        Debug.DrawLine(attackBase.position, enityPosition, circleColor, 1);
-        float halfArc = arc / 2f;
-        if (enityAngle > centerAngle - halfArc && enityAngle < centerAngle + halfArc) return true;
-        else return false;
+        this.attackDamage = attackDamage;
+        this.arc = arc;
+        this.radius = radius;
     }
 
     void OnDrawGizmosSelected()

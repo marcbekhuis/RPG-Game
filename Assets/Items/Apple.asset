@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 876a22d21b6ace245ba3f390c6a94144, type: 3}
+  m_Script: {fileID: 11500000, guid: 7110afcbf902d574f91316bdd3529217, type: 3}
   m_Name: Apple
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 5d9ba4e7d0964044ea54abe409d81dfd, type: 3}
+  icon: {fileID: 21300000, guid: 5d9ba4e7d0964044ea54abe409d81dfd, type: 3}
+  description: A basic item.
   maxStackSize: 10
-  description: A basic food item
+  amount: 0
+  healing: 1

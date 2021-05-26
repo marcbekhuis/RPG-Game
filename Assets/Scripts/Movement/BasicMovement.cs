@@ -43,6 +43,7 @@ public class BasicMovement : MonoBehaviour, IMovement
 
     public float SpeedMultiplier()
     {
+        if (GameManager.instance.GamePaused()) return 1;
         Vector2Int gridPosition = Vector2Int.RoundToInt((Vector2)transform.position - Vector2.one * 0.5f);
         Biome biome = MapData.instance.landscapeTiles[gridPosition.x, gridPosition.y].biome;
         foreach (var biomeSpeed in biomeSpeeds)
