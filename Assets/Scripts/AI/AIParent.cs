@@ -18,8 +18,8 @@ public class AIParent : MonoBehaviour
         minotaurController.attack += attack.AttackCall;
         healthSystem.ResetHealth();
         aiDeath.aiController = minotaurController;
-        healthSystem.died += aiDeath.AIDied;
-        healthSystem.died += healthDisplay.HideStatBar;
+        healthSystem.onDied += aiDeath.AIDied;
+        healthSystem.onDied += healthDisplay.HideStatBar;
         staminaSystem.ResetStamina();
     }
 }

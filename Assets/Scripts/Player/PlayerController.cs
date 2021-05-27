@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     public delegate void ToggleInventory(Inventory sideInventory);
     public event ToggleInventory toggleInventory = delegate { };
 
+    public delegate void OnCooldown(float endTime);
+    public event OnCooldown OnAttackCooldown = delegate { };
+    public event OnCooldown OnMovementCooldown = delegate { };
+
     [SerializeField] [Min(0)] private float attackCooldown = 1;
     [SerializeField] [Min(0)] private float movementCooldown = 1;
     [SerializeField] private OpenStorage openStorage;
@@ -43,8 +47,7 @@ public class PlayerController : MonoBehaviour
                 if (attack.GetInvocationList().Length > 1 && Time.timeSinceLevelLoad > attackCooldownTime)
                 {
                     attack(camera.ScreenToWorldPoint(Input.mousePosition));
-                    attackCooldownTime = Time.timeSinceLevelLoad + attackCooldown;
-                    movementCooldownTime = Time.timeSinceLevelLoad + movementCooldown;
+                    SetCooldownTimes();
                 }
                 else if (consume.GetInvocationList().Length > 1)
                 {
@@ -76,5 +79,13 @@ public class PlayerController : MonoBehaviour
     {
         this.attackCooldown = attackCooldown;
         this.movementCooldown = movementCooldown;
+    }
+
+    public void SetCooldownTimes()
+    {
+        attackCooldownTime = Time.timeSinceLevelLoad + attackCooldown;
+        movementCooldownTime = Time.timeSinceLevelLoad + movementCooldown;
+        OnAttackCooldown(attackCooldownTime);
+        OnMovementCooldown(movementCooldownTime);
     }
 }

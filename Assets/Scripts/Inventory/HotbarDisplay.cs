@@ -68,7 +68,7 @@ public class HotbarDisplay : InventoryDisplay
         itemContainer.SetBackgroundColor(selectColor);
     }
 
-    private void RemoveItemUsage()
+    public void RemoveItemUsage()
     {
         if (!selectedItemContainer) return;
         if (!selectedItemContainer.item) return;
@@ -76,9 +76,13 @@ public class HotbarDisplay : InventoryDisplay
         {
             playerController.attack -= ((Tool)selectedItemContainer.item).GetAttack(playerController.gameObject).AttackCall;
         }
+        else if (selectedItemContainer.item.GetType().BaseType == typeof(Consumable))
+        {
+            playerController.consume -= ((Consumable)selectedItemContainer.item).GetConsume(playerController.gameObject).Consume;
+        }
     }
 
-    private void AddItemUsage()
+    public void AddItemUsage()
     {
         if (!selectedItemContainer) return;
         if (!selectedItemContainer.item) return;
@@ -87,6 +91,10 @@ public class HotbarDisplay : InventoryDisplay
             Tool tool = (Tool)selectedItemContainer.item;
             playerController.attack += tool.GetAttack(playerController.gameObject).AttackCall;
             playerController.SetCooldowns(tool.attackCooldown, tool.movementCooldown);
+        }
+        else if (selectedItemContainer.item.GetType().BaseType == typeof(Consumable))
+        {
+            playerController.consume += ((Consumable)selectedItemContainer.item).GetConsume(playerController.gameObject).Consume;
         }
     }
 }
