@@ -99,9 +99,40 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
+    public bool SlotHasItem(Item item, int index)
+    {
+        return items[index].name == item.name;
+    }
+
     public bool HasSpace()
     {
         return items.Count < slots;
+    }
+
+    public void AddItemToSlot(Item item, int index)
+    {
+        int amountToAdd = item.amount;
+        if (items[index].amount < items[index].maxStackSize)
+        {
+            int stackAmountAvailable = items[index].maxStackSize - items[index].amount;
+            int amountCantBeAdded = amountToAdd - stackAmountAvailable;
+            int amountCanBeAdded = amountToAdd;
+            if (amountCantBeAdded > 0) amountCanBeAdded = amountToAdd - amountCantBeAdded;
+            amountToAdd = amountCantBeAdded;
+            items[index].amount += amountCanBeAdded;
+        }
+        if (amountToAdd > 0)
+        {
+            for (int i = amountToAdd; i > 0; i -= item.maxStackSize)
+            {
+                if (items.Count < slots)
+                {
+                    if (i >= item.maxStackSize) items.Insert(index + 1, item.Create(item, this, item.maxStackSize));
+                    else items.Insert(index + 1,item.Create(item, this, i));
+                }
+            }
+        }
+        OnInventoryChanged();
     }
 
     public int GetItemAmount(Item item)

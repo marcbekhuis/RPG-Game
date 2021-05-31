@@ -8,8 +8,8 @@ public class InputSystemController : IInputSystem
     {
         { InputActions.Sprint, KeyCode.JoystickButton8},
         { InputActions.UseTool, KeyCode.JoystickButton5},
-        { InputActions.DropItem, KeyCode.Q},
-        { InputActions.OpenConsole, KeyCode.F1},
+        { InputActions.DropItem, KeyCode.JoystickButton1},
+        { InputActions.OpenConsole, KeyCode.JoystickButton6},
         { InputActions.OpenInventory, KeyCode.JoystickButton0},
         { InputActions.HotbarSlot1, KeyCode.Alpha1},
         { InputActions.HotbarSlot2, KeyCode.Alpha2},
@@ -21,6 +21,7 @@ public class InputSystemController : IInputSystem
         { InputActions.HotbarSlot8, KeyCode.Alpha8},
         { InputActions.HotbarSlot9, KeyCode.Alpha9},
         { InputActions.MoveItem, KeyCode.JoystickButton9},
+        { InputActions.Pause, KeyCode.Joystick1Button12},
     };
 
     public Dictionary<InputActions, KeyCode> Keybinds => keybinds;

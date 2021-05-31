@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 3013319674613743295}
   - component: {fileID: 7282350721138662728}
   - component: {fileID: 4044821084513608017}
+  - component: {fileID: 4449529134162126385}
   m_Layer: 8
   m_Name: Wraith
   m_TagString: Untagged
@@ -112,7 +113,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 1
   sprintSpeed: 4
-  biomeSpeeds: []
+  biomeSpeeds:
+  - biome: {fileID: 11400000, guid: 855b5227f8b994743a9bcb91e47d49a6, type: 2}
+    multiplier: 0.5
 --- !u!58 &3056311029010151972
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -281,6 +284,8 @@ MonoBehaviour:
   staminaRegenWalk: 0.5
   staminaConsume: 1
   stamina: 0
+  biomeRegenMultiplier: []
+  biomeUsageMultiplier: []
 --- !u!114 &3013319674613743295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +337,19 @@ MonoBehaviour:
   numberProjectiles: 4
   projectilePrefab: {fileID: 6275068580151102690, guid: f4a1d0329f647914e913572426fde812, type: 3}
   projectileBase: {fileID: 3056311028802205519}
+--- !u!114 &4449529134162126385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056311029010151968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0276eca4a6688b54390bcba76edf9526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biome: {fileID: 0}
 --- !u!1 &3056311029063193725
 GameObject:
   m_ObjectHideFlags: 0

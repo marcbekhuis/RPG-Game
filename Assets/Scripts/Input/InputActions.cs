@@ -23,4 +23,5 @@ public enum InputActions
     HotbarSlot8,
     HotbarSlot9,
     MoveItem,
+    Pause
 }

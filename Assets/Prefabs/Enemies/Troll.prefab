@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 3013319674613743295}
   - component: {fileID: 7282350721138662728}
   - component: {fileID: 1941056738}
+  - component: {fileID: 5742872372394673096}
   m_Layer: 8
   m_Name: Troll
   m_TagString: Untagged
@@ -115,7 +116,9 @@ MonoBehaviour:
   sprintSpeed: 2
   biomeSpeeds:
   - biome: {fileID: 11400000, guid: 82dc3f58b8e101840b83b5d0cfb1bd4d, type: 2}
-    speedMultiplier: 0.2
+    multiplier: 0.25
+  - biome: {fileID: 11400000, guid: c6eb8f8b51bdf5b468bae3dd9930895a, type: 2}
+    multiplier: 0.25
 --- !u!58 &3056311029010151972
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -304,6 +307,16 @@ MonoBehaviour:
   staminaRegenWalk: 0.5
   staminaConsume: 1
   stamina: 0
+  biomeRegenMultiplier:
+  - biome: {fileID: 11400000, guid: 82dc3f58b8e101840b83b5d0cfb1bd4d, type: 2}
+    multiplier: 0.25
+  - biome: {fileID: 11400000, guid: c6eb8f8b51bdf5b468bae3dd9930895a, type: 2}
+    multiplier: 0.25
+  biomeUsageMultiplier:
+  - biome: {fileID: 11400000, guid: 82dc3f58b8e101840b83b5d0cfb1bd4d, type: 2}
+    multiplier: 2
+  - biome: {fileID: 11400000, guid: c6eb8f8b51bdf5b468bae3dd9930895a, type: 2}
+    multiplier: 2
 --- !u!114 &3013319674613743295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,6 +364,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ef8ed7644e099746b71d8ff96f74166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5742872372394673096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056311029010151968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0276eca4a6688b54390bcba76edf9526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biome: {fileID: 0}
 --- !u!1 &3056311029063193725
 GameObject:
   m_ObjectHideFlags: 0

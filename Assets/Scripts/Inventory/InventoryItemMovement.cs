@@ -21,7 +21,12 @@ public class InventoryItemMovement : MonoBehaviour
                         if (itemContainer.HasItem())
                         {
                             Item item = selectedItemContainer.item;
-                            if (selectedItemContainer.inventory == itemContainer.inventory)
+                            if(selectedItemContainer.inventory.SlotHasItem(item, selectedItemContainer.inventoryIndex))
+                            {
+                                selectedItemContainer.inventory.RemoveItem(item);
+                                itemContainer.inventory.AddItemToSlot(item, itemContainer.inventoryIndex);
+                            }
+                            else if (selectedItemContainer.inventory == itemContainer.inventory)
                             {
 
                                 itemContainer.inventory.MoveItemToIndex(item, itemContainer.inventoryIndex);

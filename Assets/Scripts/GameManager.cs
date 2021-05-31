@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public bool GameLoading = true;
     public bool inventoryOpen = false;
     public bool consoleOpen = false;
+    public bool gamePaused = false;
 
     private void Awake()
     {
@@ -19,6 +20,6 @@ public class GameManager : MonoBehaviour
 
     public bool GamePaused()
     {
-        return gameEnd || GameLoading || consoleOpen;
+        return gameEnd || GameLoading || consoleOpen || gamePaused;
     }
 }

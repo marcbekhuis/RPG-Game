@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(LandscapeTileDetector))]
 public class StaminaSystem : MonoBehaviour
 {
     public delegate void StaminaChanged(float stamine, float maxStamina);
@@ -12,6 +13,15 @@ public class StaminaSystem : MonoBehaviour
     [SerializeField] [Min(0)] private float staminaRegenWalk = 0.5f;
     [SerializeField] [Min(0)] private float staminaConsume = 1;
     [SerializeField] [Min(0)] private float stamina = 0;
+    [SerializeField] private BiomeMultiplier[] biomeRegenMultiplier;
+    [SerializeField] private BiomeMultiplier[] biomeUsageMultiplier;
+
+    private LandscapeTileDetector landscapeTileDetector;
+
+    private void Start()
+    {
+        landscapeTileDetector = GetComponent<LandscapeTileDetector>();
+    }
 
     public void ResetStamina()
     {
@@ -37,19 +47,19 @@ public class StaminaSystem : MonoBehaviour
 
     public void AddStaminaIdle()
     {
-        stamina = Mathf.Clamp(stamina + staminaRegenIdle * Time.deltaTime, 0, maxStamina);
+        stamina = Mathf.Clamp(stamina + staminaRegenIdle * Time.deltaTime * StaminaMultiplier(biomeRegenMultiplier), 0, maxStamina);
         staminaChanged(stamina, maxStamina);
     }
 
     public void AddStaminaWalk()
     {
-        stamina = Mathf.Clamp(stamina + staminaRegenWalk * Time.deltaTime, 0, maxStamina);
+        stamina = Mathf.Clamp(stamina + staminaRegenWalk * Time.deltaTime * StaminaMultiplier(biomeRegenMultiplier), 0, maxStamina); ;
         staminaChanged(stamina, maxStamina);
     }
 
     public void RemoveStamina()
     {
-        stamina = Mathf.Clamp(stamina - staminaConsume * Time.deltaTime, 0, maxStamina);
+        stamina = Mathf.Clamp(stamina - staminaConsume * Time.deltaTime * StaminaMultiplier(biomeRegenMultiplier), 0, maxStamina);
         staminaChanged(stamina, maxStamina);
     }
 
@@ -57,5 +67,18 @@ public class StaminaSystem : MonoBehaviour
     {
         this.stamina = maxStamina;
         staminaChanged(stamina, maxStamina);
+    }
+
+    public float StaminaMultiplier(BiomeMultiplier[] biomeMultipliers)
+    {
+        if (GameManager.instance.GameLoading) return 1;
+        foreach (var biomeMultiplier in biomeMultipliers)
+        {
+            if (biomeMultiplier.biome == landscapeTileDetector.biome)
+            {
+                return biomeMultiplier.multiplier;
+            }
+        }
+        return 1;
     }
 }
