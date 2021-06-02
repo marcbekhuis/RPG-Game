@@ -16,3 +16,4 @@ MonoBehaviour:
   description: A basic item.
   maxStackSize: 10
   amount: 0
+  inventory: {fileID: 0}

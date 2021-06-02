@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: BushSmall1
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: c80336da823dfa942a0f5563360a9cf6, type: 2}
-  drops: []
+  size: 2
+  drops:
+  - item: {fileID: 11400000, guid: f03db5a60d86c3446b325097b748dad3, type: 2}
+    minAmount: 0
+    maxAmount: 5

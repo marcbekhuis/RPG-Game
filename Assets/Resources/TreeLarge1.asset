@@ -17,7 +17,10 @@ MonoBehaviour:
   drops:
   - item: {fileID: 11400000, guid: d62c6c9d64a34584587ccefb888b37e9, type: 2}
     minAmount: 2
-    maxAmount: 5
+    maxAmount: 7
   - item: {fileID: 11400000, guid: 909bc240bdc9ee040b05e028b090e75f, type: 2}
+    minAmount: 2
+    maxAmount: 5
+  - item: {fileID: 11400000, guid: b595df8b9ee67a54ca5f344e53738022, type: 2}
     minAmount: 0
-    maxAmount: 3
+    maxAmount: 10

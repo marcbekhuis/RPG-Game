@@ -11,6 +11,6 @@ public class HotkeyHint : MonoBehaviour
     public void SetText(string textBeforeAction, string textAfterAction, InputActions action)
     {
         if (!text) text = GetComponent<Text>();
-        text.text = textBeforeAction + InputManager.instance.inputSystemKeyboard.Keybinds[action].ToString() + textAfterAction;
+        text.text = textBeforeAction + KeycodeVisually.GetVisualKeycode(InputManager.instance.Keybinds[action]) + textAfterAction;
     }
 }
