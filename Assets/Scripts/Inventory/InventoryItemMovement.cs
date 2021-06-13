@@ -21,21 +21,24 @@ public class InventoryItemMovement : MonoBehaviour
                         if (itemContainer.HasItem())
                         {
                             Item item = selectedItemContainer.item;
-                            if(selectedItemContainer.inventory.SlotHasItem(item, selectedItemContainer.inventoryIndex))
+                            if (selectedItemContainer != itemContainer)
                             {
-                                selectedItemContainer.inventory.RemoveItem(item);
-                                itemContainer.inventory.AddItemToSlot(item, itemContainer.inventoryIndex);
+                                if (itemContainer.inventory.SlotHasItem(item, itemContainer.inventoryIndex))
+                                {
+                                    itemContainer.inventory.AddItemToSlot(item, itemContainer.inventoryIndex);
+                                    selectedItemContainer.inventory.RemoveItem(item);
+                                }
+                                else if (selectedItemContainer.inventory == itemContainer.inventory)
+                                {
+                                    itemContainer.inventory.MoveItemToIndex(item, itemContainer.inventoryIndex);
+                                }
+                                else
+                                {
+                                    selectedItemContainer.inventory.RemoveItem(item);
+                                    itemContainer.inventory.AddItemAtIndex(item, itemContainer.inventoryIndex);
+                                }
                             }
-                            else if (selectedItemContainer.inventory == itemContainer.inventory)
-                            {
-
-                                itemContainer.inventory.MoveItemToIndex(item, itemContainer.inventoryIndex);
-                            }
-                            else
-                            {
-                                selectedItemContainer.inventory.RemoveItem(item);
-                                itemContainer.inventory.AddItemAtIndex(item, itemContainer.inventoryIndex);
-                            }
+                            else selectedItemContainer.inventoryDisplay.UpdateDisplay();
                         }
                         else
                         {
@@ -54,6 +57,7 @@ public class InventoryItemMovement : MonoBehaviour
                     else selectedItemContainer.inventoryDisplay.UpdateDisplay();
                     if (selectedItemContainer.itemDisplay) selectedItemContainer.itemDisplay.RemoveCanvas();
                     selectedItemContainer = null;
+                    return;
                 }
                 else
                 {
