@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public bool inventoryOpen = false;
     public bool consoleOpen = false;
     public bool gamePaused = false;
+    public bool dialogOpen = false;
 
     private void Awake()
     {
@@ -21,5 +22,10 @@ public class GameManager : MonoBehaviour
     public bool GamePaused()
     {
         return gameEnd || GameLoading || consoleOpen || gamePaused;
+    }
+
+    public bool PlayerMovementBlocked()
+    {
+        return inventoryOpen || dialogOpen;
     }
 }

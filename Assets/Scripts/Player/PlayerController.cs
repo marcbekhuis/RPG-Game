@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] [Min(0)] private float attackCooldown = 1;
     [SerializeField] [Min(0)] private float movementCooldown = 1;
     [SerializeField] private OpenStorage openStorage;
+    [SerializeField] private NPCTalk npcTalk;
 
     private IMovement movement;
     new private Camera camera;
@@ -40,7 +41,7 @@ public class PlayerController : MonoBehaviour
             movement.Move(Vector2.zero);
             return;
         }
-        if (!GameManager.instance.inventoryOpen)
+        if (!GameManager.instance.PlayerMovementBlocked())
         {
             if (InputManager.instance.GetKeyDown(InputActions.UseTool))
             {
@@ -61,8 +62,20 @@ public class PlayerController : MonoBehaviour
         {
             movement.Move(Vector2.zero);
         }
+        Interaction();
+    }
+
+    private void Interaction()
+    {
         if (InputManager.instance.GetKeyDown(InputActions.OpenInventory))
         {
+            NPCDialog npcDialog = npcTalk.DialogInRange();
+            if (npcDialog)
+            {
+                npcDialog.OpenDialog();
+                return;
+            }
+            else if (GameManager.instance.dialogOpen) return;
             toggleInventory(openStorage.StorageInRange());
         }
     }

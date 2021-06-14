@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TradingDisplay : MonoBehaviour
+public class TradingDisplay : Singleton<TradingDisplay>
 {
-    [SerializeField] private Trading trading;
+    [SerializeField] private GameObject tradeMenu;
     [SerializeField] private GameObject tradeItem;
     [SerializeField] private Transform tradeParent;
+    [SerializeField] private InventoryDisplay inventoryDisplay;
 
-    public void DisplayTrades()
+    public void DisplayTrades(Trading trading)
     {
+        inventoryDisplay.UpdateDisplay();
+
         foreach (Transform child in tradeParent)
         {
             Destroy(child.gameObject);
@@ -19,5 +22,7 @@ public class TradingDisplay : MonoBehaviour
         {
             Instantiate(tradeItem, tradeParent);
         }
+
+        tradeMenu.SetActive(true);
     }
 }
