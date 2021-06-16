@@ -1433,3 +1433,719 @@ System memory in use after: 157.1 MB.
 Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 4068.
 Total: 5.090500 ms (FindLiveObjects: 0.859600 ms CreateObjectMapping: 0.408700 ms MarkObjects: 3.630500 ms  DeleteObjects: 0.190000 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 4034.818033 seconds.
+  path: Assets/ThirdParty/Dungeon Tileset + Spikes.png
+  artifactKey: Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Dungeon Tileset + Spikes.png using Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aff25fa1a27604be6d42bb8184d890e8') in 0.216007 seconds
+  Import took 0.274753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.815068 seconds.
+  path: Assets/ThirdParty/Dungeon Tileset + Spikes.png
+  artifactKey: Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Dungeon Tileset + Spikes.png using Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b05fec0fb6dea5d92ee663536cad9294') in 0.012209 seconds
+  Import took 0.018226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 150.281511 seconds.
+  path: Assets/ThirdParty/Dungeon Tileset + Spikes.png
+  artifactKey: Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Dungeon Tileset + Spikes.png using Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94c46c26a55e6081f9c52ce02bc36412') in 0.171972 seconds
+  Import took 0.178595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 76.659376 seconds.
+  path: Assets/ThirdParty/Dungeon Tileset + Spikes.png
+  artifactKey: Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Dungeon Tileset + Spikes.png using Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c3d24a7340a2ec04a075f6bed35ffbf') in 0.165352 seconds
+  Import took 0.172557 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 343.201865 seconds.
+  path: Assets/ThirdParty/Dungeon Tileset + Spikes.png
+  artifactKey: Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Dungeon Tileset + Spikes.png using Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8304532308d280bc97626a7b8ae02efc') in 0.055314 seconds
+  Import took 0.062812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.724755 seconds.
+  path: Assets/Scenes/Room1.unity
+  artifactKey: Guid(d2986831e71dec34e9402012a9e9e89e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Room1.unity using Guid(d2986831e71dec34e9402012a9e9e89e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0bc6e50797bebdfcfa4fe3a971cc8d6') in 0.009174 seconds
+  Import took 0.014607 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.644863 seconds.
+  path: Assets/ThirdParty/Dungeon Tileset + Spikes.png
+  artifactKey: Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Dungeon Tileset + Spikes.png using Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a976cea8059dda8bb05577edb6c86ef9') in 0.067647 seconds
+  Import took 0.074991 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.528563 seconds.
+  path: Assets/ThirdParty/Dungeon Tileset + Spikes.png
+  artifactKey: Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Dungeon Tileset + Spikes.png using Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71a45ac650cd088b603fe0c4ac273470') in 0.052770 seconds
+  Import took 0.058811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 220.843060 seconds.
+  path: Assets/Scenes/Room1.unity
+  artifactKey: Guid(d2986831e71dec34e9402012a9e9e89e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Room1.unity using Guid(d2986831e71dec34e9402012a9e9e89e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34af3d159363d1a2012805c4b9085eb2') in 0.004670 seconds
+  Import took 0.012286 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003059 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.92 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.339 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2983 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 157.1 MB.
+System memory in use after: 157.2 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 4078.
+Total: 3.761100 ms (FindLiveObjects: 0.575800 ms CreateObjectMapping: 0.183800 ms MarkObjects: 2.787800 ms  DeleteObjects: 0.212300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.253383 seconds.
+  path: Assets/ThirdParty/Dungeon Tileset + Spikes.png
+  artifactKey: Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Dungeon Tileset + Spikes.png using Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31889ba791fdf7f2de33ce052780b78d') in 0.096657 seconds
+  Import took 0.103768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.286939 seconds.
+  path: Assets/ThirdParty/Dungeon Tileset + Spikes.png
+  artifactKey: Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ThirdParty/Dungeon Tileset + Spikes.png using Guid(13e01f47d85f2374483646237c1044a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc1718a446048d3d220e7a61ea31e778') in 0.068920 seconds
+  Import took 0.077733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 86.861906 seconds.
+  path: Assets/Scenes/GameScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GameScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b89973f0b25f2a0e811b0a101449771e') in 0.003997 seconds
+  Import took 0.029577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.003655 seconds.
+  path: Assets/Scenes/Room1.unity
+  artifactKey: Guid(d2986831e71dec34e9402012a9e9e89e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Room1.unity using Guid(d2986831e71dec34e9402012a9e9e89e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd0c2c3cd4b55f2f8f6afc23a9152375') in 0.004320 seconds
+  Import took 0.009801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.466242 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_0.asset
+  artifactKey: Guid(1059c858147f7c64093c6eb937e5da9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_0.asset using Guid(1059c858147f7c64093c6eb937e5da9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2447c799409013abca6268e3e89e94d') in 0.038285 seconds
+  Import took 0.046115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Tiles/rpgTile079.asset
+  artifactKey: Guid(a5d58409aa93f4b4e96837d4d35e1894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile079.asset using Guid(a5d58409aa93f4b4e96837d4d35e1894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '912100541852c8327ab0b3ba95ca7441') in 0.040837 seconds
+  Import took 0.047296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Tiles/rpgTile107.asset
+  artifactKey: Guid(c04ab3a2df9c5e84a8d65691a2617b7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile107.asset using Guid(c04ab3a2df9c5e84a8d65691a2617b7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4a97bc57941176147d68e93e15e7a80') in 0.027763 seconds
+  Import took 0.032894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_34.asset
+  artifactKey: Guid(fdf17bfe99614614ebc1bdb667230a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_34.asset using Guid(fdf17bfe99614614ebc1bdb667230a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36fe8b42c22a3dddb9d8013832145036') in 0.012191 seconds
+  Import took 0.018088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_24.asset
+  artifactKey: Guid(a36dd2eb5f4b0f143a966105573379b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_24.asset using Guid(a36dd2eb5f4b0f143a966105573379b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea9fb2fd43d33e000d505123de9af945') in 0.014663 seconds
+  Import took 0.021250 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_99.asset
+  artifactKey: Guid(e8b149d2fbb91224ba705419923beb74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_99.asset using Guid(e8b149d2fbb91224ba705419923beb74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04237d3f28dacd4c1197b79f90dca9e4') in 0.013905 seconds
+  Import took 0.021071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Tiles/rpgTile140.asset
+  artifactKey: Guid(c94d6cd4334e04a43a550e29f3389641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile140.asset using Guid(c94d6cd4334e04a43a550e29f3389641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a42a226e2f24322582f6bd1408a0c808') in 0.013167 seconds
+  Import took 0.021232 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_108.asset
+  artifactKey: Guid(304e231fae011cb4f90e194fce3a3264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_108.asset using Guid(304e231fae011cb4f90e194fce3a3264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7979a9ba55bc753b3e6da5ef7f1e191e') in 0.014002 seconds
+  Import took 0.020805 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Tiles/rpgTile060.asset
+  artifactKey: Guid(1ca1cf609df49d046a3a56ec07a43824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile060.asset using Guid(1ca1cf609df49d046a3a56ec07a43824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce9a816a9b1d54f902abf417a06ef21e') in 0.013629 seconds
+  Import took 0.020776 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_30.asset
+  artifactKey: Guid(3472b0ca870f9d74db9702c8839fb29d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_30.asset using Guid(3472b0ca870f9d74db9702c8839fb29d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fadbc12599a426b05252eff64823c1db') in 0.012053 seconds
+  Import took 0.017636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_112.asset
+  artifactKey: Guid(820c29872e999b04db265ac1d5fa4542) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_112.asset using Guid(820c29872e999b04db265ac1d5fa4542) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0115c6778eaf21453458d83b8cd00cf9') in 0.012016 seconds
+  Import took 0.031041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_8.asset
+  artifactKey: Guid(f4356ae1b5b6d064b95239451254d2f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_8.asset using Guid(f4356ae1b5b6d064b95239451254d2f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b54b439e464029bbe2458511fa4342c0') in 0.013119 seconds
+  Import took 0.019492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_58.asset
+  artifactKey: Guid(2c2e7b0f94c74594e80a7d04feabef3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_58.asset using Guid(2c2e7b0f94c74594e80a7d04feabef3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3920b63757ef7c205fbaf9fb42b68878') in 0.011161 seconds
+  Import took 0.017715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_3.asset
+  artifactKey: Guid(b501232de651f6e42acc0559159835a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_3.asset using Guid(b501232de651f6e42acc0559159835a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c29d7e537c8d1a0beea327729f6db3b8') in 0.011138 seconds
+  Import took 0.017249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Tiles/rpgTile230.asset
+  artifactKey: Guid(7da9bec9e8628ae4bbdea665d9cc486a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile230.asset using Guid(7da9bec9e8628ae4bbdea665d9cc486a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a36e21ef578d0a594f238a924b4a6d74') in 0.026263 seconds
+  Import took 0.032322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_23.asset
+  artifactKey: Guid(eb8d25cb1ffd02b4ab1c7d237507c984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_23.asset using Guid(eb8d25cb1ffd02b4ab1c7d237507c984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e7b581c05b3c47ae82f075783f6abcd') in 0.011397 seconds
+  Import took 0.017536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000482 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_136.asset
+  artifactKey: Guid(38e48cda089c1fd4a84e2ee766c341e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_136.asset using Guid(38e48cda089c1fd4a84e2ee766c341e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ec81a3f5ccf7e14ef98f7b0bbbac457') in 0.014949 seconds
+  Import took 0.022245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_19.asset
+  artifactKey: Guid(8aa345770197972418ef8b1b582c538c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_19.asset using Guid(8aa345770197972418ef8b1b582c538c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9277bef4fa7130258f3464734ffde236') in 0.014899 seconds
+  Import took 0.022274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_59.asset
+  artifactKey: Guid(db28fdcab7da1f6448f21972b352c16a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_59.asset using Guid(db28fdcab7da1f6448f21972b352c16a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01bcc5caa6feea8a0e053b99cd43b07f') in 0.013871 seconds
+  Import took 0.022768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_37.asset
+  artifactKey: Guid(cb6f7bde068c0f84a9678968b719ae13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_37.asset using Guid(cb6f7bde068c0f84a9678968b719ae13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80192887a920a7e75cb79e2bed3dd2cd') in 0.011246 seconds
+  Import took 0.017587 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_137.asset
+  artifactKey: Guid(8c0d59675b3035741872b9e542881d6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_137.asset using Guid(8c0d59675b3035741872b9e542881d6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da92e90c71537b35c42ae592f17ebe0') in 0.011951 seconds
+  Import took 0.017411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Tiles/Tile Palette.prefab
+  artifactKey: Guid(21edf8d1f8b3b8b43ad32762ea0ac61c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Tile Palette.prefab using Guid(21edf8d1f8b3b8b43ad32762ea0ac61c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3573476a37ad8272c7960fbe9bfad7f8') in 0.013544 seconds
+  Import took 0.019324 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_22.asset
+  artifactKey: Guid(f4bcfcd20d1d473439629401906c0e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_22.asset using Guid(f4bcfcd20d1d473439629401906c0e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e85b689ad9985820fd184c01247d9caf') in 0.011572 seconds
+  Import took 0.018383 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_63.asset
+  artifactKey: Guid(ed809fff69665a84b9921fafbe02211d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_63.asset using Guid(ed809fff69665a84b9921fafbe02211d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c2d0997b7217780d094e584eacb9d6f') in 0.010970 seconds
+  Import took 0.016400 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Tiles/rpgTile106.asset
+  artifactKey: Guid(4f385e4b30ad2dd499b8cd939909b126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile106.asset using Guid(4f385e4b30ad2dd499b8cd939909b126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '643a33d22bc985c2bf5bd6b740500144') in 0.011862 seconds
+  Import took 0.018106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_14.asset
+  artifactKey: Guid(979e295347f35d9489c73737aeaa93dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_14.asset using Guid(979e295347f35d9489c73737aeaa93dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '192508b2f7a131609df2795fa14e894e') in 0.012083 seconds
+  Import took 0.018038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_35.asset
+  artifactKey: Guid(070d14bd32d39f446ba1afdbe9287a57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_35.asset using Guid(070d14bd32d39f446ba1afdbe9287a57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e16bb6576035eb2f7ff010979db10743') in 0.012122 seconds
+  Import took 0.017701 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_43.asset
+  artifactKey: Guid(f785b8f31b5131a4e823c97d976e3c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_43.asset using Guid(f785b8f31b5131a4e823c97d976e3c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '241b62bb71169f4ffb7fef68ef67e131') in 0.011732 seconds
+  Import took 0.017426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_16.asset
+  artifactKey: Guid(8c12761abbea4f7488d9d69577fef70b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_16.asset using Guid(8c12761abbea4f7488d9d69577fef70b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e509a923bfe100ecb6682b7e6dfee52') in 0.011860 seconds
+  Import took 0.018136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Tiles/rpgTile231.asset
+  artifactKey: Guid(52a13123450d1f242b0733d4cd470ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile231.asset using Guid(52a13123450d1f242b0733d4cd470ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93666b50d1dea2f1ed1c1246b2c2ab97') in 0.011981 seconds
+  Import took 0.017577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/Tiles/rpgTile061.asset
+  artifactKey: Guid(327cfca384b5ceb408e7f3c029669a7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile061.asset using Guid(327cfca384b5ceb408e7f3c029669a7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '659c823680e2f7658ba178a129d88f8d') in 0.011775 seconds
+  Import took 0.017486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_53.asset
+  artifactKey: Guid(2144f3870cf8cb446b2d7fd6bcb6c518) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_53.asset using Guid(2144f3870cf8cb446b2d7fd6bcb6c518) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e28f944d3078292b7d396a3551641653') in 0.012619 seconds
+  Import took 0.018530 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Tiles/rpgTile104.asset
+  artifactKey: Guid(f856e306d41108e40af53368a97ffe40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile104.asset using Guid(f856e306d41108e40af53368a97ffe40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26aff50185eaac95cd429bad9b3774b5') in 0.012544 seconds
+  Import took 0.018233 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_135.asset
+  artifactKey: Guid(dfed356336bd4254684ce6d7bae52ac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_135.asset using Guid(dfed356336bd4254684ce6d7bae52ac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7710bc41446fbe968e94b7c42f216b73') in 0.011409 seconds
+  Import took 0.017390 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_47.asset
+  artifactKey: Guid(fc87a402ef5989446b9e45c8ae138f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_47.asset using Guid(fc87a402ef5989446b9e45c8ae138f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35f72db583a549128024e15240c7ddac') in 0.011160 seconds
+  Import took 0.016487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Tiles/rpgTile139.asset
+  artifactKey: Guid(90a9b312a32da2a4582dc7b686fef0cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile139.asset using Guid(90a9b312a32da2a4582dc7b686fef0cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee1e2f334abb50e580ff972791c1a6e9') in 0.010651 seconds
+  Import took 0.017176 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000352 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_29.asset
+  artifactKey: Guid(7897f3207f896c046a4c46e5a3ed84e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_29.asset using Guid(7897f3207f896c046a4c46e5a3ed84e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6a285fc42cbafcc8f0f6945efacd53c') in 0.013286 seconds
+  Import took 0.019089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_62.asset
+  artifactKey: Guid(b8f523318ae04244e8c99937d796db26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_62.asset using Guid(b8f523318ae04244e8c99937d796db26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1f8a6bd26b19b9ef019e6bc3cdc3222') in 0.011671 seconds
+  Import took 0.017032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_27.asset
+  artifactKey: Guid(e5b51b6e08a1976469b64d9434df735a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_27.asset using Guid(e5b51b6e08a1976469b64d9434df735a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66b34d7e965ce3c1297159d520fa9e2a') in 0.010888 seconds
+  Import took 0.017040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/Tiles/rpgTile121.asset
+  artifactKey: Guid(b022c596a6db3b34ab3ce81b78c656e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile121.asset using Guid(b022c596a6db3b34ab3ce81b78c656e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3beeae6bee06abdebb0c20647137db7c') in 0.011175 seconds
+  Import took 0.016963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Tiles/rpgTile122.asset
+  artifactKey: Guid(59505f3dff5fc9840b66e53ed0db1e59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile122.asset using Guid(59505f3dff5fc9840b66e53ed0db1e59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8994327141e390387675e7dc64f4f4b4') in 0.010747 seconds
+  Import took 0.016586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Tiles/rpgTile105.asset
+  artifactKey: Guid(9e1a52228efdffe46ba4fed9e7888329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile105.asset using Guid(9e1a52228efdffe46ba4fed9e7888329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e4a07f42e17c51f7e5a1b57df700552') in 0.011765 seconds
+  Import took 0.017227 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Tiles/rpgTile229.asset
+  artifactKey: Guid(c32da4b5e5d1ff24bbe19a09654e8c77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile229.asset using Guid(c32da4b5e5d1ff24bbe19a09654e8c77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e509d468539e28c3eb57bcc6ccb38fe8') in 0.011543 seconds
+  Import took 0.016658 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_9.asset
+  artifactKey: Guid(598908f33a84c6645b9add7c8ad6714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_9.asset using Guid(598908f33a84c6645b9add7c8ad6714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6659bfbd403a7824264786cd16987984') in 0.010130 seconds
+  Import took 0.015722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_42.asset
+  artifactKey: Guid(1d2ba97e887db9d4a9007a580e858b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_42.asset using Guid(1d2ba97e887db9d4a9007a580e858b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18d636ced36f63dd9f059930c800e526') in 0.010800 seconds
+  Import took 0.017033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_55.asset
+  artifactKey: Guid(116a5fcaef829af42b4c1b0203fd8cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_55.asset using Guid(116a5fcaef829af42b4c1b0203fd8cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a98608c5f1c22c84dff2c071ceadc57c') in 0.010433 seconds
+  Import took 0.016402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_21.asset
+  artifactKey: Guid(50f364d6b9b4e2041b01cb7a1cfb5aea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_21.asset using Guid(50f364d6b9b4e2041b01cb7a1cfb5aea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c45199816e722492b592df4f21c342f') in 0.012322 seconds
+  Import took 0.017841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Tiles/rpgTile062.asset
+  artifactKey: Guid(090f06593e253eb4483e302798c3ce0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile062.asset using Guid(090f06593e253eb4483e302798c3ce0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b23923298436bbb454c27caba9776140') in 0.011806 seconds
+  Import took 0.017221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_61.asset
+  artifactKey: Guid(9bac38f86910445469511757dd515900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_61.asset using Guid(9bac38f86910445469511757dd515900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa00d18715dd060b6d2fc79e89992ea5') in 0.012341 seconds
+  Import took 0.017990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/Tiles/rpgTile103.asset
+  artifactKey: Guid(272b0ca0cac46894c86e812ef4342870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile103.asset using Guid(272b0ca0cac46894c86e812ef4342870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1592e4fd66c7607b853d56e84e894e63') in 0.011217 seconds
+  Import took 0.017561 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Tiles/rpgTile078.asset
+  artifactKey: Guid(33d326356485b9442ad9c8d52fac9f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile078.asset using Guid(33d326356485b9442ad9c8d52fac9f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcc33523a1411893e75f676bb489b36e') in 0.013603 seconds
+  Import took 0.020973 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Tiles/rpgTile232.asset
+  artifactKey: Guid(9dc0ba350fb2b4e409b8a0cbaf397974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile232.asset using Guid(9dc0ba350fb2b4e409b8a0cbaf397974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '784dcb682d5afb286923299f9be0d863') in 0.013079 seconds
+  Import took 0.018734 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_100.asset
+  artifactKey: Guid(9958eb15646fcc14a82b9808ce388e46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_100.asset using Guid(9958eb15646fcc14a82b9808ce388e46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fb6937610f0a7d70a79c74413ab73b2') in 0.011657 seconds
+  Import took 0.017382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/Tiles/rpgTile080.asset
+  artifactKey: Guid(a5398ee0cb10f8b4f8c6e3cf6fc996fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/rpgTile080.asset using Guid(a5398ee0cb10f8b4f8c6e3cf6fc996fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b067d479c8592117c73bddcc2cda2d0f') in 0.012486 seconds
+  Import took 0.018299 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004346 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.183 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2983 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 157.2 MB.
+System memory in use after: 157.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 4086.
+Total: 4.402600 ms (FindLiveObjects: 0.719300 ms CreateObjectMapping: 0.230600 ms MarkObjects: 3.258900 ms  DeleteObjects: 0.192400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.011769 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_34.asset
+  artifactKey: Guid(fdf17bfe99614614ebc1bdb667230a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_34.asset using Guid(fdf17bfe99614614ebc1bdb667230a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d4c51a4a3c493bfc10c1f4217b56fbb') in 0.040283 seconds
+  Import took 0.046680 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_108.asset
+  artifactKey: Guid(304e231fae011cb4f90e194fce3a3264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_108.asset using Guid(304e231fae011cb4f90e194fce3a3264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46094a00f87672fc1159481c50fa130a') in 0.006470 seconds
+  Import took 0.013011 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_30.asset
+  artifactKey: Guid(3472b0ca870f9d74db9702c8839fb29d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_30.asset using Guid(3472b0ca870f9d74db9702c8839fb29d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ae90d398e13b0a4d1e818667d6e8140') in 0.007140 seconds
+  Import took 0.013973 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_0.asset
+  artifactKey: Guid(1059c858147f7c64093c6eb937e5da9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_0.asset using Guid(1059c858147f7c64093c6eb937e5da9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a392cd5ffbc120012d475f83985707bd') in 0.008374 seconds
+  Import took 0.015008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_58.asset
+  artifactKey: Guid(2c2e7b0f94c74594e80a7d04feabef3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_58.asset using Guid(2c2e7b0f94c74594e80a7d04feabef3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b929fab0099610715425995e7f9cd236') in 0.008838 seconds
+  Import took 0.014859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000354 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_112.asset
+  artifactKey: Guid(820c29872e999b04db265ac1d5fa4542) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_112.asset using Guid(820c29872e999b04db265ac1d5fa4542) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34b38a02ef248c98126c26a90bea456b') in 0.007876 seconds
+  Import took 0.014179 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_136.asset
+  artifactKey: Guid(38e48cda089c1fd4a84e2ee766c341e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_136.asset using Guid(38e48cda089c1fd4a84e2ee766c341e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c10e01aa874f1f833831699ac99911f5') in 0.008354 seconds
+  Import took 0.013726 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_59.asset
+  artifactKey: Guid(db28fdcab7da1f6448f21972b352c16a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_59.asset using Guid(db28fdcab7da1f6448f21972b352c16a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '824bfcebd0730ef1373e67bd8938ada5') in 0.010222 seconds
+  Import took 0.015844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_137.asset
+  artifactKey: Guid(8c0d59675b3035741872b9e542881d6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_137.asset using Guid(8c0d59675b3035741872b9e542881d6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83b6d4320d3dd17dedd1db58ed3b1e54') in 0.008109 seconds
+  Import took 0.013867 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_43.asset
+  artifactKey: Guid(f785b8f31b5131a4e823c97d976e3c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_43.asset using Guid(f785b8f31b5131a4e823c97d976e3c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cd0cf787de81f95b270ef254bfba07b') in 0.007680 seconds
+  Import took 0.028931 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_135.asset
+  artifactKey: Guid(dfed356336bd4254684ce6d7bae52ac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_135.asset using Guid(dfed356336bd4254684ce6d7bae52ac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '184e581d4467b14e3af97f9a41676b9d') in 0.006829 seconds
+  Import took 0.012516 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_47.asset
+  artifactKey: Guid(fc87a402ef5989446b9e45c8ae138f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_47.asset using Guid(fc87a402ef5989446b9e45c8ae138f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd5cc47e2caf9144945734157f3971ae') in 0.007084 seconds
+  Import took 0.013883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Tiles/Dungeon Tileset + Spikes_42.asset
+  artifactKey: Guid(1d2ba97e887db9d4a9007a580e858b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Dungeon Tileset + Spikes_42.asset using Guid(1d2ba97e887db9d4a9007a580e858b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '262baf81962c568cfbdf1bc7cfcd1706') in 0.007221 seconds
+  Import took 0.013410 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003505 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.171 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2983 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 157.2 MB.
+System memory in use after: 157.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 4091.
+Total: 3.470200 ms (FindLiveObjects: 0.471600 ms CreateObjectMapping: 0.176100 ms MarkObjects: 2.630100 ms  DeleteObjects: 0.191500 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
