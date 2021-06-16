@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawner : Singleton<EnemySpawner>
 {
     [SerializeField] private SpawnEntry[] spawnEntries;
     [SerializeField] private SpawnPosition spawnPosition;
     [SerializeField] private DayNightCycle dayNightCycle;
     [SerializeField] private Transform player;
+
+    public delegate void OnCreatureSpawn(GameObject creatureGameObject);
+    public event OnCreatureSpawn onCreatureSpawn = delegate { };
 
     [System.Serializable]
     public class SpawnEntry 
@@ -43,8 +46,10 @@ public class EnemySpawner : MonoBehaviour
         Vector3 position = (Vector3Int)spawnPosition.GetPosition(spawnEntry.spawnBiomes, Vector2Int.RoundToInt((Vector2)player.position), spawnEntry.minRange, spawnEntry.maxRange);
         if (position.x < 0) return;
         GameObject spawnedEnemy = Instantiate(spawnEntry.prefab, position + new Vector3(.5f,.5f,0), new Quaternion(0, 0, 0, 0));
+        spawnedEnemy.name = spawnEntry.prefab.name;
         dayNightCycle.AddShadow(spawnedEnemy.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>());
         spawnEntry.spawns++;
         spawnEntry.nextSpawnTime = Time.time + spawnEntry.timeBetweenSpawns;
+        onCreatureSpawn.Invoke(spawnedEnemy);
     }
 }

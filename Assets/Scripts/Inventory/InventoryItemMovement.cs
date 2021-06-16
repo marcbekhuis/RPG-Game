@@ -50,7 +50,7 @@ public class InventoryItemMovement : MonoBehaviour
                             else
                             {
                                 selectedItemContainer.inventory.RemoveItem(item);
-                                itemContainer.inventory.AddItemExact(item);
+                                itemContainer.inventory.AddItem(item);
                             }
                         }
                     }
@@ -75,7 +75,7 @@ public class InventoryItemMovement : MonoBehaviour
                                 else
                                 {
                                     selectedItemContainer.inventory.RemoveItem(item);
-                                    inventoryDisplay.inventory.AddItemExact(item);
+                                    inventoryDisplay.inventory.AddItem(item);
                                 }
                             }
                             else selectedItemContainer.inventoryDisplay.UpdateDisplay();

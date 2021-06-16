@@ -16,11 +16,13 @@ public class GameGenerator : MonoBehaviour
 
     private LandscapeGenerator landscapeGenerator;
     private ResourceGenerator resourceGenerator;
+    private BuildingGenerator buildingGenerator;
 
     private void Start()
     {
         TryGetComponent<LandscapeGenerator>(out landscapeGenerator);
         TryGetComponent<ResourceGenerator>(out resourceGenerator);
+        TryGetComponent<BuildingGenerator>(out buildingGenerator);
         updateLoadText.AddListener(UpdateLoadText);
         StartCoroutine(GenerateGame());
     }
@@ -30,6 +32,7 @@ public class GameGenerator : MonoBehaviour
         GameManager.instance.GameLoading = true;
         if (loadscreen) loadscreen.SetActive(true);
         if (landscapeGenerator) yield return StartCoroutine(landscapeGenerator.MakeLandscape(mapSize));
+        if (buildingGenerator) yield return StartCoroutine(buildingGenerator.MakeBuildings(mapSize));
         if (resourceGenerator) yield return StartCoroutine(resourceGenerator.MakeResources(mapSize));
         if(spawnPosition) spawnPosition.Setup();
         if(spawnPlayer && spawnPosition) spawnPlayer.Spawn();

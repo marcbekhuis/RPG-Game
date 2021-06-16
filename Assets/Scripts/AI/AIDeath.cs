@@ -8,7 +8,7 @@ public class AIDeath : MonoBehaviour
     [HideInInspector] public AIController aiController;
     [SerializeField] private LayerMask layerMaskOnDead;
     [SerializeField] private float decayTime = 60;
-    [SerializeField] private UnityEvent OnDead = new UnityEvent();
+    [SerializeField] public UnityEvent OnDead = new UnityEvent();
     [SerializeField] private SpriteRenderer[] spriteRenderers;
 
     private bool dead = false;

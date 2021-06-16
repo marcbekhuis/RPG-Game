@@ -47,4 +47,16 @@ public class Trade : ScriptableObject
         costItems = new List<TradeItem>();
         returnItems = new List<TradeItem>();
     }
+
+    public void DoTrade(Inventory inventory)
+    {
+        foreach (var item in costItems)
+        {
+            inventory.RemoveItem(item.item, item.amount);
+        }
+        foreach (var item in returnItems)
+        {
+            inventory.AddItem(item.item, item.amount);
+        }
+    }
 }

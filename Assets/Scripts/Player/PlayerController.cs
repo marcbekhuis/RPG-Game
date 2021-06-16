@@ -70,12 +70,12 @@ public class PlayerController : MonoBehaviour
         if (InputManager.instance.GetKeyDown(InputActions.OpenInventory))
         {
             NPCDialog npcDialog = npcTalk.DialogInRange();
-            if (npcDialog)
+            if (GameManager.instance.dialogOpen) return;
+            else if (npcDialog)
             {
                 npcDialog.OpenDialog();
                 return;
             }
-            else if (GameManager.instance.dialogOpen) return;
             toggleInventory(openStorage.StorageInRange());
         }
     }

@@ -4,18 +4,10 @@ using UnityEngine;
 
 public class LandscapeTileDetector : MonoBehaviour
 {
-    public Biome biome;
-
-    // Update is called once per frame
-    void Update()
+    public Biome FindBiome()
     {
-        if (GameManager.instance.GamePaused()) return;
-        FindBiome();
-    }
-
-    public void FindBiome()
-    {
+        if (!MapData.instance.gameObject.activeSelf) return null;
         Vector2Int gridPosition = Vector2Int.RoundToInt((Vector2)transform.position - Vector2.one * 0.5f);
-        biome = MapData.instance.landscapeTiles[gridPosition.x, gridPosition.y].biome;
+        return MapData.instance.landscapeTiles[gridPosition.x, gridPosition.y].biome;
     }
 }

@@ -19,7 +19,7 @@ public class InventoryRandomItems : MonoBehaviour
     {
         foreach (var randomItem in randomItems)
         {
-            inventory.AddItem(randomItem.item.Create(randomItem.item, inventory, Random.Range(randomItem.minAmount, randomItem.maxAmount + 1)));
+            inventory.AddItem(randomItem.item, Random.Range(randomItem.minAmount, randomItem.maxAmount + 1));
         }
     }
 }

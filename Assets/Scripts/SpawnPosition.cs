@@ -25,6 +25,7 @@ public class SpawnPosition : MonoBehaviour
         {
             foreach (var value in filteredPositions[biome])
             {
+                if (mapData.structures[value.x, value.y] != null) continue;
                 if (value.x + 1 < mapData.size.x - borderDistance && value.x + 1 > borderDistance && value.y + 1 < mapData.size.y - borderDistance && value.y + 1 > borderDistance) biomePositions.Add(value);
             }
         }
@@ -38,6 +39,7 @@ public class SpawnPosition : MonoBehaviour
         {
             foreach (var value in filteredPositions[biome])
             {
+                if (mapData.structures[value.x, value.y] != null) continue;
                 float distance = Vector2.Distance(value, center);
                 if (distance < maxRange && distance > minRange) biomePositions.Add(value);
             }

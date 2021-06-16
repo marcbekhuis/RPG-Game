@@ -73,7 +73,7 @@ public class Console : MonoBehaviour
             {
                 if (int.TryParse(args[args.Length - 1], out int amount))
                 {
-                    playerInventory.AddItem(item.Create(item, playerInventory, amount));
+                    playerInventory.AddItem(item, amount);
                     ConsoleMessage(amount + " of item " + item.name + " Added to the players inventory");
                     return;
                 }

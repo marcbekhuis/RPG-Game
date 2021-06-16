@@ -72,9 +72,10 @@ public class StaminaSystem : MonoBehaviour
     public float StaminaMultiplier(BiomeMultiplier[] biomeMultipliers)
     {
         if (GameManager.instance.GameLoading) return 1;
+        Biome biome = landscapeTileDetector.FindBiome();
         foreach (var biomeMultiplier in biomeMultipliers)
         {
-            if (biomeMultiplier.biome == landscapeTileDetector.biome)
+            if (biomeMultiplier.biome == biome)
             {
                 return biomeMultiplier.multiplier;
             }

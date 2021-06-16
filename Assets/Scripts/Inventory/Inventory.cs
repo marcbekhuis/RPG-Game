@@ -37,13 +37,13 @@ public class Inventory : MonoBehaviour
     {
         foreach (var startingItem in startingItems)
         {
-            AddItem(startingItem.item.Create(startingItem.item, this, startingItem.amount));
+            AddItem(startingItem.item, startingItem.amount);
         }
     }
 
-    public void AddItem(Item item)
+    public void AddItem(Item item, int amount)
     {
-        int amountToAdd = item.amount;
+        int amountToAdd = amount;
         foreach (var loopItem in items)
         {
             if (loopItem.name != item.name) continue;
@@ -71,7 +71,7 @@ public class Inventory : MonoBehaviour
         OnInventoryChanged();
     }
 
-    public void AddItemExact(Item item)
+    public void AddItem(Item item)
     {
         item.inventory = this;
         items.Add(item);
@@ -143,6 +143,16 @@ public class Inventory : MonoBehaviour
             if (loopItem.name == item.name) amount += loopItem.amount;
         }
         return amount;
+    }
+
+    public bool HasItemAmount(Item item, int neededAmount)
+    {
+        int amount = 0;
+        foreach (var loopItem in items)
+        {
+            if (loopItem.name == item.name) amount += loopItem.amount;
+        }
+        return amount >= neededAmount;
     }
 
     public void RemoveItemAt(int index)

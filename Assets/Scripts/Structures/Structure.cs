@@ -18,6 +18,11 @@ public class Structure : ScriptableObject
 
     }
 
+    public Structure(TileBase tileBase)
+    {
+        this.tile = tileBase;
+    }
+
     public virtual Structure Create(Structure structure)
     {
         return new Structure(structure);

@@ -62,6 +62,7 @@ public class ResourceGenerator : MonoBehaviour
 
     private void GenerateResource(int x, int y)
     {
+        if (MapData.instance.structures[x, y] != null) return;
         Biome biome = mapData.landscapeTiles[x, y].biome;
         if (!resourcesFilteredByBiome.ContainsKey(biome)) return;
         int numberOfResources = resourcesFilteredByBiome[biome].Count;

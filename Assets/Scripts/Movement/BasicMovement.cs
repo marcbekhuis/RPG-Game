@@ -40,9 +40,10 @@ public class BasicMovement : MonoBehaviour, IMovement
     public float SpeedMultiplier()
     {
         if (GameManager.instance.GamePaused()) return 1;
+        Biome biome = landscapeTileDetector.FindBiome();
         foreach (var biomeMulitplier in biomeSpeeds)
         {
-            if(biomeMulitplier.biome == landscapeTileDetector.biome)
+            if(biomeMulitplier.biome == biome)
             {
                 return biomeMulitplier.multiplier;
             }

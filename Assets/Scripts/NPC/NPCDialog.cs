@@ -5,9 +5,10 @@ using UnityEngine;
 public class NPCDialog : MonoBehaviour
 {
     [SerializeField] private Trading trading;
+    [SerializeField] private Questing questing;
 
     public void OpenDialog()
     {
-        NPCDialogDisplay.instance.DisplayDialog(trading);
+        NPCDialogDisplay.instance.DisplayDialog(trading, questing);
     }
 }
