@@ -81,8 +81,7 @@ public class BuildingGenerator : MonoBehaviour
             { 
                 for (int y2 = 0; y2 < buildTilemap.cellBounds.size.y; y2++)
                 {
-                    Tile tile = new Tile();
-                    tile.sprite = buildTilemap.GetTile<Tile>(new Vector3Int(x2, y2, 0)).sprite;
+                    TileBase tile = buildTilemap.GetTile<TileBase>(new Vector3Int(x2, y2, 0));
                     mapData.structures[x + x2, y + y2] = new Structure(tile);
                 }
             }
@@ -121,7 +120,6 @@ public class BuildingGenerator : MonoBehaviour
             yield break;
         }
 
-        structureTilemap.ClearAllTiles();
         GameGenerator.updateLoadText.Invoke("Tilemap cleared");
         yield return null;
 

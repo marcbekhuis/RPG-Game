@@ -5,28 +5,13 @@ using UnityEngine.Tilemaps;
 
 public class ResourceRemoveSystem : Singleton<ResourceRemoveSystem>
 {
-    [SerializeField] private Tilemap resourceLargeTilemap;
-    [SerializeField] private Tilemap resourceLargeShadowTilemap;
-    [SerializeField] private Tilemap resourceSmallShadowTilemap;
-    [SerializeField] private Tilemap resourceSmallTilemap;
+    [SerializeField] private Tilemap resourceTilemap;
+    [SerializeField] private Tilemap resourceShadowTilemap;
 
     public void RemoveResource(Vector2Int gridPosition)
     {
-        switch (MapData.instance.resources[gridPosition.x, gridPosition.y].size)
-        {
-            case ESize.Small:
-                resourceSmallTilemap.SetTile((Vector3Int)gridPosition, null);
-                resourceSmallShadowTilemap.SetTile((Vector3Int)gridPosition, null);
-                break;
-            case ESize.Medium:
-                break;
-            case ESize.Large:
-                resourceLargeTilemap.SetTile((Vector3Int)gridPosition, null);
-                resourceLargeShadowTilemap.SetTile((Vector3Int)gridPosition, null);
-                break;
-            default:
-                break;
-        }
+        resourceTilemap.SetTile((Vector3Int)gridPosition, null);
+        resourceShadowTilemap.SetTile((Vector3Int)gridPosition, null);
         MapData.instance.resources[gridPosition.x, gridPosition.y] = null;
     }
 }

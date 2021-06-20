@@ -26,6 +26,7 @@ public class InputSystemKeyboard : IInputSystem
         { InputActions.HotbarSlot9, KeyCode.Alpha9},
         { InputActions.MoveItem, KeyCode.Mouse0},
         { InputActions.Pause, KeyCode.Escape},
+        { InputActions.Minimap, KeyCode.M},
     };
 
     public Dictionary<InputActions, KeyCode> Keybinds => keybinds;

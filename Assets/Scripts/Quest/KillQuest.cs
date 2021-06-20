@@ -49,6 +49,7 @@ public class KillQuest : Quest
                 if (killCreature.amount >= killCreature.neededAmount) RewardClaimable = true;
             }
         }
+        QuestTraker.instance.UpdateTrakingQuest(this);
     }
 
     [System.Serializable]

@@ -21,6 +21,7 @@ public abstract class Quest : ScriptableObject
     public virtual void StartQuest()
     {
         started = true;
+        QuestTraker.instance.AddTrakingQuest(this);
     }
 
     public abstract string Objective();
@@ -32,6 +33,7 @@ public abstract class Quest : ScriptableObject
         {
             inventory.AddItem(questReward.item, questReward.amount);
         }
+        QuestTraker.instance.RemoveTrakingQuest(this);
     }
 
     public Quest(Quest quest)

@@ -16,7 +16,7 @@ MonoBehaviour:
   maxTempature: 50
   minWetness: 0
   maxWetness: 100
-  minLandHeight: 600
+  minLandHeight: 650
   maxLandHeight: 1000
   minWaterHeight: -1000
   maxWaterHeight: 0

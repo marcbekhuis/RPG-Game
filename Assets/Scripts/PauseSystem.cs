@@ -23,6 +23,7 @@ public class PauseSystem : MonoBehaviour
         bool ClosedNoPanels = true;
         GameManager.instance.consoleOpen = false;
         GameManager.instance.inventoryOpen = false;
+        GameManager.instance.dialogOpen = false;
         foreach (var closePanel in closePanels)
         {
             if (closePanel.activeSelf) ClosedNoPanels = false;

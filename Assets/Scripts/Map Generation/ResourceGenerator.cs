@@ -7,10 +7,8 @@ using UnityEngine.Tilemaps;
 public class ResourceGenerator : MonoBehaviour
 {
     [SerializeField] private GenerationResource[] resources;
-    [SerializeField] private Tilemap resourceLargeTilemap;
-    [SerializeField] private Tilemap resourceLargeShadowTilemap;
-    [SerializeField] private Tilemap resourceSmallShadowTilemap;
-    [SerializeField] private Tilemap resourceSmallTilemap;
+    [SerializeField] private Tilemap resourceTilemap;
+    [SerializeField] private Tilemap resourceShadowTilemap;
 
     private MapData mapData;
     private Dictionary<Biome, List<GenerationResource>> resourcesFilteredByBiome = new Dictionary<Biome, List<GenerationResource>>();
@@ -85,14 +83,13 @@ public class ResourceGenerator : MonoBehaviour
 
     public IEnumerator PlaceResources(Vector2Int mapSize)
     {
-        if (!resourceLargeTilemap)
+        if (!resourceTilemap)
         {
             GameGenerator.updateLoadText.Invoke("Tilemap not set");
             Debug.LogError("Tilemap not set");
             yield break;
         }
 
-        resourceLargeTilemap.ClearAllTiles();
         GameGenerator.updateLoadText.Invoke("Tilemap cleared");
         yield return null;
 
@@ -116,18 +113,6 @@ public class ResourceGenerator : MonoBehaviour
     {
         Resource resource = mapData.resources[x, y];
         if (resource == null) return;
-        Tilemap resourceTilemap;
-        Tilemap resourceShadowTilemap;
-        if (resource.size == ESize.Large)
-        {
-            resourceTilemap = resourceLargeTilemap;
-            resourceShadowTilemap = resourceLargeShadowTilemap;
-        }
-        else
-        {
-            resourceTilemap = resourceSmallTilemap;
-            resourceShadowTilemap = resourceSmallShadowTilemap;
-        }
 
         Vector3 positionOffset = new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f), 0);
         Vector3 SpriteSize = Vector3.one * Random.Range(0.7f, 1);
