@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 968024230509ad84cb8ab4f7afd8222e, type: 3}
-  m_Name: Kill Minotaurs
+  m_Name: Minotaur Hunt
   m_EditorClassIdentifier: 
   story: Minotaurs are over running this land kill them and I will give you a reward.
   Rewards:

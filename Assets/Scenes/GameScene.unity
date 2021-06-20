@@ -7542,7 +7542,7 @@ MonoBehaviour:
   rangeDetection: {fileID: 1601598763}
   hotkeyCanvas: {fileID: 3734957941747988397, guid: 648ce8ad00949454e8ed0ee0f7b8afce, type: 3}
   textBeforeAction: Press "
-  textAfterAction: '" to open inventory'
+  textAfterAction: '" to talk with the NPC'
   action: 8
 --- !u!114 &1601598763
 MonoBehaviour:
@@ -9843,6 +9843,8 @@ MonoBehaviour:
   questingMenu: {fileID: 518698155}
   questItem: {fileID: 8119101924197806743, guid: e4552cb57a12c464caf8400c77c6adc8, type: 3}
   questParent: {fileID: 1503680853}
+  itemContainer: {fileID: 8473029384112658199, guid: 80d16d6f5c22b9642bde1013c2c4f905, type: 3}
+  itemDisplay: {fileID: 1368706676901314092, guid: b0c91ce16933d4e42b188d135dacd009, type: 3}
   inventory: {fileID: 1601598753}
 --- !u!114 &2047033484
 MonoBehaviour:

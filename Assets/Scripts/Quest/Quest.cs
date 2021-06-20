@@ -36,6 +36,7 @@ public abstract class Quest : ScriptableObject
 
     public Quest(Quest quest)
     {
+        this.name = quest.name;
         this.story = quest.story;
         this.Rewards = quest.Rewards;
         this.RewardClaimable = false;

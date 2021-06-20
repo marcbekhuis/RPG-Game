@@ -8,6 +8,8 @@ public class QuestingDisplay : Singleton<QuestingDisplay>
     public GameObject questingMenu;
     [SerializeField] private GameObject questItem;
     [SerializeField] private Transform questParent;
+    [SerializeField] private GameObject itemContainer;
+    [SerializeField] private GameObject itemDisplay;
     [SerializeField] private Inventory inventory;
 
     public void DisplayQuest(Questing questing)
@@ -24,6 +26,15 @@ public class QuestingDisplay : Singleton<QuestingDisplay>
             GameObject placedQuest = Instantiate(questItem, questParent);
             placedQuest.transform.Find("Story Text").GetComponent<Text>().text = quest.story;
             placedQuest.transform.Find("Objective Text").GetComponent<Text>().text = quest.Objective();
+            placedQuest.transform.Find("Title Text").GetComponent<Text>().text = quest.name;
+            Transform rewardsParent = placedQuest.transform.Find("Rewards");
+            foreach (var reward in quest.Rewards)
+            {
+                GameObject placedItemContainer = Instantiate(itemContainer, rewardsParent);
+                GameObject placedItemDisplay = Instantiate(itemDisplay, placedItemContainer.transform);
+                placedItemDisplay.transform.Find("Icon Image").GetComponent<Image>().sprite = reward.item.icon;
+                placedItemDisplay.transform.Find("Amount Text").GetComponent<Text>().text = reward.amount.ToString();
+            }
             if (quest.completed)
             {
                 placedQuest.transform.Find("Button").gameObject.SetActive(false);
