@@ -62,7 +62,9 @@ public class HotbarDisplay : InventoryDisplay
             }
             else if (selectedItemContainer.item.GetType().BaseType == typeof(Consumable))
             {
-                playerController.consume += ((Consumable)selectedItemContainer.item).GetConsume(playerController.gameObject).Consume;
+                Consumable consumable = (Consumable)selectedItemContainer.item;
+                playerController.consume += consumable.GetConsume(playerController.gameObject).Consume;
+                playerController.SetCooldowns(consumable.cooldown, consumable.movementCooldown);
             }
         }
         itemContainer.SetBackgroundColor(selectColor);

@@ -17,4 +17,6 @@ MonoBehaviour:
   maxStackSize: 20
   amount: 0
   inventory: {fileID: 0}
+  cooldown: 2
+  movementCooldown: 1
   healing: 1
