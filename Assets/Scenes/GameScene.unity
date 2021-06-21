@@ -2003,7 +2003,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
-  m_Color: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2997,6 +2997,7 @@ RectTransform:
   - {fileID: 568340643}
   - {fileID: 1190888010}
   - {fileID: 1063340380}
+  - {fileID: 1347226102}
   m_Father: {fileID: 171457759}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6191,6 +6192,88 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7319336403810098287, guid: 1f12f6ffe6968784b880054bd1c770ff, type: 3}
   m_PrefabInstance: {fileID: 1344748280}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1347226101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1347226102}
+  - component: {fileID: 1347226103}
+  - component: {fileID: 1347226104}
+  m_Layer: 5
+  m_Name: Inventory Feedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1347226102
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347226101}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 666899624}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 5, y: 0}
+  m_SizeDelta: {x: 300, y: -200}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &1347226103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347226101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 10
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &1347226104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347226101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f27b43d9b0559141a360e52617b1be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayTime: 5
+  inventories:
+  - {fileID: 1601598753}
+  - {fileID: 1601598755}
+  feedbackItem: {fileID: 4202163869091537432, guid: fa3f0313f2513bd4fb5b206120060088, type: 3}
+  feedbackContainer: {fileID: 9055308941407931548, guid: 83e5f6eab5bde6244906aaac95221d0b, type: 3}
+  feedbackItemsparent: {fileID: 1347226102}
 --- !u!1 &1349186069
 GameObject:
   m_ObjectHideFlags: 0
@@ -10057,6 +10140,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   display: {fileID: 578338818}
+  neededItems:
+  - {fileID: 11400000, guid: df223e68aeb366340b395a64497e7698, type: 2}
+  inventories:
+  - {fileID: 1601598753}
+  - {fileID: 1601598755}
 --- !u!1 &2058136130
 GameObject:
   m_ObjectHideFlags: 0
@@ -10328,6 +10416,10 @@ PrefabInstance:
     - target: {fileID: 9011656254517132002, guid: 1b97e0d2cdf3eae40b149980fd6bc226, type: 3}
       propertyPath: m_Name
       value: Tooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011656254517132002, guid: 1b97e0d2cdf3eae40b149980fd6bc226, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9011656254517132003, guid: 1b97e0d2cdf3eae40b149980fd6bc226, type: 3}
       propertyPath: m_Pivot.x

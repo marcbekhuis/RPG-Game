@@ -11,6 +11,9 @@ public class Inventory : MonoBehaviour
 
     public delegate void InventoryChanged();
     public event InventoryChanged OnInventoryChanged = delegate { };
+    public delegate void OnItemChange(Item item, int amount);
+    public event OnItemChange onItemAdded = delegate { };
+    public event OnItemChange onItemRemoved = delegate { };
 
     public int Slots {
         get => slots;
@@ -43,6 +46,7 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item item, int amount)
     {
+        if(item.inventory != this) onItemAdded.Invoke(item, amount);
         int amountToAdd = amount;
         foreach (var loopItem in items)
         {
@@ -73,6 +77,7 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item item)
     {
+        if (item.inventory != this) onItemAdded.Invoke(item, item.amount);
         item.inventory = this;
         items.Add(item);
         OnInventoryChanged();
@@ -80,6 +85,7 @@ public class Inventory : MonoBehaviour
 
     public void AddItemAtIndex(Item item, int index)
     {
+        if (item.inventory != this) onItemAdded.Invoke(item, item.amount);
         item.inventory = this;
         items.Insert(index, item);
         OnInventoryChanged();
@@ -111,6 +117,7 @@ public class Inventory : MonoBehaviour
 
     public void AddItemToSlot(Item item, int index)
     {
+        if (item.inventory != this) onItemAdded.Invoke(item, item.amount);
         int amountToAdd = item.amount;
         if (items[index].amount < items[index].maxStackSize)
         {
@@ -157,18 +164,21 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItemAt(int index)
     {
+        onItemRemoved.Invoke(items[index], items[index].amount);
         items.RemoveAt(index);
         OnInventoryChanged();
     }
 
     public void RemoveItem(Item item)
     {
+        onItemRemoved.Invoke(item, item.amount);
         items.Remove(item);
         OnInventoryChanged();
     }
 
     public void RemoveItem(Item item, int amount)
     {
+        onItemRemoved.Invoke(item, amount);
         for (int i = 0; i < items.Count; i++)
         {
             if(items[i].name == item.name)
@@ -193,6 +203,7 @@ public class Inventory : MonoBehaviour
         {
             if (items[i].name == item.name)
             {
+                onItemRemoved.Invoke(item, items[i].amount);
                 items.RemoveAt(i);
                 i--;
             }
@@ -206,6 +217,7 @@ public class Inventory : MonoBehaviour
         {
             if (items[i].name == name)
             {
+                onItemRemoved.Invoke(items[i], items[i].amount);
                 items.RemoveAt(i);
                 i--;
             }

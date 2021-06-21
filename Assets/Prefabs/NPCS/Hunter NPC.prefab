@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604321041985873561, guid: 8c665b4d10154914297103817c54042c, type: 3}
       propertyPath: possibleTrades.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1604321041985873561, guid: 8c665b4d10154914297103817c54042c, type: 3}
       propertyPath: possibleTrades.Array.data[0]
@@ -26,7 +26,7 @@ PrefabInstance:
     - target: {fileID: 1604321041985873561, guid: 8c665b4d10154914297103817c54042c, type: 3}
       propertyPath: possibleTrades.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 44e54090beb9fca45a2a3feb22bb71b6, type: 2}
+      objectReference: {fileID: 11400000, guid: 8270836d0d7b1114ba8f0b4ccde9509d, type: 2}
     - target: {fileID: 1604321041985873562, guid: 8c665b4d10154914297103817c54042c, type: 3}
       propertyPath: m_RootOrder
       value: 0
