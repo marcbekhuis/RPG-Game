@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
                 else if (consume.GetInvocationList().Length > 1)
                 {
                     consume();
+                    SetCooldownTimes();
                 }
             }
             if (Time.timeSinceLevelLoad > movementCooldownTime) movement.Move(MovementInput(), InputManager.instance.GetKey(InputActions.Sprint));

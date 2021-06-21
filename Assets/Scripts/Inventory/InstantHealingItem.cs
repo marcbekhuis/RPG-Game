@@ -42,7 +42,7 @@ public class InstantHealingItem : Consumable
 
     public override string TooltipInformation()
     {
-        string information = "<b>" + this.name + "</b>\n" + description + "\n\n" + "Heals: " + healing + " HP";
+        string information = "<b>" + this.name + "</b>\n" + description + "\n\n" + "Heals: " + healing + " HP" + "\n" + "Cooldown: " + cooldown + "\n" + "Movement cooldown: " + movementCooldown;
         if (maxStackSize > 1)
         {
             information += "\n\n" + "Amount: " + amount + "/" + maxStackSize;
