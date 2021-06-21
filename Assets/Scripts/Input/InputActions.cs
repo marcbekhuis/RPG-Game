@@ -24,5 +24,6 @@ public enum InputActions
     HotbarSlot9,
     MoveItem,
     Pause,
-    Minimap
+    Minimap,
+    SkipTutorial
 }

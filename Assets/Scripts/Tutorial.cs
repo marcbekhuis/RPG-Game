@@ -9,6 +9,8 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private Text informationText;
     [SerializeField] private Text inputText;
     [SerializeField] private GameObject tutorial;
+    [SerializeField] private Text tutorialSkipText;
+    [SerializeField] private InputActions skipAction = InputActions.SkipTutorial;
 
     private int tutorialStepIndex = 0;
 
@@ -24,6 +26,7 @@ public class Tutorial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tutorialSkipText.text = "To skip the tutorial press " + '"' + KeycodeVisually.GetVisualKeycode(InputManager.instance.Keybinds[skipAction]) + '"';
         EnableTutorialStep(tutorialSteps[tutorialStepIndex]);
     }
 
@@ -37,6 +40,7 @@ public class Tutorial : MonoBehaviour
             if (tutorialStepIndex < tutorialSteps.Length) EnableTutorialStep(tutorialSteps[tutorialStepIndex]);
             else tutorial.SetActive(false);
         }
+        if(InputManager.instance.GetKeyDown(skipAction)) tutorial.SetActive(false);
     }
 
     public bool TutorialStepActionPressed(TutorialStep tutorialStep)
