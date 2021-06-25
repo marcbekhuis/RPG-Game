@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IAttack
 {
-    void AttackCall(Vector2 mousePosition);
+    void AttackCall(Vector2 mousePosition, float cooldown);
 }

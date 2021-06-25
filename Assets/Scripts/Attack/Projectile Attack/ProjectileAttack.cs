@@ -23,7 +23,7 @@ public class ProjectileAttack : MonoBehaviour, IAttack
         this.projectilePrefab = projectilePrefab;
     }
 
-    public void AttackCall(Vector2 mousePosition)
+    public void AttackCall(Vector2 mousePosition, float cooldown)
     {
         float distanceBetweenProjectiles = arc / (numberProjectiles + 1);
         float halfArc = arc / 2f;

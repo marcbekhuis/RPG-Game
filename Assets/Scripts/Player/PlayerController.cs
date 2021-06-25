@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public delegate void Attack(Vector2 direction);
+    public delegate void Attack(Vector2 direction, float cooldown);
     public event Attack attack = delegate { };
 
     public delegate void Consume();
@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] [Min(0)] private float movementCooldown = 1;
     [SerializeField] private OpenStorage openStorage;
     [SerializeField] private NPCTalk npcTalk;
+    [SerializeField] private CharacterAnimator characterAnimator;
 
     private IMovement movement;
     new private Camera camera;
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
         if (GameManager.instance.GamePaused())
         {
             movement.Move(Vector2.zero);
+            characterAnimator.SetState("IDLE");
             return;
         }
         if (!GameManager.instance.PlayerMovementBlocked())
@@ -47,7 +49,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (attack.GetInvocationList().Length > 1 && Time.timeSinceLevelLoad > attackCooldownTime)
                 {
-                    attack(camera.ScreenToWorldPoint(Input.mousePosition));
+                    attack(camera.ScreenToWorldPoint(Input.mousePosition), attackCooldown);
                     SetCooldownTimes();
                 }
                 else if (consume.GetInvocationList().Length > 1)
@@ -56,12 +58,23 @@ public class PlayerController : MonoBehaviour
                     SetCooldownTimes();
                 }
             }
-            if (Time.timeSinceLevelLoad > movementCooldownTime) movement.Move(MovementInput(), InputManager.instance.GetKey(InputActions.Sprint));
-            else movement.Move(Vector2.zero);
+            if (Time.timeSinceLevelLoad > movementCooldownTime)
+            {
+                movement.Move(MovementInput(), InputManager.instance.GetKey(InputActions.Sprint));
+                if (MovementInput() == Vector2.zero) characterAnimator.SetState("IDLE");
+                else if (InputManager.instance.GetKey(InputActions.Sprint)) characterAnimator.SetState("RUN");
+                else characterAnimator.SetState("WALK");
+            }
+            else
+            {
+                movement.Move(Vector2.zero);
+                characterAnimator.SetState("IDLE");
+            }
         }
         else
         {
             movement.Move(Vector2.zero);
+            characterAnimator.SetState("IDLE");
         }
         Interaction();
     }

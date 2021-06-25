@@ -4215,6 +4215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 875824279}
   - component: {fileID: 875824280}
+  - component: {fileID: 875824281}
   m_Layer: 3
   m_Name: Sprite
   m_TagString: Untagged
@@ -4288,6 +4289,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &875824281
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875824278}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 67192424ddd76284db9122dd9cc4f240, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &878292401 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9011656254517132003, guid: 1b97e0d2cdf3eae40b149980fd6bc226, type: 3}
@@ -4699,7 +4719,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.017089844, y: 0}
   m_SizeDelta: {x: 0, y: 110}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &939827600
@@ -4744,6 +4764,7 @@ MonoBehaviour:
   itemContainers: []
   slotSelectActions: 090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
   playerController: {fileID: 1601598743}
+  handHeldItem: {fileID: 997978586}
   selectColor: {r: 0, g: 0, b: 0, a: 1}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!222 &939827602
@@ -4754,6 +4775,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939827598}
   m_CullTransparentMesh: 1
+--- !u!1 &997978584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 997978585}
+  - component: {fileID: 997978586}
+  m_Layer: 3
+  m_Name: Hand held item
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &997978585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997978584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2110428303}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &997978586
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997978584}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1054510188
 GameObject:
   m_ObjectHideFlags: 0
@@ -5301,6 +5404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1225119150}
   - component: {fileID: 1225119151}
+  - component: {fileID: 1225119152}
   m_Layer: 3
   m_Name: Shadow
   m_TagString: Untagged
@@ -5373,6 +5477,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1225119152
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225119149}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 67192424ddd76284db9122dd9cc4f240, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1258534265
 GameObject:
   m_ObjectHideFlags: 0
@@ -7344,6 +7467,7 @@ GameObject:
   - component: {fileID: 1601598761}
   - component: {fileID: 1601598762}
   - component: {fileID: 1601598763}
+  - component: {fileID: 1601598764}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -7402,6 +7526,7 @@ MonoBehaviour:
   movementCooldown: 0.1
   openStorage: {fileID: 1601598757}
   npcTalk: {fileID: 1601598762}
+  characterAnimator: {fileID: 1601598764}
 --- !u!114 &1601598744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7461,6 +7586,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 264
   attackBase: {fileID: 1587779950}
+  handRotation: {fileID: 2110428303}
   circleColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &1601598747
 MonoBehaviour:
@@ -7512,6 +7638,7 @@ MonoBehaviour:
   playerInventory: {fileID: 1601598754}
   attackCooldownDisplay: {fileID: 1598010006}
   movementCooldownDisplay: {fileID: 1476627824}
+  characterAnimator: {fileID: 1601598764}
 --- !u!114 &1601598750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7711,6 +7838,7 @@ MonoBehaviour:
     m_Bits: 64
   attackBase: {fileID: 1587779950}
   inventory: {fileID: 1601598753}
+  handRotation: {fileID: 2110428303}
   circleColor: {r: 0, g: 0, b: 1, a: 1}
 --- !u!114 &1601598761
 MonoBehaviour:
@@ -7759,6 +7887,31 @@ MonoBehaviour:
     m_Bits: 2048
   DetectionBase: {fileID: 1587779950}
   circleColor: {r: 1, g: 1, b: 0, a: 1}
+--- !u!114 &1601598764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601598740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1df2c5b0c930d54e9ffb2244ac9b433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directions:
+  - UP
+  - DOWN
+  - RIGHT
+  - LEFT
+  states:
+  - IDLE
+  - WALK
+  - RUN
+  animators:
+  - {fileID: 875824281}
+  - {fileID: 1225119152}
+  rigidbody: {fileID: 1601598745}
 --- !u!1 &1620050766
 GameObject:
   m_ObjectHideFlags: 0
@@ -10459,6 +10612,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103568071}
   m_CullTransparentMesh: 1
+--- !u!1 &2110428302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2110428303}
+  m_Layer: 3
+  m_Name: Hand rotation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2110428303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110428302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 997978585}
+  m_Father: {fileID: 2138262596}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2138262595
 GameObject:
   m_ObjectHideFlags: 0
@@ -10483,14 +10667,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138262595}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38509995, w: 0.92287487}
   m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 807898410}
+  - {fileID: 2110428303}
   m_Father: {fileID: 1601598742}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 765.3}
 --- !u!114 &2138262597
 MonoBehaviour:
   m_ObjectHideFlags: 0

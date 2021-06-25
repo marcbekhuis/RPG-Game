@@ -9,11 +9,14 @@ public class HarvestingAttack : MonoBehaviour, IAttack
     [SerializeField] private LayerMask layerMasks;
     [SerializeField] private Transform attackBase;
     [SerializeField] private Inventory inventory;
+    [SerializeField] private Transform handRotation;
     [Header("Debugging")]
     [SerializeField] private Color circleColor = Color.red;
 
-    public void AttackCall(Vector2 mousePosition)
+    public void AttackCall(Vector2 mousePosition, float cooldown)
     {
+        StopAllCoroutines();
+        if (handRotation) StartCoroutine(Animation(cooldown));
         RaycastHit2D[] raycastHit2ds = Physics2D.CircleCastAll(attackBase.position, radius, Vector2.up, 0, layerMasks);
         foreach (var raycastHit2d in raycastHit2ds)
         {
@@ -23,6 +26,22 @@ public class HarvestingAttack : MonoBehaviour, IAttack
             else if (HarvestResource(raycastHit2d.point)) return;
             else continue;
         }
+    }
+
+    IEnumerator Animation(float duration)
+    {
+        float startAngle = arc / 2 * -1;
+        float endAngle = arc / 2;
+
+        handRotation.localEulerAngles = new Vector3(0, 0, startAngle);
+        for (float time = 0; time < duration; time += Time.deltaTime)
+        {
+            handRotation.localEulerAngles = new Vector3(0, 0, Mathf.Lerp(startAngle, endAngle, time / duration));
+            yield return null;
+        }
+        handRotation.localEulerAngles = new Vector3(0, 0, endAngle);
+        yield return new WaitForSeconds(1);
+        handRotation.localEulerAngles = new Vector3(0, 0, 0);
     }
 
     public bool HarvestResource(Vector2 position)

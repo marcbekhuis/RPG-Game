@@ -1,10 +1,10 @@
 Using pre-set license
 Built from '2020.3/release' branch; Version is '2020.3.2f1 (8fd9074bf66c) revision 9427207'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19041.985; Version 2004; 64bit' Language: 'nl' Physical Memory: 16269 MB
+OS: 'Windows 10 Home; OS build 19042.1052; Version 2009; 64bit' Language: 'nl' Physical Memory: 16320 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-D:\Unity\Hub\Editor\2020.3.2f1\Editor\Unity.exe
+D:\Unity\Engines\2020.3.2f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,40 +15,164 @@ D:/Unity/Projects/RPG-Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53838
+49861
 Successfully changed project path to: D:/Unity/Projects/RPG-Game
 D:/Unity/Projects/RPG-Game
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 125.03 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 143.52 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
-[Subsystems] Discovering subsystems at path D:/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity/Engines/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path D:/Unity/Projects/RPG-Game/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1050 (ID=0x1c8d)
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
     Vendor:   
-    VRAM:     1977 MB
-    Driver:   27.21.14.6627
+    VRAM:     6052 MB
+    Driver:   27.21.14.6677
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
-Mono path[0] = 'D:/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'D:/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56284
+Mono path[0] = 'D:/Unity/Engines/2020.3.2f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Engines/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/Engines/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56644
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Unity/Hub/Editor/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001986 seconds.
+Register platform support module: D:/Unity/Engines/2020.3.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Unity/Engines/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006321 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 130.61 ms, found 1 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 120.61 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.083 seconds
+- Completed reload, in  1.556 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001943 seconds.
+Registered in 0.004064 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 130.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.478 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 1.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3099 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 157.7 MB.
+System memory in use after: 157.7 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 3566.
+Total: 4.290500 ms (FindLiveObjects: 0.564800 ms CreateObjectMapping: 0.209300 ms MarkObjects: 3.249100 ms  DeleteObjects: 0.265900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/SidewaysCharacterAnimator.cs
+  artifactKey: Guid(635403170b1d02343a14d23e4ab336c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SidewaysCharacterAnimator.cs using Guid(635403170b1d02343a14d23e4ab336c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6db1b09124b18e500d0383b9a23840e6') in 0.199351 seconds
+  Import took 0.239533 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 121.064161 seconds.
+  path: Assets/Scripts/SidewaysCharacterAnimator.cs
+  artifactKey: Guid(635403170b1d02343a14d23e4ab336c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SidewaysCharacterAnimator.cs using Guid(635403170b1d02343a14d23e4ab336c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12bed687cad0895bbb7a83ad5e4ec3cb') in 0.109882 seconds
+  Import took 0.192280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.082681 seconds.
+  path: Assets/Scripts/SidewaysCharacterAnimator.cs
+  artifactKey: Guid(635403170b1d02343a14d23e4ab336c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SidewaysCharacterAnimator.cs using Guid(635403170b1d02343a14d23e4ab336c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eae479075bfed665ff4324cc461870b') in 0.003089 seconds
+  Import took 0.056080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.002516 seconds.
+  path: Assets/Scripts/SidewaysCharacterAnimator.cs
+  artifactKey: Guid(635403170b1d02343a14d23e4ab336c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SidewaysCharacterAnimator.cs using Guid(635403170b1d02343a14d23e4ab336c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba737e4722694f1f391be9a849f5d10b') in 0.004552 seconds
+  Import took 0.093767 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.528369 seconds.
+  path: Assets/Scripts/SidewaysCharacterAnimator.cs
+  artifactKey: Guid(635403170b1d02343a14d23e4ab336c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SidewaysCharacterAnimator.cs using Guid(635403170b1d02343a14d23e4ab336c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c88413e3176cb317965bcd39467b8218') in 0.005170 seconds
+  Import took 0.061863 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.455794 seconds.
+  path: Assets/Scripts/SidewaysCharacterAnimator.cs
+  artifactKey: Guid(635403170b1d02343a14d23e4ab336c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SidewaysCharacterAnimator.cs using Guid(635403170b1d02343a14d23e4ab336c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ca0a94474faac1bcab8109fb25a30e1') in 0.006508 seconds
+  Import took 0.065989 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.094952 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.727 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.80 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2989 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 150.7 MB.
+System memory in use after: 150.8 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3570.
+Total: 3.431500 ms (FindLiveObjects: 0.435200 ms CreateObjectMapping: 0.205400 ms MarkObjects: 2.578700 ms  DeleteObjects: 0.210200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015595 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.31 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.207 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2989 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 150.7 MB.
+System memory in use after: 150.8 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3574.
+Total: 3.507200 ms (FindLiveObjects: 0.445800 ms CreateObjectMapping: 0.167700 ms MarkObjects: 2.661700 ms  DeleteObjects: 0.230500 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

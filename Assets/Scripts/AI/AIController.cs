@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AIController : MonoBehaviour
 {
-    public delegate void Attack(Vector2 direction);
+    public delegate void Attack(Vector2 direction, float cooldown);
     public event Attack attack;
     public bool disabled = false;
 
@@ -45,7 +45,7 @@ public class AIController : MonoBehaviour
         }
         if (attackRange.DetectRange() && Time.timeSinceLevelLoad > attackCooldownTime)
         {
-            attack(targetPosition);
+            attack(targetPosition, attackCooldown);
             attackCooldownTime = Time.timeSinceLevelLoad + attackCooldown;
             movementCooldownTime = Time.timeSinceLevelLoad + movementCooldown;
         }

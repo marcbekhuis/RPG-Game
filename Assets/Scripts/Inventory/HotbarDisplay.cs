@@ -6,6 +6,7 @@ public class HotbarDisplay : InventoryDisplay
 {
     [SerializeField] private InputActions[] slotSelectActions;
     [SerializeField] private PlayerController playerController;
+    [SerializeField] private SpriteRenderer handHeldItem;
     [Header("Customization")]
     [SerializeField] private Color selectColor = Color.red;
     [SerializeField] private Color defaultColor = Color.white;
@@ -54,6 +55,7 @@ public class HotbarDisplay : InventoryDisplay
         selectedItemContainer = itemContainer;
         if (selectedItemContainer.item)
         {
+            handHeldItem.sprite = selectedItemContainer.item.icon;
             if (selectedItemContainer.item.GetType().BaseType == typeof(Tool))
             {
                 Tool tool = (Tool)selectedItemContainer.item;
@@ -67,6 +69,7 @@ public class HotbarDisplay : InventoryDisplay
                 playerController.SetCooldowns(consumable.cooldown, consumable.movementCooldown);
             }
         }
+        else handHeldItem.sprite = null;
         itemContainer.SetBackgroundColor(selectColor);
     }
 

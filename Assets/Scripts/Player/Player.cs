@@ -13,12 +13,14 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerInventory playerInventory;
     [SerializeField] private CooldownDisplay attackCooldownDisplay;
     [SerializeField] private CooldownDisplay movementCooldownDisplay;
+    [SerializeField] private CharacterAnimator characterAnimator;
 
     private void Start()
     {
         healthSystem.healthChanged += healthDisplay.SetStatBar;
         healthSystem.ResetHealth();
         healthSystem.onDied += playerDeath.PlayerDied;
+        healthSystem.onDied += characterAnimator.DiedAnimation;
         staminaSystem.staminaChanged += staminaDisplay.SetStatBarFinish;
         staminaSystem.ResetStamina();
         playerController.toggleInventory += playerInventory.ToggleInventory;
