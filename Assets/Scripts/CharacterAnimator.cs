@@ -4,20 +4,12 @@ using UnityEngine;
 
 public class CharacterAnimator : MonoBehaviour
 {
-    [SerializeField] private string[] directions = new string[] { "UP", "DOWN", "RIGHT", "LEFT"};
     [SerializeField] private string[] states = new string[] { "IDLE", "WALK", "RUN"};
     [SerializeField] private Animator[] animators;
     [SerializeField] private Rigidbody2D rigidbody;
 
-    private Dictionary<string, bool> animationDirections = new Dictionary<string, bool>();
-
-    private void Start()
-    {
-        foreach (var direction in directions)
-        {
-            animationDirections.Add(direction, false);
-        }
-    }
+    private string activeDirection = "";
+    private string activeState = "";
 
     private void Update()
     {
@@ -34,23 +26,21 @@ public class CharacterAnimator : MonoBehaviour
 
     public void SetDirection(string currentDirection) 
     {
-        foreach (var direction in directions)
-        {
-            if (direction != currentDirection) animationDirections[direction] = false; 
-        }
-
-        if (animationDirections[currentDirection]) return;
+        if (activeDirection == currentDirection) return;
         foreach (var animator in animators)
         {
             animator.SetTrigger(currentDirection);
         }
-        animationDirections[currentDirection] = true;
+        activeDirection = currentDirection;
     }
 
     public void SetState(string currentState)
     {
+        if (activeState == currentState) return;
+        activeState = currentState;
         foreach (var state in states)
         {
+            if (state == currentState) continue;
             foreach (var animator in animators)
             {
                 animator.SetBool(state, false);
@@ -60,6 +50,7 @@ public class CharacterAnimator : MonoBehaviour
         foreach (var animator in animators)
         {
             animator.SetBool(currentState, true);
+
         }
     }
 

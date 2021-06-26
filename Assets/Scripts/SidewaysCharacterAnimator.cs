@@ -9,6 +9,9 @@ public class SidewaysCharacterAnimator : MonoBehaviour
     [SerializeField] private SpriteRenderer[] spriteRenderers;
     [SerializeField] private Rigidbody2D rigidbody;
 
+    private string activeState = "";
+    private bool activeDirection = false;
+
     private void Update()
     {
         CalculateDirection();
@@ -22,6 +25,7 @@ public class SidewaysCharacterAnimator : MonoBehaviour
 
     public void SetDirection(bool flipped)
     {
+        if (activeDirection == flipped) return;
         foreach (var spriteRenderer in spriteRenderers)
         {
             spriteRenderer.flipX = flipped;
@@ -30,8 +34,11 @@ public class SidewaysCharacterAnimator : MonoBehaviour
 
     public void SetState(string currentState)
     {
+        if (activeState == currentState) return;
+        activeState = currentState;
         foreach (var state in states)
         {
+            if (state == currentState) continue;
             foreach (var animator in animators)
             {
                 animator.SetBool(state, false);
@@ -41,6 +48,7 @@ public class SidewaysCharacterAnimator : MonoBehaviour
         foreach (var animator in animators)
         {
             animator.SetBool(currentState, true);
+
         }
     }
 

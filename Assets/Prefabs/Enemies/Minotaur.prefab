@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 3013319674613743295}
   - component: {fileID: 7282350721138662728}
   - component: {fileID: 5726169174030592357}
+  - component: {fileID: 6532051554119126980}
   m_Layer: 8
   m_Name: Minotaur
   m_TagString: Untagged
@@ -167,6 +168,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 264
   attackBase: {fileID: 3056311028802205519}
+  handRotation: {fileID: 0}
   circleColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &3056311029010151975
 MonoBehaviour:
@@ -202,6 +204,7 @@ MonoBehaviour:
   attackCooldown: 1
   movementCooldown: 1
   runProcentDistance: 0.5
+  sidewaysCharacterAnimator: {fileID: 6532051554119126980}
 --- !u!114 &3056311029010151998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,6 +258,7 @@ MonoBehaviour:
   minotaurController: {fileID: 3056311029010151997}
   aiDeath: {fileID: 3056311029010151996}
   staminaSystem: {fileID: 3056311029010151987}
+  sidewaysCharacterAnimator: {fileID: 6532051554119126980}
 --- !u!114 &3056311029010151996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,6 +367,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0276eca4a6688b54390bcba76edf9526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6532051554119126980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056311029010151968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635403170b1d02343a14d23e4ab336c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  states:
+  - IDLE
+  - WALK
+  - RUN
+  animators:
+  - {fileID: 7752126720551546707}
+  - {fileID: 8238852675540134568}
+  spriteRenderers:
+  - {fileID: 3056311030765375078}
+  - {fileID: 3056311029063193715}
+  rigidbody: {fileID: 3056311029010151993}
 --- !u!1 &3056311029063193725
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3056311029063193724}
   - component: {fileID: 3056311029063193715}
+  - component: {fileID: 8238852675540134568}
   m_Layer: 8
   m_Name: Shadow
   m_TagString: Untagged
@@ -445,6 +473,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8238852675540134568
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056311029063193725}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 838924cbfb482a94eb87b0a5ac7f1059, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3056311029300129984
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +603,7 @@ GameObject:
   - component: {fileID: 3056311030765375079}
   - component: {fileID: 3056311030765375078}
   - component: {fileID: 5498107271950570539}
+  - component: {fileID: 7752126720551546707}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -648,6 +696,25 @@ MonoBehaviour:
   spriteRenderers:
   - {fileID: 3056311030765375078}
   - {fileID: 3056311029063193715}
+--- !u!95 &7752126720551546707
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056311030765375072}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 838924cbfb482a94eb87b0a5ac7f1059, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5762834140766009881
 PrefabInstance:
   m_ObjectHideFlags: 0

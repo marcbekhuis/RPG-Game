@@ -10,6 +10,7 @@ public class AIParent : MonoBehaviour
     [SerializeField] private IAttack attack;
     [SerializeField] private AIDeath aiDeath;
     [SerializeField] private StaminaSystem staminaSystem;
+    [SerializeField] private SidewaysCharacterAnimator sidewaysCharacterAnimator;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class AIParent : MonoBehaviour
         aiDeath.aiController = minotaurController;
         healthSystem.onDied += aiDeath.AIDied;
         healthSystem.onDied += healthDisplay.HideStatBar;
+        healthSystem.onDied += sidewaysCharacterAnimator.DiedAnimation;
         staminaSystem.ResetStamina();
     }
 }
