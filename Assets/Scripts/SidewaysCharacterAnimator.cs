@@ -12,6 +12,11 @@ public class SidewaysCharacterAnimator : MonoBehaviour
     private string activeState = "";
     private bool activeDirection = false;
 
+    private void Start()
+    {
+        activeDirection = spriteRenderers[0];
+    }
+
     private void Update()
     {
         CalculateDirection();
@@ -26,6 +31,7 @@ public class SidewaysCharacterAnimator : MonoBehaviour
     public void SetDirection(bool flipped)
     {
         if (activeDirection == flipped) return;
+        activeDirection = flipped;
         foreach (var spriteRenderer in spriteRenderers)
         {
             spriteRenderer.flipX = flipped;
@@ -48,12 +54,12 @@ public class SidewaysCharacterAnimator : MonoBehaviour
         foreach (var animator in animators)
         {
             animator.SetBool(currentState, true);
-
         }
     }
 
     public void DiedAnimation()
     {
+        activeState = "DIED";
         foreach (var animator in animators)
         {
             animator.SetTrigger("DIED");

@@ -374,7 +374,7 @@ MonoBehaviour:
     maxRange: 1000
     earlyTime: 0
     lateTime: 24
-    maxSpawns: 1
+    maxSpawns: 2
     timeBetweenSpawns: 1
     spawnBiomes:
     - {fileID: 11400000, guid: 802359305580bec44bd63291bd6860fa, type: 2}
@@ -385,7 +385,7 @@ MonoBehaviour:
     maxRange: 1000
     earlyTime: 0
     lateTime: 24
-    maxSpawns: 1
+    maxSpawns: 2
     timeBetweenSpawns: 1
     spawnBiomes:
     - {fileID: 11400000, guid: 855b5227f8b994743a9bcb91e47d49a6, type: 2}
@@ -7747,10 +7747,6 @@ MonoBehaviour:
   startingItems:
   - item: {fileID: 11400000, guid: f4e2e323b6431254993547a611a44999, type: 2}
     amount: 1
-  - item: {fileID: 11400000, guid: 7b351897bbd71ca47a901c1070a6f825, type: 2}
-    amount: 1
-  - item: {fileID: 11400000, guid: 0982a6654f0c35144aba88283a2125f1, type: 2}
-    amount: 1
   - item: {fileID: 11400000, guid: 6e7727e2e43db6340bb86f47c041f8fb, type: 2}
     amount: 1
   items: []
@@ -7899,11 +7895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1df2c5b0c930d54e9ffb2244ac9b433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directions:
-  - UP
-  - DOWN
-  - RIGHT
-  - LEFT
   states:
   - IDLE
   - WALK
@@ -10269,6 +10260,10 @@ MonoBehaviour:
     information: To move around.
     anyInput: 0
     inputPressed: 
+  - actions: 04000000
+    information: You can sprint to move around faster.
+    anyInput: 0
+    inputPressed: 
   - actions: 08000000
     information: To open your inventory and acces your items.
     anyInput: 0
@@ -10279,6 +10274,10 @@ MonoBehaviour:
     inputPressed: 
   - actions: 05000000
     information: When you have an item equiped you can use it.
+    anyInput: 0
+    inputPressed: 
+  - actions: 14000000
+    information: Once you have bought the map item you can open a minimap.
     anyInput: 0
     inputPressed: 
   informationText: {fileID: 1798515316}

@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 7282350721138662728}
   - component: {fileID: 4044821084513608017}
   - component: {fileID: 4449529134162126385}
+  - component: {fileID: 5614752241418165139}
   m_Layer: 8
   m_Name: Wraith
   m_TagString: Untagged
@@ -180,6 +181,7 @@ MonoBehaviour:
   attackCooldown: 1
   movementCooldown: 0.2
   runProcentDistance: 0.25
+  sidewaysCharacterAnimator: {fileID: 5614752241418165139}
 --- !u!114 &3056311029010151998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +235,7 @@ MonoBehaviour:
   minotaurController: {fileID: 3056311029010151997}
   aiDeath: {fileID: 3056311029010151996}
   staminaSystem: {fileID: 3056311029010151987}
+  sidewaysCharacterAnimator: {fileID: 5614752241418165139}
 --- !u!114 &3056311029010151996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +352,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0276eca4a6688b54390bcba76edf9526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5614752241418165139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056311029010151968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635403170b1d02343a14d23e4ab336c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  states:
+  - IDLE
+  - WALK
+  - RUN
+  animators:
+  - {fileID: 2488365880327426901}
+  - {fileID: 7735804259548533935}
+  spriteRenderers:
+  - {fileID: 3056311030765375078}
+  - {fileID: 3056311029063193715}
+  rigidbody: {fileID: 3056311029010151993}
 --- !u!1 &3056311029063193725
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3056311029063193724}
   - component: {fileID: 3056311029063193715}
+  - component: {fileID: 7735804259548533935}
   m_Layer: 8
   m_Name: Shadow
   m_TagString: Untagged
@@ -431,6 +458,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7735804259548533935
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056311029063193725}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c18de7e40d5098b49b3c5544dcf881e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3056311029300129984
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +587,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3056311030765375079}
   - component: {fileID: 3056311030765375078}
-  - component: {fileID: 5498107271950570539}
+  - component: {fileID: 2488365880327426901}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -615,25 +661,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5498107271950570539
-MonoBehaviour:
+--- !u!95 &2488365880327426901
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3056311030765375072}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8c77af3437bfe2499c457b15c739098, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 21300000, guid: bf00845eb4e56c94ca696b0b467f5f00, type: 3}
-  - {fileID: 21300000, guid: a62632f9127dcff4299ddf7b67d1d8c6, type: 3}
-  - {fileID: 21300000, guid: 9346312775b853e4cb94e11e4a67fc58, type: 3}
-  spriteRenderers:
-  - {fileID: 3056311030765375078}
-  - {fileID: 3056311029063193715}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c18de7e40d5098b49b3c5544dcf881e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5762834140766009881
 PrefabInstance:
   m_ObjectHideFlags: 0

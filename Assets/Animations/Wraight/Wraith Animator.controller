@@ -46,7 +46,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: adc384c908430734bbb483aae1fd4ed5, type: 2}
+  m_Motion: {fileID: 7400000, guid: d4cf63f0a7e01c843a545ae4b97de1e2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -160,7 +160,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c14b7526a1b322c47a551591ce597ab4, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9ca5ff98d4a509a418344def6170adef, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -187,7 +187,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: bdf550e83f373fe4f85fe301c9c26847, type: 2}
+  m_Motion: {fileID: 7400000, guid: 89964e6de6774a945ac0ecbea540c6d3, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -224,7 +224,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wraight Animator
+  m_Name: Wraith Animator
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IDLE

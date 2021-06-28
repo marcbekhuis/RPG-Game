@@ -17,7 +17,7 @@ public static class KeycodeVisually
         {KeyCode.Alpha9, "9"},
         {KeyCode.Mouse0, "Left mouse"},
         {KeyCode.Mouse1, "Right mouse"},
-
+        {KeyCode.LeftShift, "Left Shift"},
     };
 
     public static string GetVisualKeycode(KeyCode keyCode)

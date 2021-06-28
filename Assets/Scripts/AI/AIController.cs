@@ -30,21 +30,21 @@ public class AIController : MonoBehaviour
         if (disabled)
         {
             movement.Move(Vector2.zero);
-            sidewaysCharacterAnimator.SetState("IDLE");
+            if(sidewaysCharacterAnimator) sidewaysCharacterAnimator.SetState("IDLE");
             movement.Frozen(true);
             return;
         }
         if (GameManager.instance.GameLoading || GameManager.instance.gameEnd || GameManager.instance.consoleOpen)
         {
             movement.Move(Vector2.zero);
-            sidewaysCharacterAnimator.SetState("IDLE");
+            if (sidewaysCharacterAnimator) sidewaysCharacterAnimator.SetState("IDLE");
             return;
         }
         Vector3 targetPosition = targetRange.DetectRangePosition();
         if (targetPosition == transform.position)
         {
             movement.Move(Vector2.zero);
-            sidewaysCharacterAnimator.SetState("IDLE");
+            if (sidewaysCharacterAnimator) sidewaysCharacterAnimator.SetState("IDLE");
             return;
         }
         if (attackRange.DetectRange() && Time.timeSinceLevelLoad > attackCooldownTime)
@@ -58,18 +58,18 @@ public class AIController : MonoBehaviour
             if (Vector2.Distance(transform.position, targetPosition) > targetRange.GetRadius() * runProcentDistance)
             {
                 movement.Move((targetPosition - transform.position).normalized, true);
-                sidewaysCharacterAnimator.SetState("RUN");
+                if (sidewaysCharacterAnimator) sidewaysCharacterAnimator.SetState("RUN");
             }
             else
             {
                 movement.Move((targetPosition - transform.position).normalized);
-                sidewaysCharacterAnimator.SetState("WALK");
+                if (sidewaysCharacterAnimator) sidewaysCharacterAnimator.SetState("WALK");
             }
         }
         else
         {
             movement.Move(Vector2.zero);
-            sidewaysCharacterAnimator.SetState("IDLE");
+            if (sidewaysCharacterAnimator) sidewaysCharacterAnimator.SetState("IDLE");
         }
     }
 }

@@ -21,7 +21,7 @@ public class AIParent : MonoBehaviour
         aiDeath.aiController = minotaurController;
         healthSystem.onDied += aiDeath.AIDied;
         healthSystem.onDied += healthDisplay.HideStatBar;
-        healthSystem.onDied += sidewaysCharacterAnimator.DiedAnimation;
+        if(sidewaysCharacterAnimator) healthSystem.onDied += sidewaysCharacterAnimator.DiedAnimation;
         staminaSystem.ResetStamina();
     }
 }
