@@ -25,5 +25,6 @@ public enum InputActions
     MoveItem,
     Pause,
     Minimap,
-    SkipTutorial
+    SkipTutorial,
+    TutorialNext,
 }

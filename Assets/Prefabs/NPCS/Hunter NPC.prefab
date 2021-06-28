@@ -22,7 +22,7 @@ PrefabInstance:
     - target: {fileID: 1604321041985873561, guid: 8c665b4d10154914297103817c54042c, type: 3}
       propertyPath: possibleTrades.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 44e54090beb9fca45a2a3feb22bb71b6, type: 2}
+      objectReference: {fileID: 11400000, guid: 95c7593b673a8ab439b12863ac485651, type: 2}
     - target: {fileID: 1604321041985873561, guid: 8c665b4d10154914297103817c54042c, type: 3}
       propertyPath: possibleTrades.Array.data[2]
       value: 

@@ -19,6 +19,8 @@ public class Tutorial : MonoBehaviour
     {
         public InputActions[] actions;
         public string information;
+        public string textBeforeInput = "Press ";
+        public string textAfterInput = ".";
         public bool anyInput = false;
         [HideInInspector] public List<InputActions> inputPressed = new List<InputActions>();
     }
@@ -62,17 +64,17 @@ public class Tutorial : MonoBehaviour
     {
         informationText.text = tutorialStep.information;
 
-        string inputInformation = "Press ";
+        string inputInformation = tutorialStep.textBeforeInput;
         for (int i = 0; i < tutorialStep.actions.Length; i++)
         {
-            inputInformation += KeycodeVisually.GetVisualKeycode(InputManager.instance.Keybinds[tutorialStep.actions[i]]);
+            inputInformation += '"' + KeycodeVisually.GetVisualKeycode(InputManager.instance.Keybinds[tutorialStep.actions[i]]) + '"';
             if (i < tutorialStep.actions.Length - 2) inputInformation += ", ";
             else if (i < tutorialStep.actions.Length - 1)
             {
                 if (tutorialStep.anyInput) inputInformation += " or ";
                 else inputInformation += " and ";
             }
-            else inputInformation += ".";
+            else inputInformation += tutorialStep.textAfterInput;
         }
 
         inputText.text = inputInformation;

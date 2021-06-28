@@ -10258,26 +10258,57 @@ MonoBehaviour:
   tutorialSteps:
   - actions: 00000000020000000100000003000000
     information: To move around.
+    textBeforeInput: 'Press '
+    textAfterInput: .
     anyInput: 0
     inputPressed: 
   - actions: 04000000
     information: You can sprint to move around faster.
+    textBeforeInput: 'Press '
+    textAfterInput: .
     anyInput: 0
     inputPressed: 
   - actions: 08000000
     information: To open your inventory and acces your items.
+    textBeforeInput: 'Press '
+    textAfterInput: .
     anyInput: 0
     inputPressed: 
   - actions: 090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
     information: You can equip items in your hotbar.
+    textBeforeInput: 'Press '
+    textAfterInput: .
     anyInput: 1
     inputPressed: 
   - actions: 05000000
     information: When you have an item equiped you can use it.
+    textBeforeInput: 'Press '
+    textAfterInput: .
     anyInput: 0
     inputPressed: 
   - actions: 14000000
-    information: Once you have bought the map item you can open a minimap.
+    information: Once you have bought the map item you can open the minimap.
+    textBeforeInput: 'Press '
+    textAfterInput: ' this would open the minimap.'
+    anyInput: 0
+    inputPressed: 
+  - actions: 16000000
+    information: Across the world you can find npcs that you can trade with or start
+      quest.
+    textBeforeInput: 'Press '
+    textAfterInput: ' to continue.'
+    anyInput: 0
+    inputPressed: 
+  - actions: 16000000
+    information: But beware of the monster that roame this world.
+    textBeforeInput: 'Press '
+    textAfterInput: ' to continue.'
+    anyInput: 0
+    inputPressed: 
+  - actions: 16000000
+    information: Kill the big troll roaming around in the forest to win the game.
+    textBeforeInput: 'Press '
+    textAfterInput: ' to continue.'
     anyInput: 0
     inputPressed: 
   informationText: {fileID: 1798515316}

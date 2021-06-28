@@ -28,6 +28,7 @@ public class InputSystemKeyboard : IInputSystem
         { InputActions.Pause, KeyCode.Escape},
         { InputActions.Minimap, KeyCode.M},
         { InputActions.SkipTutorial, KeyCode.Backspace},
+        { InputActions.TutorialNext, KeyCode.Return},
     };
 
     public Dictionary<InputActions, KeyCode> Keybinds => keybinds;
