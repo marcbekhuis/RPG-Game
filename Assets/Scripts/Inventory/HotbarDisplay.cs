@@ -77,6 +77,7 @@ public class HotbarDisplay : InventoryDisplay
     {
         if (!selectedItemContainer) return;
         if (!selectedItemContainer.item) return;
+        handHeldItem.sprite = null;
         if (selectedItemContainer.item.GetType().BaseType == typeof(Tool))
         {
             playerController.attack -= ((Tool)selectedItemContainer.item).GetAttack(playerController.gameObject).AttackCall;
@@ -91,6 +92,7 @@ public class HotbarDisplay : InventoryDisplay
     {
         if (!selectedItemContainer) return;
         if (!selectedItemContainer.item) return;
+        handHeldItem.sprite = selectedItemContainer.item.icon;
         if (selectedItemContainer.item.GetType().BaseType == typeof(Tool))
         {
             Tool tool = (Tool)selectedItemContainer.item;

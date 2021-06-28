@@ -9,9 +9,6 @@ public class EnemySpawner : Singleton<EnemySpawner>
     [SerializeField] private DayNightCycle dayNightCycle;
     [SerializeField] private Transform player;
 
-    public delegate void OnCreatureSpawn(GameObject creatureGameObject);
-    public event OnCreatureSpawn onCreatureSpawn = delegate { };
-
     [System.Serializable]
     public class SpawnEntry 
     {
@@ -50,6 +47,5 @@ public class EnemySpawner : Singleton<EnemySpawner>
         dayNightCycle.AddShadow(spawnedEnemy.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>());
         spawnEntry.spawns++;
         spawnEntry.nextSpawnTime = Time.time + spawnEntry.timeBetweenSpawns;
-        onCreatureSpawn.Invoke(spawnedEnemy);
     }
 }

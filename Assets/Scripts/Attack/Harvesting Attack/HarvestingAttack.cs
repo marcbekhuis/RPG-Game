@@ -51,7 +51,8 @@ public class HarvestingAttack : MonoBehaviour, IAttack
         {
             foreach (var drop in MapData.instance.resources[gridPosition.x, gridPosition.y].drops)
             {
-                inventory.AddItem(drop.item, Random.Range(drop.minAmount, drop.maxAmount + 1));
+                int amount = Random.Range(drop.minAmount, drop.maxAmount + 1);
+                if(amount > 0) inventory.AddItem(drop.item, amount);
             }
             ResourceRemoveSystem.instance.RemoveResource(gridPosition);
             return true;

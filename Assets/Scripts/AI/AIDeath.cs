@@ -11,6 +11,9 @@ public class AIDeath : MonoBehaviour
     [SerializeField] public UnityEvent OnDead = new UnityEvent();
     [SerializeField] private SpriteRenderer[] spriteRenderers;
 
+    public delegate void StaticDead(string name);
+    public static event StaticDead OnStaticDead;
+
     private bool dead = false;
     private float timeOfDead = 0;
     private float decayStart = 0;
@@ -20,6 +23,7 @@ public class AIDeath : MonoBehaviour
     {
         aiController.disabled = true;
         OnDead.Invoke();
+        OnStaticDead.Invoke(gameObject.name);
         gameObject.layer = (int)Mathf.Log(layerMaskOnDead.value, 2);
         dead = true;
         timeOfDead = Time.timeSinceLevelLoad;

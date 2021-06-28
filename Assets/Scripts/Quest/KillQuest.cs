@@ -14,17 +14,12 @@ public class KillQuest : Quest
         {
             this.killCreatures[i] = new KillCreature(quest.killCreatures[i]);
         }
-        EnemySpawner.instance.onCreatureSpawn += ListenNewCreature;
+        AIDeath.OnStaticDead += OnCreatureDead;
     }
 
     public override Quest Create(Quest quest)
     {
         return new KillQuest((KillQuest)quest);
-    }
-
-    public void ListenNewCreature(GameObject creatureGameObject)
-    {
-        if (creatureGameObject.TryGetComponent<AIDeath>(out AIDeath aiDeath)) aiDeath.OnDead.AddListener(() => OnCreatureDead(creatureGameObject.name));
     }
 
     public override string Objective()

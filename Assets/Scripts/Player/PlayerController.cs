@@ -47,15 +47,18 @@ public class PlayerController : MonoBehaviour
         {
             if (InputManager.instance.GetKeyDown(InputActions.UseTool))
             {
-                if (attack.GetInvocationList().Length > 1 && Time.timeSinceLevelLoad > attackCooldownTime)
+                if (Time.timeSinceLevelLoad > attackCooldownTime)
                 {
-                    attack(camera.ScreenToWorldPoint(Input.mousePosition), attackCooldown);
-                    SetCooldownTimes();
-                }
-                else if (consume.GetInvocationList().Length > 1)
-                {
-                    consume();
-                    SetCooldownTimes();
+                    if (attack.GetInvocationList().Length > 1)
+                    {
+                        attack(camera.ScreenToWorldPoint(Input.mousePosition), attackCooldown);
+                        SetCooldownTimes();
+                    }
+                    else if (consume.GetInvocationList().Length > 1)
+                    {
+                        consume();
+                        SetCooldownTimes();
+                    }
                 }
             }
             if (Time.timeSinceLevelLoad > movementCooldownTime)
