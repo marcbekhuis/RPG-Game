@@ -16,7 +16,7 @@ MonoBehaviour:
   Rewards:
   - item: {fileID: 11400000, guid: 25ffdec9f27ddc14580e3534c03fc2ed, type: 2}
     amount: 30
-  change: 100
+  change: 50
   RewardClaimable: 0
   started: 0
   completed: 0

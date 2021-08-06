@@ -17,15 +17,34 @@ public class HarvestingAttack : MonoBehaviour, IAttack
     {
         StopAllCoroutines();
         if (handRotation) StartCoroutine(Animation(cooldown));
-        RaycastHit2D[] raycastHit2ds = Physics2D.CircleCastAll(attackBase.position, radius, Vector2.up, 0, layerMasks);
-        foreach (var raycastHit2d in raycastHit2ds)
+        Vector2Int[] positions = GetTilesInRange(attackBase.position, radius);
+        if (positions.Length <= 0) return;
+        Vector2Int closestPosition = new Vector2Int(-500,-500);
+        float closestDistance = 1000;
+        foreach (var position in positions)
         {
-            if (raycastHit2d.transform == transform) continue;
-            else if (raycastHit2d.transform.parent == transform) continue;
-            else if (!MathM.CheckIfInArc(MathM.GetAngle(mousePosition - (Vector2)attackBase.position), MathM.GetAngle(raycastHit2d.point - (Vector2)attackBase.position), arc)) continue;
-            else if (HarvestResource(raycastHit2d.point)) return;
-            else continue;
+            if (MathM.CheckIfInArc(MathM.GetAngle(mousePosition - (Vector2)attackBase.position), MathM.GetAngle(position - (Vector2)attackBase.position), arc)) 
+            {
+                if (Vector2.Distance(attackBase.position, position) < closestDistance) closestPosition = position;
+            }
         }
+        if (closestPosition == new Vector2Int(-500, -500)) return;
+        HarvestResource(closestPosition);
+    }
+
+    private Vector2Int[] GetTilesInRange(Vector2 center, float radius)
+    {
+        List<Vector2Int> positions = new List<Vector2Int>();
+        for (int x = Mathf.FloorToInt(center.x - radius); x <= Mathf.CeilToInt(center.x + radius); x++)
+        {
+            for (int y = Mathf.FloorToInt(center.y - radius); y <= Mathf.CeilToInt(center.y + radius); y++)
+            {
+                if (!MapData.instance.resources[x, y]) continue;
+                Vector2Int position = new Vector2Int(x, y);
+                if (Vector2.Distance(center, position + Vector2.one * 0.5f) <= radius) positions.Add(position);
+            }
+        }
+        return positions.ToArray();
     }
 
     IEnumerator Animation(float duration)
@@ -44,9 +63,8 @@ public class HarvestingAttack : MonoBehaviour, IAttack
         handRotation.localEulerAngles = new Vector3(0, 0, 0);
     }
 
-    public bool HarvestResource(Vector2 position)
+    public bool HarvestResource(Vector2Int gridPosition)
     {
-        Vector2Int gridPosition = Vector2Int.RoundToInt(position - Vector2.one * 0.5f);
         if(MapData.instance.resources[gridPosition.x, gridPosition.y])
         {
             foreach (var drop in MapData.instance.resources[gridPosition.x, gridPosition.y].drops)

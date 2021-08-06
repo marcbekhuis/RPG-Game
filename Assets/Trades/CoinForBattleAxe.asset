@@ -22,4 +22,4 @@ MonoBehaviour:
     minAmount: 1
     maxAmount: 1
     amount: 0
-  change: 100
+  change: 70
